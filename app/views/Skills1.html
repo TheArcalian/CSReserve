@@ -1,0 +1,361 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="#" method="post">
+
+        <h1 class="govuk-heading-xl">
+          Your Digital, Data and Technology Skills - Overview
+  <p></p>
+  <p>We will now ask you to rate yourself against the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/717275/CS_Behaviours_2018.pdf">Success Profiles</a> </p>
+  <p>You must rate yourself against one of four levels:</p>
+  <p></p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Level 1: Awareness. You know about the skill and have an appreciation of how it is applied in the environment  </li>
+    <li>Level 2: Working. You can apply your knowledge and experience of the skill, including tools and techniques. You can adopt those most appropriate for the environment </li>
+    <li>Level 3: Practitioner. You know how to share your knowledge and experience of this skill with others, including tools and techniques. You can define those most appropriate for the environment</li>
+    <li>Level 3: Expert. You have both knowledge and experience in the application of this skill. You are a recognised specialist and adviser in this skill including user needs, generation of ideas, methods and tools. You can lead or guide others in best-practice use</li>
+  </ul>
+  <p></p>
+  <h1 class="govuk-heading-xl">
+    Your Digital, Data and Technology Skills - Planning
+<p></p>
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Seeing the Big Picture",
+  name: "Seeing the Big Picture",
+  label: {
+    text: "Seeing the Big Picture"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+
+    {
+      value: "Awareness",
+      text: "Awareness"
+    },
+    {
+      value: "Working",
+      text: "Working"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Changing and Improving",
+  name: "Changing and Improving",
+  label: {
+    text: "Changing and Improving"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+
+    {
+      value: "Awareness",
+      text: "Awareness"
+    },
+    {
+      value: "Working",
+      text: "Working"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+<h1 class="govuk-heading-xl">
+  Your Digital, Data and Technology Skills - Leadership
+<p></p>
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Making Effective Decisions",
+  name: "Making Effective Decisions",
+  label: {
+    text: "Making Effective Decisions"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+
+    {
+      value: "Awareness",
+      text: "Awareness"
+    },
+    {
+      value: "Working",
+      text: "Working"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Leadership",
+  name: "Leadership",
+  label: {
+    text: "Leadership"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+
+    {
+      value: "Awareness",
+      text: "Awareness"
+    },
+    {
+      value: "Working",
+      text: "Working"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+<h1 class="govuk-heading-xl">
+  Your Digital, Data and Technology Skills - Teamwork
+<p></p>
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Communicating and Influencing",
+  name: "Communicating and Influencing",
+  label: {
+    text: "Communicating and Influencing"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+
+    {
+      value: "Awareness",
+      text: "Awareness"
+    },
+    {
+      value: "Working",
+      text: "Working"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Working Together",
+  name: "Working Together",
+  label: {
+    text: "Working Together"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+
+    {
+      value: "Awareness",
+      text: "Awareness"
+    },
+    {
+      value: "Working",
+      text: "Working"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Developing Self and Others",
+  name: "Developing Self and Others",
+  label: {
+    text: "Developing Self and Others"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+
+    {
+      value: "Awareness",
+      text: "Awareness"
+    },
+    {
+      value: "Working",
+      text: "Working"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+<h1 class="govuk-heading-xl">
+  Your Digital, Data and Technology Skills - Delivery
+
+<p></p>
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Managing a Quality Service",
+  name: "Managing a Quality Service",
+  label: {
+    text: "Managing a Quality Service"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+
+    {
+      value: "Awareness",
+      text: "Awareness"
+    },
+    {
+      value: "Working",
+      text: "Working"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Delivering at Pace",
+  name: "Delivering at Pace",
+  label: {
+    text: "Delivering at Pace"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+
+    {
+      value: "Awareness",
+      text: "Awareness"
+    },
+    {
+      value: "Working",
+      text: "Working"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-button-group">
+{{ govukButton({
+text: "Continue"
+}) }}
+
+<a class="govuk-link" href="/start">Cancel</a>
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}
