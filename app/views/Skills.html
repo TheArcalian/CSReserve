@@ -15,7 +15,7 @@
 
 
 
-      <form class="form" action="/skills1" method="post">
+      <form class="form" action="#" method="post">
 
         <h1 class="govuk-heading-xl">
           Your Policy Skills - Overview
@@ -29,7 +29,350 @@
     <li>Level 3: Expert - Policy professionals may progress from skilled practice to developing deep expertise for certain Standards, becoming policy leaders and sometimes undertaking professional qualifications</li>
   </ul>
   <p></p>
+  <h1 class="govuk-heading-xl">
+    Your Policy Skills - Strategy
+<p></p>
+{% from "govuk/components/select/macro.njk" import govukSelect %}
 
+{{ govukSelect({
+  id: "Policy Context and Purpose",
+  name: "Policy Context and Purpose",
+  label: {
+    text: "Policy Context and Purpose"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+    {
+      value: "Developing",
+      text: "Developing"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Data, Analysis, and Scientific Advice",
+  name: "Data, Analysis, and Scientific Advice",
+  label: {
+    text: "Data, Analysis, and Scientific Advice"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+    {
+      value: "Developing",
+      text: "Developing"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Participation and Engagement",
+  name: "Participation and Engagement",
+  label: {
+    text: "Participation and Engagement"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+    {
+      value: "Developing",
+      text: "Developing"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "Working Internationally",
+  name: "Working Internationally",
+  label: {
+    text: "Working Internationally"
+  },
+  items: [
+  {
+    value: "Empty",
+    text: " "
+  },
+    {
+      value: "Developing",
+      text: "Developing"
+    },
+    {
+      value: "Practitioner",
+      text: "Practitioner"
+    },
+    {
+      value: "Expert",
+      text: "Expert"
+    }
+  ]
+}) }}
+
+<h1 class="govuk-heading-xl">
+  Your Policy Skills – Democracy
+<p></p>
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+id: "Working with Ministers  ",
+name: "Working with Ministers  ",
+label: {
+  text: "Working with Ministers  "
+},
+items: [
+{
+  value: "Empty",
+  text: " "
+},
+  {
+    value: "Developing",
+    text: "Developing"
+  },
+  {
+    value: "Practitioner",
+    text: "Practitioner"
+  },
+  {
+    value: "Expert",
+    text: "Expert"
+  }
+]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+id: "Parliament and Law",
+name: "Parliament and Law",
+label: {
+  text: "Parliament and Law"
+},
+items: [
+{
+  value: "Empty",
+  text: " "
+},
+  {
+    value: "Developing",
+    text: "Developing"
+  },
+  {
+    value: "Practitioner",
+    text: "Practitioner"
+  },
+  {
+    value: "Expert",
+    text: "Expert"
+  }
+]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+id: "Finance",
+name: "Finance",
+label: {
+  text: "Finance"
+},
+items: [
+{
+  value: "Empty",
+  text: " "
+},
+  {
+    value: "Developing",
+    text: "Developing"
+  },
+  {
+    value: "Practitioner",
+    text: "Practitioner"
+  },
+  {
+    value: "Expert",
+    text: "Expert"
+  }
+]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+id: "Multilevel Government",
+name: "Multilevel Government",
+label: {
+  text: "Multilevel Government"
+},
+items: [
+{
+  value: "Empty",
+  text: " "
+},
+  {
+    value: "Developing",
+    text: "Developing"
+  },
+  {
+    value: "Practitioner",
+    text: "Practitioner"
+  },
+  {
+    value: "Expert",
+    text: "Expert"
+  }
+]
+}) }}
+
+<h1 class="govuk-heading-xl">
+  Your Policy Skills – Delivery
+<p></p>
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+id: "Policy Delivery and Systems ",
+name: "Policy Delivery and Systems ",
+label: {
+  text: "Policy Delivery and Systems"
+},
+items: [
+{
+  value: "Empty",
+  text: " "
+},
+  {
+    value: "Developing",
+    text: "Developing"
+  },
+  {
+    value: "Practitioner",
+    text: "Practitioner"
+  },
+  {
+    value: "Expert",
+    text: "Expert"
+  }
+]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+id: "Governance and Project Delivery  ",
+name: "Governance and Project Delivery  ",
+label: {
+  text: "Governance and Project Delivery  "
+},
+items: [
+{
+  value: "Empty",
+  text: " "
+},
+  {
+    value: "Developing",
+    text: "Developing"
+  },
+  {
+    value: "Practitioner",
+    text: "Practitioner"
+  },
+  {
+    value: "Expert",
+    text: "Expert"
+  }
+]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+id: "Commercial  ",
+name: "Commercial  ",
+label: {
+  text: "Commercial  "
+},
+items: [
+{
+  value: "Empty",
+  text: " "
+},
+  {
+    value: "Developing",
+    text: "Developing"
+  },
+  {
+    value: "Practitioner",
+    text: "Practitioner"
+  },
+  {
+    value: "Expert",
+    text: "Expert"
+  }
+]
+}) }}
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+id: "Evaluation",
+name: "Evaluation",
+label: {
+  text: "Evaluation"
+},
+items: [
+{
+  value: "Empty",
+  text: " "
+},
+  {
+    value: "Developing",
+    text: "Developing"
+  },
+  {
+    value: "Practitioner",
+    text: "Practitioner"
+  },
+  {
+    value: "Expert",
+    text: "Expert"
+  }
+]
+}) }}
         <button class="govuk-button" data-module="govuk-button">Continue</button> {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
