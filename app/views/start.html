@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <p>The Civil Service Reserve (CSR) helps to provide the expertise and capacity needed to respond quickly and effectively to crises that threaten our nation.     </p>
+
+      <p>The CSR supports the Civil Contingencies Secretariat (CCS), National Cyber Force (NCF), and Resilience and Recovery Directorate (RED) to manage unexpected crises, as well as known peaks in demands. It is made up of current and former civil servants who join on a voluntary basis and can be surged into particular roles in times of need. </p>
+
+      <h1 class="govuk-heading-xl">
+        How to join the CSR
+<p></p>
+<p>If you are a current or former civil servant, you can <a href="/Resreg">register to join the CSR</a>.</p>
+
+<h1 class="govuk-heading-xl">
+  How to use the CSR
+
+  <p></p>
+  <p>Currently, the CSR is only open to use for the CCS, NCF or RED. If you are a member of one of those organisations, you can <a href="#">sign into the CSR platform</a>.</p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Sevice Navigation
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="/Resreg">
+                Reservist Registration
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Reservist Update Details
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Host Organiztion Registration
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Host Organiztion Login
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}

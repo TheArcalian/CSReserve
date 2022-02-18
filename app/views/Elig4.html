@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/elig4-answer" method="post">
+
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  idPrefix: "current-last-role",
+  name: "current-last-role",
+  fieldset: {
+    legend: {
+      text: "Have you ever worked in the following professions?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Select all that apply."
+  },
+  items: [
+    {
+      value: "Analysis",
+      text: "Analysis"
+    },
+    {
+      value: "Digital, Data and Technology",
+      text: "Digital, Data and Technology"
+    },
+    {
+      value: "Operational Delivery",
+      text: "Operational Delivery"
+    },
+    {
+      value: "Policy",
+      text: "Policy"
+    },
+    {
+      value: "None of the above",
+      text: "None of the above"
+    }
+  ]
+}) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button> {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Cancel",
+  href: "/start",
+  isStartButton: false
+}) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

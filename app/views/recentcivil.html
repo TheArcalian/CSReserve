@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your Experience Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="#" method="post">
+
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        {{ govukSelect({
+          id: "civildepartment",
+          name: "civildepartment",
+          label: {
+            text: "What was/is the Civil Service department?"
+          },
+          items: [
+            {
+              value: "Option 1",
+              text: "Option 1"
+            },
+            {
+              value: "Option 2",
+              text: "Option 2"
+            },
+            {
+              value: "Option 3",
+              text: "Option 3"
+            },
+            {
+              value: "Option 4",
+              text: "Option 5"
+            }
+          ]
+        }) }}
+
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+        {{ govukDateInput({
+          id: "date-start",
+          namePrefix: "date-start",
+          fieldset: {
+            legend: {
+              text: "What was your start date? "
+            }
+          },
+          hint: {
+            text: ""
+          }
+        }) }}
+
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+        {{ govukDateInput({
+          id: "date-end",
+          namePrefix: "date-end",
+          fieldset: {
+            legend: {
+              text: "What was your end date? "
+            }
+          },
+          hint: {
+            text: "Leave blank if this is your current role"
+          }
+        }) }}
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "What was/is your role? "
+  },
+  id: "your-role",
+  name: "your-role"
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+label: {
+text: "Provide the name of someone we can contact for a reference. "
+},
+id: "your-ref",
+name: "your-ref"
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+label: {
+text: "What is their role? "
+},
+id: "ref-role",
+name: "ref-role"
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "What is their email address?"
+  },
+  hint: {
+    text: ""
+  },
+  id: "ref-email",
+  name: "ref-email",
+  type: "ref-email",
+  autocomplete: "email",
+  spellcheck: false
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "What is their telephone number? "
+  },
+  id: "ref-telephone-number",
+  name: "ref-telephone-number",
+  type: "tel",
+  autocomplete: "tel",
+  classes: "govuk-input--width-20"
+}) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button> {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Cancel",
+  href: "/start",
+  isStartButton: false
+}) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/elig3-answer" method="post">
+
+        <p>{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "current-last-grade",
+  name: "current-last-grade",
+  fieldset: {
+    legend: {
+      text: "What is your current or most recent Civil Service grade?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "HEO",
+      text: "HEO"
+    },
+    {
+      value: "SEO",
+      text: "SEO"
+    },
+    {
+      value: "Grade 7",
+      text: "Grade 7"
+    },
+    {
+      value: "Grade 6",
+      text: "Grade 6"
+    },
+    {
+      value: "SCS1",
+      text: "SCS1"
+    },
+    {
+      value: "None of the above",
+      text: "None of the above"
+    }
+  ]
+}) }}</p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button> {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Cancel",
+  href: "/start",
+  isStartButton: false
+}) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
