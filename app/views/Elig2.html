@@ -45,15 +45,17 @@
   ]
 }) }}</p>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
+<div class="govuk-button-group">
 {{ govukButton({
-  text: "Cancel",
-  href: "/start",
-  isStartButton: false
+text: "Continue"
 }) }}
 
-      </form>
+<a class="govuk-link" href="/Start">Cancel</a>
+</div>
+
+</form>
 
     </div>
   </div>
