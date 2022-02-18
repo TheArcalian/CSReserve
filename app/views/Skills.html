@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/skills1" method="post">
+
+        <h1 class="govuk-heading-xl">
+          Your Policy Skills - Overview
+  <p></p>
+  <p>We will now ask you to rate yourself against the <a href="https://www.gov.uk/government/publications/policy-profession-standards">Policy Profession Standards framework</a> </p>
+  <p>You must rate yourself against one of three levels:</p>
+  <p></p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Level 1: Developing - Represents the baseline for Civil Servants and is relevant to roles at the HEO, SEO, Grade 7, Grade 6 or SCS1 grades.  </li>
+    <li>Level 2: Practitioner - As policy professionals progress they will have the opportunity to apply skills and knowledge and will become skilled practitioners, often leading policy areas and teams. </li>
+    <li>Level 3: Expert - Policy professionals may progress from skilled practice to developing deep expertise for certain Standards, becoming policy leaders and sometimes undertaking professional qualifications</li>
+  </ul>
+  <p></p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button> {% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Cancel",
+  href: "/start",
+  isStartButton: false
+}) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
