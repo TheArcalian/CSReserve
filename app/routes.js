@@ -38,14 +38,6 @@ router.post('/elig4-answer', function (req, res) {
   }
 })
 
-router.post('/proan-answer', function (req, res) {
-  var proans = req.session.data['pronans1']
-  if (proans == "Continue"){
-      res.redirect('/who')
-  } else {
-        res.redirect('/start')
-  }
-})
 
 router.post('/typeofrole-answer', function (req, res) {
   var typeofroleans = req.session.data['current-former-role']
