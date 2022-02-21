@@ -6,6 +6,9 @@ router.post('/elig1-answer', function (req, res) {
   var elig1answer = req.session.data['current-former']
   if (elig1answer == "other"){
       res.redirect('/Unelig1')
+  }
+  if (elig1answer == "former"){
+      res.redirect('/Elig2a')
   } else {
         res.redirect('/Elig2')
   }
