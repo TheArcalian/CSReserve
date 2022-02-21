@@ -20,328 +20,2005 @@
         <h1 class="govuk-heading-xl">
           Your Digital, Data and Technology Skills - Overview
   <p></p>
-  <p>We will now ask you to rate yourself against the <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/717275/CS_Behaviours_2018.pdf">Success Profiles</a> </p>
   <p>You must rate yourself against one of four levels:</p>
   <p></p>
   <ul class="govuk-list govuk-list--bullet">
+    <li>N/a: Not applicable. not applicable to your role  </li>
     <li>Level 1: Awareness. You know about the skill and have an appreciation of how it is applied in the environment  </li>
     <li>Level 2: Working. You can apply your knowledge and experience of the skill, including tools and techniques. You can adopt those most appropriate for the environment </li>
     <li>Level 3: Practitioner. You know how to share your knowledge and experience of this skill with others, including tools and techniques. You can define those most appropriate for the environment</li>
-    <li>Level 3: Expert. You have both knowledge and experience in the application of this skill. You are a recognised specialist and adviser in this skill including user needs, generation of ideas, methods and tools. You can lead or guide others in best-practice use</li>
+    <li>Level 4: Expert. You have both knowledge and experience in the application of this skill. You are a recognised specialist and adviser in this skill including user needs, generation of ideas, methods and tools. You can lead or guide others in best-practice use</li>
   </ul>
   <p></p>
-  <h1 class="govuk-heading-xl">
-    Your Digital, Data and Technology Skills - Planning
-<p></p>
-{% from "govuk/components/select/macro.njk" import govukSelect %}
 
-{{ govukSelect({
-  id: "Seeing the Big Picture",
-  name: "Seeing the Big Picture",
-  label: {
-    text: "Seeing the Big Picture"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
 
-    {
-      value: "Awareness",
-      text: "Awareness"
-    },
-    {
-      value: "Working",
-      text: "Working"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
+  <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Data Job Family
+      </span>
+    </summary>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Analytical and problem-solving skills
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Communication Skills
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Data Management
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Data modelling, data cleansing, and data enrichment skills
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Data visualisation
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Logical and creative thinking skills
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Project Management
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Proven IT and mathematical skills
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Quality assurance, validation and data linkage abilities
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Statistical methods and data analysis skills
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Data analysis and synthesis
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Data development process
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Data innovation
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Data integration design
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Data modelling
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Metadata management
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Problem resolution
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Programming and build
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Technical understanding
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Testing
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Communicating analysis and insight
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Performance measurement
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Technical understanding
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Understanding analysis across the product life cycle
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Understanding constraints
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Undertaking analysis and providing insight
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        User-centred analysis
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Verification and validation of data and analysis
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Verification and validation of data and analysis
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+  </details>
 
-{% from "govuk/components/select/macro.njk" import govukSelect %}
+  <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      IT Operations Job Family
+    </span>
+  </summary>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Incident management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Ownership and initiative
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Problem management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      User focus
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Asset and configuration management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Business analysis
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Continual service improvement
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Relationship management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Service focus
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Service Management Framework knowledge
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Service Reporting
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Strategic thinking
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Technical understanding
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Availability and capacity management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Change management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Community collaboration
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Continuity management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Technical understanding
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Continual service improvement
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Technical specialism
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Testing
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Coding and scripting
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+</details>
 
-{{ govukSelect({
-  id: "Changing and Improving",
-  name: "Changing and Improving",
-  label: {
-    text: "Changing and Improving"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Product and delivery job family
+    </span>
+  </summary>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Agile working
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Business analysis
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Business improvement process
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Business modelling
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Business process testing
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Digtial Perspective
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Enterprise and business architecture
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Innovation
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Methods and tools
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Requirements definition and management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Stakeholder relationship management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Testing
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      User focus
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Agile and Lean practices
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Commercial Management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Communication Skills
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Financial management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Life-cycle perspective
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Maintaining delivery momentum
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Making the process work
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Planning
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Team dynamics and collaboration
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      DDaT perspective
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Experience of working within constraints
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Financial ownership
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Operational management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Problem ownership
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Product ownership
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Strategic ownership
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      User focus
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Functional testing
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Non-functional testing
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Technical breadth
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Test analysis
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+</details>
 
-    {
-      value: "Awareness",
-      text: "Awareness"
-    },
-    {
-      value: "Working",
-      text: "Working"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Technical Job Family
+    </span>
+  </summary>
 
-<h1 class="govuk-heading-xl">
-  Your Digital, Data and Technology Skills - Leadership
-<p></p>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Communication Skills
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
 
-{% from "govuk/components/select/macro.njk" import govukSelect %}
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Data analysis and synthesis
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="Blank"> </option>
+        <option value="Not applicable">Not applicable</option>
+        <option value="Awareness">Awareness</option>
+        <option value="Working">Working</option>
+        <option value="Practitioner">Practitioner</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
 
-{{ govukSelect({
-  id: "Making Effective Decisions",
-  name: "Making Effective Decisions",
-  label: {
-    text: "Making Effective Decisions"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Data communication
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="Blank"> </option>
+          <option value="Not applicable">Not applicable</option>
+          <option value="Awareness">Awareness</option>
+          <option value="Working">Working</option>
+          <option value="Practitioner">Practitioner</option>
+          <option value="Expert">Expert</option>
+        </select>
+      </div>
 
-    {
-      value: "Awareness",
-      text: "Awareness"
-    },
-    {
-      value: "Working",
-      text: "Working"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Data governance
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="Blank"> </option>
+            <option value="Not applicable">Not applicable</option>
+            <option value="Awareness">Awareness</option>
+            <option value="Working">Working</option>
+            <option value="Practitioner">Practitioner</option>
+            <option value="Expert">Expert</option>
+          </select>
+        </div>
 
-{% from "govuk/components/select/macro.njk" import govukSelect %}
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              Data innovation
+            </label>
+            <select class="govuk-select" id="sort" name="sort">
+              <option value="Blank"> </option>
+              <option value="Not applicable">Not applicable</option>
+              <option value="Awareness">Awareness</option>
+              <option value="Working">Working</option>
+              <option value="Practitioner">Practitioner</option>
+              <option value="Expert">Expert</option>
+            </select>
+          </div>
 
-{{ govukSelect({
-  id: "Leadership",
-  name: "Leadership",
-  label: {
-    text: "Leadership"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                Data modelling
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="Blank"> </option>
+                <option value="Not applicable">Not applicable</option>
+                <option value="Awareness">Awareness</option>
+                <option value="Working">Working</option>
+                <option value="Practitioner">Practitioner</option>
+                <option value="Expert">Expert</option>
+              </select>
+            </div>
 
-    {
-      value: "Awareness",
-      text: "Awareness"
-    },
-    {
-      value: "Working",
-      text: "Working"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                  Data standards
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="Blank"> </option>
+                  <option value="Not applicable">Not applicable</option>
+                  <option value="Awareness">Awareness</option>
+                  <option value="Working">Working</option>
+                  <option value="Practitioner">Practitioner</option>
+                  <option value="Expert">Expert</option>
+                </select>
+              </div>
 
-<h1 class="govuk-heading-xl">
-  Your Digital, Data and Technology Skills - Teamwork
-<p></p>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Metadata management
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
 
-{% from "govuk/components/select/macro.njk" import govukSelect %}
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Problem resolution
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Strategic thinking
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Turning business problems into data design
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Availability and capacity management
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Information security
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Modern standards approach
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Programming and build
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Prototyping
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Service support
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Programming and build
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    User focus
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Systems design
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Systems integration
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Prototyping
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Accessibility
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Communicating information
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Leadership and guidance
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Web performance optimisation
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Community collaboration
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Strategic thinking
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    IT Infrastructure
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Ownership and initiative
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Problem solving
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Systems design
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Systems integration
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Technical understanding
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Troubleshooting and problem resolution
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Governance and assurance
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Analysis
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Design secure systems
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Enabling and informing risk-based decisions
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Reseach and innovation
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Specific security technology and understanding
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sort">
+                    Understanding security implications of transformation
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="Blank"> </option>
+                    <option value="Not applicable">Not applicable</option>
+                    <option value="Awareness">Awareness</option>
+                    <option value="Working">Working</option>
+                    <option value="Practitioner">Practitioner</option>
+                    <option value="Expert">Expert</option>
+                  </select>
+                </div>
+</details>
 
-{{ govukSelect({
-  id: "Communicating and Influencing",
-  name: "Communicating and Influencing",
-  label: {
-    text: "Communicating and Influencing"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      User-centred design job family
+    </span>
+  </summary>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Agile working
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Content concepts and prototyping
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Stakeholder relationship management
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Strategic thinking
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      User focus
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      User-centred content design
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Prototyping
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Communicating information
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Community collaboration
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Digital perspective
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Evidence and context based design
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Experience of using tools and software
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Experience of working within constraints
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Leadership and guidance
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Prototyping in code
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Technical understanding
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Analysis and synthesis
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Inclusive research
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Research skills
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Society and technology
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Strategic insight
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      User centred and agile practices
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="Not applicable">Not applicable</option>
+      <option value="Awareness">Awareness</option>
+      <option value="Working">Working</option>
+      <option value="Practitioner">Practitioner</option>
+      <option value="Expert">Expert</option>
+    </select>
+  </div>
 
-    {
-      value: "Awareness",
-      text: "Awareness"
-    },
-    {
-      value: "Working",
-      text: "Working"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
 
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-  id: "Working Together",
-  name: "Working Together",
-  label: {
-    text: "Working Together"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
-
-    {
-      value: "Awareness",
-      text: "Awareness"
-    },
-    {
-      value: "Working",
-      text: "Working"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
-
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-  id: "Developing Self and Others",
-  name: "Developing Self and Others",
-  label: {
-    text: "Developing Self and Others"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
-
-    {
-      value: "Awareness",
-      text: "Awareness"
-    },
-    {
-      value: "Working",
-      text: "Working"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
-
-<h1 class="govuk-heading-xl">
-  Your Digital, Data and Technology Skills - Delivery
-
-<p></p>
-
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-  id: "Managing a Quality Service",
-  name: "Managing a Quality Service",
-  label: {
-    text: "Managing a Quality Service"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
-
-    {
-      value: "Awareness",
-      text: "Awareness"
-    },
-    {
-      value: "Working",
-      text: "Working"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
-
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-  id: "Delivering at Pace",
-  name: "Delivering at Pace",
-  label: {
-    text: "Delivering at Pace"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
-
-    {
-      value: "Awareness",
-      text: "Awareness"
-    },
-    {
-      value: "Working",
-      text: "Working"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
+</details>
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 

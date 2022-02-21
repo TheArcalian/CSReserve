@@ -18,7 +18,7 @@
       <form class="form" action="/typeofrole" method="post">
 
         <h1 class="govuk-heading-xl">
-          What are your contact details
+          About you
         <p></p>
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -62,9 +62,63 @@
   classes: "govuk-input--width-20"
 }) }}
 
+{% from "govuk/components/input/macro.njk" import govukInput %}
 
+{{ govukInput({
+  label: {
+    text: "National Insurance number"
+  },
+  hint: {
+    text: "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+  },
+  classes: "govuk-input--width-10",
+  id: "national-insurance-number",
+  name: "national-insurance-number",
+  spellcheck: false
+}) }}
 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Do you have the right to remain and take up work in the UK before employment commences?
+      </h1>
+    </legend>
+    <div id="contact-hint" class="govuk-hint">
+      Select one option.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="nation" type="radio" value="Yes" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+        <div class="govuk-form-group">
+<label class="govuk-label" for="sort">
+Sort by
+</label>
+<select class="govuk-select" id="sort" name="sort">
+<option value="blank"> </option>
+<option value="UK National" >UK National</option>
+<option value="National of Commonwealth countries who have the right to work in the UK">National of Commonwealth countries who have the right to work in the UK</option>
+<option value="Nationals of the Republic of Ireland">Nationals of the Republic of Ireland</option>
+<option value="etc">etc</option>
+</select>
+</div>
 
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="nation" type="radio" value="No" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          No
+        </label>
+      </div>
+      </div>
+
+  </fieldset>
+</div>
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 <div class="govuk-button-group">
@@ -72,8 +126,13 @@
 text: "Continue"
 }) }}
 
-<a class="govuk-link" href="/Start">Cancel</a>
+<a class="govuk-link" href="/start">Cancel</a>
 </div>
+
+</form>
+
+    </div>
+  </div>
 
 </form>
 

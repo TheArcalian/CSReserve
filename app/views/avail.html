@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/check-answers" method="post">
+
+      <h1 class="govuk-heading-xl">
+        Let us know about your availability for the next 3 months
+
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+        {{ govukDateInput({
+          id: "availfrom1",
+          namePrefix: "availfrom1",
+          fieldset: {
+            legend: {
+              text: "Availible from"
+            }
+          },
+          hint: {
+            text: "For example, 27 3 2007"
+          }
+        }) }}
+
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+        {{ govukDateInput({
+          id: "availto1",
+          namePrefix: "availto1",
+          fieldset: {
+            legend: {
+              text: "Availible until"
+            }
+          },
+          hint: {
+            text: "For example, 27 3 2007"
+          }
+        }) }}
+
+
+
+<div class="govuk-button-group">
+{{ govukButton({
+text: "Continue"
+}) }}
+
+<a class="govuk-link" href="/start">Cancel</a>
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

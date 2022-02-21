@@ -1,0 +1,243 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+
+      <h2 class="govuk-heading-m">Personal details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Full Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['full-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Who">
+              Change
+              <span class="govuk-visually-hidden"> Full Name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phone
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['telephone-number'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/CurrentContact">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['email'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/CurrentContact">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National Insurance Number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['national-insurance-number'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/CurrentContact">
+              Change
+              <span class="govuk-visually-hidden"> National Insurance Number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Right to work
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['nation'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/CurrentContact">
+              Change
+              <span class="govuk-visually-hidden"> Right to work</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <h2 class="govuk-heading-m">Employment Details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Current or Former civil servant
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['current-former'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Elig1">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Current or last grade
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['current-last-grade'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Elig3">
+              Change
+              <span class="govuk-visually-hidden"> Current or last grade</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Current Civil Service role or current oragnisation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['department-current-role'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/typeofrole">
+              Change
+              <span class="govuk-visually-hidden"> Current Civil Service role or current oragnisation</span>
+            </a>
+          </dd>
+        </div>
+          <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['date-start'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/typeofrole">
+              Change
+              <span class="govuk-visually-hidden"> Your Start Date</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Your end date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['date-end'] }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          <a href="/typeofrole">
+            Change
+            <span class="govuk-visually-hidden"> Your end date</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        What was/is your role
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p>{{data['your-role'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        <a href="/typeofrole">
+          Change
+          <span class="govuk-visually-hidden"> What was/is your role</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      The name of your reference
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p>{{data['your-ref'] }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      <a href="/typeofrole">
+        Change
+        <span class="govuk-visually-hidden"> The name of your reference</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Your references email address
+  </dt>
+  <dd class="govuk-summary-list__value">
+    <p>{{data['ref-email'] }}</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+    <a href="/typeofrole">
+      Change
+      <span class="govuk-visually-hidden"> Your references email address</span>
+    </a>
+  </dd>
+</div>
+<div class="govuk-summary-list__row">
+<dt class="govuk-summary-list__key">
+  Your references telephone number
+</dt>
+<dd class="govuk-summary-list__value">
+  <p>{{data['ref-telephone-number'] }}</p>
+  </dd>
+  <dd class="govuk-summary-list__actions">
+  <a href="/typeofrole">
+    Change
+    <span class="govuk-visually-hidden"> Your references telephone number</span>
+  </a>
+</dd>
+</div>
+
+
+
+      </dl>
+
+      <h2 class="govuk-heading-m">Now send your application</h2>
+
+      <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="/conf" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
