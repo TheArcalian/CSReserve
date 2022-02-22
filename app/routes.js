@@ -7,7 +7,7 @@ router.post('/elig1-answer', function (req, res) {
   if (elig1answer == "other"){
       res.redirect('/Unelig1')
   }
-  if (elig1answer == "former"){
+  if (elig1answer == "Former"){
       res.redirect('/Elig2a')
   } else {
         res.redirect('/Elig2')
