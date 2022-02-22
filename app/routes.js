@@ -51,8 +51,8 @@ router.post('/elig5-answer', function (req, res) {
 })
 
 router.post('/who-answer', function (req, res) {
-  var typeofroleans = req.session.data['Manager-ask']
-  if (typeofroleans == "Yes"){
+  var typeofroleans = req.session.data['current-former']
+  if (typeofroleans == "Current"){
       res.redirect('/recentcivil')
   } else {
         res.redirect('/notrecentcivil')
