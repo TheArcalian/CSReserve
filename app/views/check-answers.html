@@ -39,7 +39,7 @@
             <p>{{data['telephone-number'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
-            <a href="/CurrentContact">
+            <a href="/Who">
               Change
               <span class="govuk-visually-hidden"> contact details</span>
             </a>
@@ -53,7 +53,7 @@
             <p>{{data['email'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
-            <a href="/CurrentContact">
+            <a href="/Who">
               Change
               <span class="govuk-visually-hidden"> contact details</span>
             </a>
@@ -67,7 +67,7 @@
             <p>{{data['national-insurance-number'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
-            <a href="/CurrentContact">
+            <a href="/Who">
               Change
               <span class="govuk-visually-hidden"> National Insurance Number</span>
             </a>
@@ -81,7 +81,7 @@
             <p>{{data['nation'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
-            <a href="/CurrentContact">
+            <a href="/Who">
               Change
               <span class="govuk-visually-hidden"> Right to work</span>
             </a>
@@ -220,6 +220,119 @@
 </dd>
 </div>
 
+      </dl>
+
+      <h2 class="govuk-heading-m">Professions, skills and qualifications</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Professions Worked in
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['current-last-role'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Elig4">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Skills - Policy
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Completed
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Skills">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Skills - Digital, Data and Technology
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Completed
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Skills1">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your Highest Qualification
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['qualification-name'] }}
+            <br>{{data['awarding-body'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Qualif">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+
+
+              </dl>
+
+              <h2 class="govuk-heading-m">Security clearance, Preferred location and Availability</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    My security clearance
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{data['secclear'] }}
+                    <br>{{data['secclear1'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="/secclear">
+                      Change
+                      <span class="govuk-visually-hidden"> Current or Former</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    My preferred locations
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{data['preflocation'] }}
+                    </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="/locpref">
+                      Change
+                      <span class="govuk-visually-hidden"> Current or Former</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Next 3 months availiblity
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{data['availfrom1'] }}
+                    <br>{{data['availto1'] }}
+                    </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="/avail">
+                      Change
+                      <span class="govuk-visually-hidden"> Current or Former</span>
+                    </a>
+                  </dd>
+                </div>
 
 
       </dl>
