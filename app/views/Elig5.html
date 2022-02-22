@@ -15,44 +15,43 @@
 
 
 
-      <form class="form" action="/locpref" method="post">
+      <form class="form" action="/elig5-answer" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Do you currently have security clearance?
+                Do you have the right to remain and take up work in the UK before employment commences?
               </h1>
             </legend>
             <div id="contact-hint" class="govuk-hint">
-              
+
             </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="secclear" name="secclear" type="radio" value="Yes" data-aria-controls="conditional-contact">
-                <label class="govuk-label govuk-radios__label" for="secclear">
+                <input class="govuk-radios__input" id="contact" name="nation" type="radio" value="Yes" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
                 <div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
-    Select the type of security clearance you have
-  </label>
-  <select class="govuk-select" id="secclear1" name="secclear1">
-    <option value="blank"> </option>
-    <option value="BPSS" >BPSS</option>
-    <option value="CTC">CTC</option>
-    <option value="SC">SC</option>
-    <option value="SC">DV</option>
-    <option value="SC">EDV</option>
-  </select>
-</div>
+        <label class="govuk-label" for="sort">
+
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+        <option value="blank"> </option>
+        <option value="UK National" >UK National</option>
+        <option value="National of Commonwealth countries who have the right to work in the UK">National of Commonwealth countries who have the right to work in the UK</option>
+        <option value="Nationals of the Republic of Ireland">Nationals of the Republic of Ireland</option>
+        <option value="etc">etc</option>
+        </select>
+        </div>
 
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="secclear" name="secclear" type="radio" value="No" data-aria-controls="conditional-contact-2">
-                <label class="govuk-label govuk-radios__label" for="secclear">
+                <input class="govuk-radios__input" id="contact-2" name="nation" type="radio" value="No" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
                   No
                 </label>
               </div>
@@ -60,9 +59,6 @@
 
           </fieldset>
         </div>
-
-
-{% from "govuk/components/button/macro.njk" import govukButton %}
 
 <div class="govuk-button-group">
 {{ govukButton({

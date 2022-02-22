@@ -29,350 +29,170 @@
     <li>expert - policy professionals may progress from skilled practice to developing deep expertise for certain Standards, becoming policy leaders and sometimes undertaking professional qualifications</li>
   </ul>
   <p></p>
-  <h1 class="govuk-heading-xl">
-    Your policy skills - strategy
+
 <p></p>
-{% from "govuk/components/select/macro.njk" import govukSelect %}
 
-{{ govukSelect({
-  id: "Policy Context and Purpose",
-  name: "Policy Context and Purpose",
-  label: {
-    text: "Policy context and purpose"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
-    {
-      value: "Developing",
-      text: "Developing"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Your policy skills - strategy
+    </span>
+  </summary>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Policy context and purpose
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">Working</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Data, analysis, and scientific advice
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">Working</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Participation and engagement
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">Working</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Working internationally
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">Working</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+</details>
 
-{% from "govuk/components/select/macro.njk" import govukSelect %}
+    <p></p>
 
-{{ govukSelect({
-  id: "Data, Analysis, and Scientific Advice",
-  name: "Data, Analysis, and Scientific Advice",
-  label: {
-    text: "Data, analysis, and scientific advice"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
-    {
-      value: "Developing",
-      text: "Developing"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
+  <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Your policy skills – democracy
+    </span>
+  </summary>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Working with ministers
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">Working</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Parliament and law
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">Working</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Finance
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">Working</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Multilevel government
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">Working</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+</details>
 
-{% from "govuk/components/select/macro.njk" import govukSelect %}
+  <p></p>
 
-{{ govukSelect({
-  id: "Participation and Engagement",
-  name: "Participation and Engagement",
-  label: {
-    text: "Participation and engagement"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
-    {
-      value: "Developing",
-      text: "Developing"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
+<details class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+  <span class="govuk-details__summary-text">
+    Your policy skills – delivery
+  </span>
+</summary>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Policy delivery and systems
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="Blank"> </option>
+    <option value="developing">Working</option>
+    <option value="practitioner">Practitioner</option>
+    <option value="expert">Expert</option>
+  </select>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Governance and project delivery
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="Blank"> </option>
+    <option value="developing">Working</option>
+    <option value="practitioner">Practitioner</option>
+    <option value="expert">Expert</option>
+  </select>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Commercial
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="Blank"> </option>
+    <option value="developing">Working</option>
+    <option value="practitioner">Practitioner</option>
+    <option value="expert">Expert</option>
+  </select>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Evaluation
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="Blank"> </option>
+    <option value="developing">Working</option>
+    <option value="practitioner">Practitioner</option>
+    <option value="expert">Expert</option>
+  </select>
+</div>
+</details>
 
-{% from "govuk/components/select/macro.njk" import govukSelect %}
 
-{{ govukSelect({
-  id: "Working Internationally",
-  name: "Working Internationally",
-  label: {
-    text: "Working internationally"
-  },
-  items: [
-  {
-    value: "Empty",
-    text: " "
-  },
-    {
-      value: "Developing",
-      text: "Developing"
-    },
-    {
-      value: "Practitioner",
-      text: "Practitioner"
-    },
-    {
-      value: "Expert",
-      text: "Expert"
-    }
-  ]
-}) }}
-
-<h1 class="govuk-heading-xl">
-  Your policy skills – democracy
-<p></p>
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-id: "Working with Ministers  ",
-name: "Working with Ministers  ",
-label: {
-  text: "Working with ministers  "
-},
-items: [
-{
-  value: "Empty",
-  text: " "
-},
-  {
-    value: "Developing",
-    text: "Developing"
-  },
-  {
-    value: "Practitioner",
-    text: "Practitioner"
-  },
-  {
-    value: "Expert",
-    text: "Expert"
-  }
-]
-}) }}
-
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-id: "Parliament and Law",
-name: "Parliament and Law",
-label: {
-  text: "Parliament and law"
-},
-items: [
-{
-  value: "Empty",
-  text: " "
-},
-  {
-    value: "Developing",
-    text: "Developing"
-  },
-  {
-    value: "Practitioner",
-    text: "Practitioner"
-  },
-  {
-    value: "Expert",
-    text: "Expert"
-  }
-]
-}) }}
-
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-id: "Finance",
-name: "Finance",
-label: {
-  text: "Finance"
-},
-items: [
-{
-  value: "Empty",
-  text: " "
-},
-  {
-    value: "Developing",
-    text: "Developing"
-  },
-  {
-    value: "Practitioner",
-    text: "Practitioner"
-  },
-  {
-    value: "Expert",
-    text: "Expert"
-  }
-]
-}) }}
-
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-id: "Multilevel Government",
-name: "Multilevel Government",
-label: {
-  text: "Multilevel government"
-},
-items: [
-{
-  value: "Empty",
-  text: " "
-},
-  {
-    value: "Developing",
-    text: "Developing"
-  },
-  {
-    value: "Practitioner",
-    text: "Practitioner"
-  },
-  {
-    value: "Expert",
-    text: "Expert"
-  }
-]
-}) }}
-
-<h1 class="govuk-heading-xl">
-  Your policy skills – delivery
-<p></p>
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-id: "Policy Delivery and Systems ",
-name: "Policy Delivery and Systems ",
-label: {
-  text: "Policy delivery and systems"
-},
-items: [
-{
-  value: "Empty",
-  text: " "
-},
-  {
-    value: "Developing",
-    text: "Developing"
-  },
-  {
-    value: "Practitioner",
-    text: "Practitioner"
-  },
-  {
-    value: "Expert",
-    text: "Expert"
-  }
-]
-}) }}
-
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-id: "Governance and Project Delivery  ",
-name: "Governance and Project Delivery  ",
-label: {
-  text: "Governance and project delivery  "
-},
-items: [
-{
-  value: "Empty",
-  text: " "
-},
-  {
-    value: "Developing",
-    text: "Developing"
-  },
-  {
-    value: "Practitioner",
-    text: "Practitioner"
-  },
-  {
-    value: "Expert",
-    text: "Expert"
-  }
-]
-}) }}
-
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-id: "Commercial  ",
-name: "Commercial  ",
-label: {
-  text: "Commercial  "
-},
-items: [
-{
-  value: "Empty",
-  text: " "
-},
-  {
-    value: "Developing",
-    text: "Developing"
-  },
-  {
-    value: "Practitioner",
-    text: "Practitioner"
-  },
-  {
-    value: "Expert",
-    text: "Expert"
-  }
-]
-}) }}
-
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-id: "Evaluation",
-name: "Evaluation",
-label: {
-  text: "Evaluation"
-},
-items: [
-{
-  value: "Empty",
-  text: " "
-},
-  {
-    value: "Developing",
-    text: "Developing"
-  },
-  {
-    value: "Practitioner",
-    text: "Practitioner"
-  },
-  {
-    value: "Expert",
-    text: "Expert"
-  }
-]
-}) }}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 <div class="govuk-button-group">

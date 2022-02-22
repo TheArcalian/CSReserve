@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Feedback page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/elig5-answer" method="post">
+
+        <h1 class="govuk-heading-xl">
+          Give Feedback on Join the Civil Service Reserve
+        </h1>
+        <p></p>
+  <h2 class="govuk-heading-m">Satisfaction Survey</h2>
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  {{ govukRadios({
+    idPrefix: "how-did-we-do",
+    name: "how-did-we-do",
+    fieldset: {
+      legend: {
+        text: "Overall, how did you feel about the service you received today?"
+      }
+    },
+    items: [
+      {
+        value: "Very satisfied",
+        text: "Very satisfied"
+      },
+      {
+        value: "Satisfied",
+        text: "Satisfied"
+      },
+      {
+        value: "Neither satisfied or dissatisfied",
+        text: "Neither satisfied or dissatisfied"
+      },
+      {
+        value: "Dissatisfied",
+        text: "Dissatisfied"
+      },
+      {
+        value: "Very dissatisfied",
+        text: "Very dissatisfied"
+      }
+    ]
+  }) }}
+
+  {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+  {{ govukTextarea({
+    name: "imporve",
+    id: "improve",
+    label: {
+      text: "How could we improve this service?",
+      classes: "govuk-label--l",
+      isPageHeading: true
+    },
+    hint: {
+      text: "Do not include personal or financial information, like your National Insurance number or credit card details."
+    }
+  }) }}
+
+<div class="govuk-button-group">
+{{ govukButton({
+text: "Send Feedback"
+}) }}
+
+<a class="govuk-link" href="/start">Cancel</a>
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}
