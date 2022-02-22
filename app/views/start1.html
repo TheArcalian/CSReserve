@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Login Page
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        The Civil Service Reserve
+      </h1>
+
+      <p>To use this service</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>you must have already registered at <a href="/start">Registration Portal</a></li>
+        <li>have been accepted and have been provided login details</li>
+      </ul>
+
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+
+      {{ govukInput({
+        label: {
+          text: "Enter Login Details",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        classes: "govuk-input--width-20",
+        hint: {
+          text: "User ID"
+        },
+        id: "User-ID",
+        name: "User-ID",
+        inputmode: "numeric",
+        pattern: "[0-9]*",
+        spellcheck: false
+      }) }}
+
+      {%- from "govuk/components/input/macro.njk" import govukInput -%}
+
+      {{ govukInput({
+        id: "password",
+        attributes: {"data-module": "moj-password-reveal"},
+        classes: "govuk-input--width-20",
+        name: "password",
+        type: "password",
+        label: {
+          text: "Password",
+          classes: 'govuk-label--1'
+        },
+        value: ""
+      }) }}
+
+      <a href="/typeofservice" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Login
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+
+    </div>
+
+
+
+    </div>
+  </div>
+{% endblock %}
