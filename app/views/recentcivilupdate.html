@@ -1,0 +1,246 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your Experience Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "The Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/update" method="post">
+
+        <h1 class="govuk-heading-xl">
+          About your current or most recent employment 
+        <p></p>
+
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        {{ govukSelect({
+          id: "department-current-role",
+          name: "department-current-role",
+          label: {
+            text: "What was/is the Civil Service department?"
+          },
+          items: [
+          {
+            value: "blank",
+            text: "  "
+          },
+            {
+              value: "Prime Ministers Office",
+              text: "Prime Ministers Office"
+            },
+            {
+              value: "Attorney Generals Office",
+              text: "Attorney Generals Office"
+            },
+            {
+              value: "Cabinet Office",
+              text: "Cabinet Office"
+            },
+            {
+              value: "Department for Business, Energy and Industrial Strategy",
+              text: "Department for Business, Energy and Industrial Strategy"
+            },
+            {
+              value: "Department for Digital, Culture, Media and Sport",
+              text: "Department for Digital, Culture, Media and Sport"
+            },
+            {
+              value: "Department for Education",
+              text: "Department for Education"
+            },
+            {
+              value: "Department for Environment Food and Rural Affairs",
+              text: "Department for Environment Food and Rural Affairs"
+            },
+            {
+              value: "Department for International Trade",
+              text: "Department for International Trade"
+            },
+            {
+              value: "Department for Levelling Up, housing and Communities",
+              text: "Department for Levelling Up, housing and Communities"
+            },
+            {
+              value: "Department for Transport",
+              text: "Department for Transport"
+            },
+            {
+              value: "Department for Health and Social Care",
+              text: "Department for Health and Social Care"
+            },
+            {
+              value: "Foreign, Commonwealth and Development Office",
+              text: "Foreign, Commonwealth and Development Office"
+            },
+            {
+              value: "HM Treasury",
+              text: "HM Treasury"
+            },
+            {
+              value: "Home Office",
+              text: "Home Office"
+            },
+            {
+              value: "Ministry of Defence",
+              text: "Ministry of Defence"
+            },
+            {
+              value: "Ministry of Justice",
+              text: "Ministry of Justice"
+            },
+            {
+              value: "Northern Ireland Office",
+              text: "Northern Ireland Office"
+            },
+            {
+              value: "Office of the Advocate Gerneral for Scotland",
+              text: "Office of the Advocate Gerneral for Scotland"
+            },
+            {
+              value: "Office of the Leader of the House of Commons",
+              text: "Office of the Leader of the House of Commons"
+            },
+            {
+              value: "Office of the Leader of the House of Lords",
+              text: "Office of the Leader of the House of Lords"
+            },
+            {
+              value: "Office of the Secretary of State for Scotland",
+              text: "Office of the Secretary of State for Scotland"
+            },
+            {
+              value: "Office of the Secretary of State for Wales",
+              text: "Office of the Secretary of State for Wales"
+            },
+            {
+              value: "UK Export Finance",
+              text: "UK Export Finance"
+            }
+          ]
+        }) }}
+
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+        {{ govukDateInput({
+          id: "date-start",
+          namePrefix: "date-start",
+          fieldset: {
+            legend: {
+              text: "What was your start date? "
+            }
+          },
+          hint: {
+            text: ""
+          }
+        }) }}
+
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+        {{ govukDateInput({
+          id: "date-end",
+          namePrefix: "date-end",
+          fieldset: {
+            legend: {
+              text: "What was your end date? "
+            }
+          },
+          hint: {
+            text: "Leave blank if this is your current role"
+          }
+        }) }}
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "What was/is your role? "
+  },
+  id: "your-role",
+  name: "your-role"
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+label: {
+text: "Provide the name of someone we can contact for a reference. "
+},
+id: "your-ref",
+name: "your-ref"
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+label: {
+text: "What is their role? "
+},
+id: "ref-role",
+name: "ref-role"
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "What is their email address?"
+  },
+  hint: {
+    text: ""
+  },
+  id: "ref-email",
+  name: "ref-email",
+  type: "ref-email",
+  autocomplete: "email",
+  spellcheck: false
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "What is their telephone number? "
+  },
+  id: "ref-telephone-number",
+  name: "ref-telephone-number",
+  type: "tel",
+  autocomplete: "tel",
+  classes: "govuk-input--width-20"
+}) }}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-button-group">
+{{ govukButton({
+text: "Continue"
+}) }}
+
+<a class="govuk-link" href="#">Cancel</a>
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

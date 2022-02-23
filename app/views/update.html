@@ -1,0 +1,369 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "The Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Review and update your information</h1>
+
+      <h2 class="govuk-heading-m">Personal details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Full name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['full-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Whoupdate">
+              Change
+              <span class="govuk-visually-hidden"> Full Name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phone
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['telephone-number'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/Whoupdate">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['email'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/Whoupdate">
+              Change
+              <span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['national-insurance-number'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/Whoupdate">
+              Change
+              <span class="govuk-visually-hidden"> National Insurance Number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Right to work
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['nation'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="#">
+
+              <span class="govuk-visually-hidden"> Right to work</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <h2 class="govuk-heading-m">Employment details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Current or former civil servant
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['current-former'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Current or last grade
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['current-last-grade'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+
+              <span class="govuk-visually-hidden"> Current or last grade</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Current Civil Service department or current organisation
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['department-current-role'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/typeofroleupdate">
+              Change
+              <span class="govuk-visually-hidden"> Current Civil Service role or current oragnisation</span>
+            </a>
+          </dd>
+        </div>
+          <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['date-start'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/typeofroleupdate">
+              Change
+              <span class="govuk-visually-hidden"> Your Start Date</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Your end date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['date-end'] }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          <a href="/typeofroleupdate">
+            Change
+            <span class="govuk-visually-hidden"> Your end date</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Current or most recent role
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p>{{data['your-role'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        <a href="/typeofroleupdate">
+          Change
+          <span class="govuk-visually-hidden"> What was/is your role</span>
+        </a>
+      </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Referee name
+      </dt>
+      <dd class="govuk-summary-list__value">
+      <p>{{data['your-ref'] }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      <a href="/typeofroleupdate">
+        Change
+        <span class="govuk-visually-hidden"> The name of your reference</span>
+      </a>
+      </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Referee’s email address
+      </dt>
+      <dd class="govuk-summary-list__value">
+      <p>{{data['ref-email'] }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      <a href="/typeofroleupdate">
+      Change
+      <span class="govuk-visually-hidden"> Your references email address</span>
+      </a>
+      </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Referee’s telephone number
+      </dt>
+      <dd class="govuk-summary-list__value">
+      <p>{{data['ref-telephone-number'] }}</p>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+      <a href="/typeofroleupdate">
+      Change
+      <span class="govuk-visually-hidden"> Your references telephone number</span>
+      </a>
+      </dd>
+      </div>
+
+      </dl>
+
+      <h2 class="govuk-heading-m">Professions, skills and qualifications</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Professions worked in
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['current-last-role'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Elig4update">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Policy skills
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Completed
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Skillsupdate">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Digital, data and technology skills
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Completed
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Skills1update">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your highest qualification
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['qualification-name'] }}
+            <br>{{data['awarding-body'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/Qualifupdate">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+
+
+              </dl>
+
+              <h2 class="govuk-heading-m">Security clearance, preferred location and availability</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Security clearance
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{data['secclear'] }}
+                    <br>{{data['secclear1'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="/secclearupdate">
+                      Change
+                      <span class="govuk-visually-hidden"> Current or Former</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Preferred location(s)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{data['preflocation'] }}
+                    </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="/locprefupdate">
+                      Change
+                      <span class="govuk-visually-hidden"> Current or Former</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Availability for the next 3 months
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    {{data['availfrom1'] }}
+                    <br>{{data['availto1'] }}
+                    </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="/availupdate">
+                      Change
+                      <span class="govuk-visually-hidden"> Current or Former</span>
+                    </a>
+                  </dd>
+                </div>
+
+
+      </dl>
+
+      <h2 class="govuk-heading-m">Do you wish to change your Reserve Status</h2>
+
+      <p>TO update your reserve status please click the below button or take the logout link to end this session</p>
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+<form class="form" action="#" method="post">
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Update reserve status",
+  classes: "govuk-button--warning"
+  }) }}
+
+  <a class="govuk-link" href="#">Cancel</a>
+</div>
+
+</form>
+  </div>
+{% endblock %}

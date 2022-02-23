@@ -60,4 +60,22 @@ router.post('/who-answer', function (req, res) {
   }
 })
 
+router.post('/typeofroleupdate-answer', function (req, res) {
+  var typeofroleans = req.session.data['current-former-role-update']
+  if (typeofroleans == "Yes"){
+      res.redirect('/recentcivilupdate')
+  } else {
+        res.redirect('/notrecentcivilupdate')
+  }
+})
+
+router.post('/typeofrole-answer', function (req, res) {
+  var typeofroleans = req.session.data['current-former-role']
+  if (typeofroleans == "Yes"){
+      res.redirect('/recentcivil')
+  } else {
+        res.redirect('/notrecentcivil')
+  }
+})
+
 module.exports = router

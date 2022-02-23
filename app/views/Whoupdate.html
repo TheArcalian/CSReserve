@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Personal Details
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "The Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/update" method="post">
+
+        <h1 class="govuk-heading-xl">
+          About you
+        <p></p>
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Full name"
+  },
+  id: "full-name",
+  name: "full-name",
+  autocomplete: "name",
+  spellcheck: false
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "Email address"
+  },
+  hint: {
+    text: ""
+  },
+  id: "email",
+  name: "email",
+  type: "email",
+  autocomplete: "email",
+  spellcheck: false
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "UK telephone number"
+  },
+  id: "telephone-number",
+  name: "telephone-number",
+  type: "tel",
+  autocomplete: "tel",
+  classes: "govuk-input--width-20"
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "National Insurance number"
+  },
+  hint: {
+    text: "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+  },
+  classes: "govuk-input--width-10",
+  id: "national-insurance-number",
+  name: "national-insurance-number",
+  spellcheck: false
+}) }}
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-button-group">
+{{ govukButton({
+text: "Submit"
+}) }}
+
+<a class="govuk-link" href="#">Cancel</a>
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

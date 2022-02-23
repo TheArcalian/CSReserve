@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Login Page
+  Your Experience Question page
 {% endblock %}
 
 {% block header %}
@@ -19,51 +19,49 @@
 {% endblock %}
 
 {% block content %}
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
 
-      <form class="form" action="/elig1-answer" method="post">
+
+      <form class="form" action="/typeofroleupdate-answer" method="post">
 
         <p>{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  idPrefix: "current-former",
-  name: "current-former",
+  idPrefix: "current-former-role-update",
+  name: "current-former-role-update",
   fieldset: {
     legend: {
-      text: "Are you a current or former civil servant?",
+      text: "Is or was your most recent employment a Civil Service role?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
     {
-      value: "Current",
-      text: "Current"
+      value: "Yes",
+      text: "Yes"
     },
     {
-      value: "Former",
-      text: "Former"
-    },
-    {
-      value: "other",
-      text: "Other"
+      value: "No",
+      text: "No"
     }
   ]
 }) }}</p>
 
-       {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
 <div class="govuk-button-group">
-  {{ govukButton({
-    text: "Continue"
-  }) }}
+{{ govukButton({
+text: "Continue"
+}) }}
 
-  <a class="govuk-link" href="/start">Cancel</a>
+<a class="govuk-link" href="/start">Cancel</a>
 </div>
 
-      </form>
+</form>
 
     </div>
   </div>

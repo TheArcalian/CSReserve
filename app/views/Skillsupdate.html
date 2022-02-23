@@ -1,0 +1,219 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "The Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/update" method="post">
+
+        <h1 class="govuk-heading-xl">
+          Your policy skills - overview
+  <p></p>
+  <p>We will now ask you to rate yourself against the <a href="https://www.gov.uk/government/publications/policy-profession-standards">Policy Profession Standards framework</a> </p>
+  <p>You must rate yourself against one of three levels:</p>
+  <p></p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>developing - represents the baseline for civil servants and is relevant to roles at the HEO, SEO, Grade 7, Grade 6 or SCS1 grades  </li>
+    <li>practitioner - as policy professionals progress they will have the opportunity to apply skills and knowledge and will become skilled practitioners, often leading policy areas and teams </li>
+    <li>expert - policy professionals may progress from skilled practice to developing deep expertise for certain Standards, becoming policy leaders and sometimes undertaking professional qualifications</li>
+  </ul>
+  <p></p>
+
+<p></p>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Your policy skills - strategy
+    </span>
+  </summary>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Policy context and purpose
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">developing</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Data, analysis, and scientific advice
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">developing</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Participation and engagement
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">developing</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Working internationally
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">developing</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+</details>
+
+    <p></p>
+
+  <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Your policy skills – democracy
+    </span>
+  </summary>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Working with ministers
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">developing</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Parliament and law
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">developing</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Finance
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">developing</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      Multilevel government
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="Blank"> </option>
+      <option value="developing">developing</option>
+      <option value="practitioner">Practitioner</option>
+      <option value="expert">Expert</option>
+    </select>
+  </div>
+</details>
+
+  <p></p>
+
+<details class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+  <span class="govuk-details__summary-text">
+    Your policy skills – delivery
+  </span>
+</summary>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Policy delivery and systems
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="Blank"> </option>
+    <option value="developing">developing</option>
+    <option value="practitioner">Practitioner</option>
+    <option value="expert">Expert</option>
+  </select>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Governance and project delivery
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="Blank"> </option>
+    <option value="developing">developing</option>
+    <option value="practitioner">Practitioner</option>
+    <option value="expert">Expert</option>
+  </select>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Commercial
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="Blank"> </option>
+    <option value="developing">developing</option>
+    <option value="practitioner">Practitioner</option>
+    <option value="expert">Expert</option>
+  </select>
+</div>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Evaluation
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="Blank"> </option>
+    <option value="developing">developing</option>
+    <option value="practitioner">Practitioner</option>
+    <option value="expert">Expert</option>
+  </select>
+</div>
+</details>
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-button-group">
+{{ govukButton({
+text: "Submit"
+}) }}
+
+<a class="govuk-link" href="/start">Cancel</a>
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}
