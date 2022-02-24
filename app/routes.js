@@ -78,4 +78,16 @@ router.post('/typeofrole-answer', function (req, res) {
   }
 })
 
+router.post('/change-answer', function (req, res) {
+  var leaveans = req.session.data['what-do']
+  if (leaveans == "Reinstate my participation of the reserve"){
+      res.redirect('/rein')
+    }
+    if (leaveans == "Temporally suspend my service to the reserve"){
+        res.redirect('/templ')
+    } else {
+          res.redirect('/perml')
+    }
+  })
+
 module.exports = router

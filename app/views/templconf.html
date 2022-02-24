@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "The Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukPanel({
+        titleText: "Your request to temporally leave the reserve is being processed ",
+        html: "Your reference number<br><strong>HDJ2123F</strong>"
+      }) }}
+
+      <p class="govuk-body">We have sent you a confirmation email.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">
+        The Civil Service Reserve team will update your status.
+      </p>
+      <p class="govuk-body">
+      We will let you know by email once your request has been processed.
+      </p>
+
+      <p class="govuk-body">
+        <a href="/feedback" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+      </p>
+    </div>
+  </div>
+{% endblock %}

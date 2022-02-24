@@ -353,16 +353,15 @@
 
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
-<form class="form" action="#" method="post">
+<form class="form" action="/changestat" method="post">
 
-<div class="govuk-button-group">
+  <div class="govuk-button-group">
   {{ govukButton({
-    text: "Update reserve status",
-  classes: "govuk-button--warning"
+  text: "Update Status"
   }) }}
 
-  <a class="govuk-link" href="#">Cancel</a>
-</div>
+  <a class="govuk-link" href="/start">Cancel</a>
+  </div>
 
 </form>
   </div>

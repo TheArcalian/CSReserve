@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Updating my status page
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "The Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+        <h1 class="govuk-heading-xl">
+          Temporary Leaving the Reserve 
+        <p></p>
+
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        {{ govukSelect({
+          id: "temp-leave",
+          name: "temp-leave",
+          label: {
+            text: "Select one option"
+          },
+          items: [
+            {
+              value: "not-avail",
+              text: "Not availible for more than 3 months"
+            },
+            {
+              value: "ill",
+              text: "Extended period of illness"
+            },
+            {
+              value: "parental",
+              text: "Extended period of parental leave"
+            },
+            {
+              value: "Personal",
+              text: "Personal reasons"
+            },
+            {
+              value: "Other",
+              text: "Other"
+            }
+          ]
+        }) }}
+
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+        {{ govukTextarea({
+          name: "more-detail",
+          id: "more-detail",
+          label: {
+            text: "Can you provide more detail?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "This is optional"
+          }
+        }) }}
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<form class="form" action="/templconf" method="post">
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Temporally leave",
+  classes: "govuk-button--warning"
+  }) }}
+
+  <a class="govuk-link" href="/update">Cancel</a>
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}
