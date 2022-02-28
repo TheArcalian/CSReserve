@@ -9,9 +9,21 @@
 
 {{ govukHeader({
   homepageUrl: "#",
-  serviceName: "The Civil Service Reserve",
+  serviceName: "My Civil Service Reserve Account",
   serviceUrl: "#"
 }) }}
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,7 +38,10 @@
       {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
       {{ govukNotificationBanner({
-        text: 'On leaving the reserve you will be required to undergo the the registraion process again if you wish to rejoin in the future. You can withdraw your request by clicking the Cancel button or proceed by clicking Leave the reserve'
+        text: 'Once you leave, you will need to complete the registration process again if you wish to rejoin the Civil Service Reserve in the future. 
+
+You can withdraw your request by selecting Cancel, or proceed by selecting Leave the reserve.
+'
       }) }}
 
 

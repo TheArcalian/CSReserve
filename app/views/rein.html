@@ -9,9 +9,21 @@
 
 {{ govukHeader({
   homepageUrl: "#",
-  serviceName: "The Civil Service Reserve",
+  serviceName: "My Civil Service Reserve Account",
   serviceUrl: "#"
 }) }}
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,7 +34,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       {{ govukPanel({
-        titleText: "Your application to Rejoin the Civil Service Reserve has been submitted ",
+        titleText: "Your application to rejoin the Civil Service Reserve is being processed",
         html: "Your reference number<br><strong>HDJ2123F</strong>"
       }) }}
 
@@ -34,7 +46,7 @@
         Your status will be reviewed by a member of the Civil Service Reserve team.
       </p>
       <p class="govuk-body">
-      We will let you know the outcome of your reinstatement by email.
+      We will let you know by email once your request has been processed.
       </p>
 
       <p class="govuk-body">

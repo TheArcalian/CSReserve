@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Check your answers
+  Update your details
 {% endblock %}
 
 {% block header %}
@@ -9,9 +9,21 @@
 
 {{ govukHeader({
   homepageUrl: "#",
-  serviceName: "The Civil Service Reserve",
+  serviceName: "My Civil Service Reserve Account",
   serviceUrl: "#"
 }) }}
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
 {% endblock %}
 
 {% block beforeContent %}
@@ -111,8 +123,8 @@
             {{data['current-former'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
-
+            <a href="/Elig1update">
+Change
               <span class="govuk-visually-hidden"> Current or Former</span>
             </a>
           </dd>
@@ -347,9 +359,9 @@
 
       </dl>
 
-      <h2 class="govuk-heading-m">Do you wish to change your Reserve Status</h2>
+      <h2 class="govuk-heading-m">Update your Reserve status</h2>
 
-      <p>To update your reserve status please click the below button or take the logout link to end this session</p>
+      <p>If you wish to be temporarily removed from the Reserve, or to permanently leave the Reserve, you can request to update your Reserve status.</p>
 
       {% from "govuk/components/button/macro.njk" import govukButton %}
 

@@ -9,9 +9,21 @@
 
 {{ govukHeader({
   homepageUrl: "#",
-  serviceName: "The Civil Service Reserve",
+  serviceName: "My Civil Service Reserve Account",
   serviceUrl: "#"
 }) }}
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,7 +40,7 @@
 
 
         <h1 class="govuk-heading-xl">
-          Leave the Reserve 
+          Permanently leave the Reserve
         <p></p>
 
         {% from "govuk/components/select/macro.njk" import govukSelect %}
@@ -37,12 +49,16 @@
           id: "temp-leave",
           name: "temp-leave",
           label: {
-            text: "Select one option"
+            text: "Select a reason for leaving the Reserve"
           },
           items: [
             {
+              value: " ",
+              text: " "
+            },
+            {
               value: "not-avail",
-              text: "Not availible for more than 3 months"
+              text: "Not available for more than 3 months"
             },
             {
               value: "ill",
@@ -85,7 +101,7 @@
           name: "more-detail",
           id: "more-detail",
           label: {
-            text: "Please provide further comment to help us imporve the reserve",
+            text: "Provide further detail to help us improve the reserve",
             classes: "govuk-label--l",
             isPageHeading: true
           },

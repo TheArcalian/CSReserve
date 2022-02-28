@@ -9,9 +9,21 @@
 
 {{ govukHeader({
   homepageUrl: "#",
-  serviceName: "The Civil Service Reserve",
+  serviceName: "My Civil Service Reserve Account",
   serviceUrl: "#"
 }) }}
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,7 +40,7 @@
 
 
         <h1 class="govuk-heading-xl">
-          Temporary Leaving the Reserve 
+          Temporarily suspend my Reserve membership 
         <p></p>
 
         {% from "govuk/components/select/macro.njk" import govukSelect %}
@@ -37,12 +49,16 @@
           id: "temp-leave",
           name: "temp-leave",
           label: {
-            text: "Select one option"
+            text: "Select a reason for suspending your membership"
           },
           items: [
             {
+              value: " ",
+              text: " "
+            },
+            {
               value: "not-avail",
-              text: "Not availible for more than 3 months"
+              text: "Not available for more than 3 months"
             },
             {
               value: "ill",
@@ -85,7 +101,7 @@
 
 <div class="govuk-button-group">
   {{ govukButton({
-    text: "Temporally leave",
+    text: "Suspend membership",
   classes: "govuk-button--warning"
   }) }}
 
