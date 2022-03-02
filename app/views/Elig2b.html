@@ -20,7 +20,6 @@
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
-
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -28,47 +27,47 @@
 
 
 
-      <form class="form" action="/elig1-answer" method="post">
+      <form class="form" action="/elig2-answer" method="post">
 
         <p>{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  idPrefix: "current-former",
-  name: "current-former",
+  idPrefix: "Manager-ask",
+  name: "Manager-ask",
   fieldset: {
     legend: {
-      text: "Are you a current or former civil servant?",
+      text: "Have you received permission from your current employer to join the Civil Service Reserve?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
     {
-      value: "Current",
-      text: "I am currently a civil servant"
+      value: "Yes",
+      text: "Yes"
     },
     {
-      value: "Former",
-      text: "I am a former civil servant"
+      value: "No",
+      text: "No"
     },
     {
-      value: "other",
-      text: "I am not nor have ever been a civil servant"
+      value: "I am currently not in employment, self employed or I am retired",
+      text: "I am currently self employed, retired or not in employment"
     }
   ]
 }) }}</p>
 
-       {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
 <div class="govuk-button-group">
-  {{ govukButton({
-    text: "Continue"
-  }) }}
+{{ govukButton({
+text: "Continue"
+}) }}
 
-  <a class="govuk-link" href="/start">Cancel</a>
+<a class="govuk-link" href="/start">Cancel</a>
 </div>
 
-      </form>
+</form>
 
     </div>
   </div>

@@ -14,6 +14,10 @@ router.post('/elig1-answer', function (req, res) {
   }
 })
 
+
+
+
+
 router.post('/elig2-answer', function (req, res) {
   var elig2answer = req.session.data['Manager-ask']
   if (elig2answer == "No"){
@@ -38,7 +42,7 @@ router.post('/elig4-answer', function (req, res) {
   if (elig4answer == "None of the above"){
       res.redirect('/Unelig4')
   } else {
-        res.redirect('/Elig5')
+        res.redirect('/proceed1')
   }
 })
 
@@ -47,7 +51,7 @@ router.post('/elig5-answer', function (req, res) {
   if (elig5answer == "No"){
       res.redirect('/Unelig5')
   } else {
-        res.redirect('/proceed1')
+        res.redirect('/Elig2b')
   }
 })
 

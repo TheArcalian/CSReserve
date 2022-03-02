@@ -142,6 +142,141 @@ name: "ref-role"
   classes: "govuk-input--width-20"
 }) }}
 
+<p></p>
+<h1 class="govuk-heading-xl">
+  About your most recent Civil Service role  
+<p></p>
+
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+
+{{ govukSelect({
+  id: "former-current-role",
+  name: "former-current-role",
+  label: {
+    text: "What best describes your former Civil Service department"
+  },
+  items: [
+  {
+    value: "blank",
+    text: "  "
+  },
+    {
+      value: "Prime Ministers Office",
+      text: "Prime Ministers Office"
+    },
+    {
+      value: "Attorney Generals Office",
+      text: "Attorney Generals Office"
+    },
+    {
+      value: "Cabinet Office",
+      text: "Cabinet Office"
+    },
+    {
+      value: "Department for Business, Energy and Industrial Strategy",
+      text: "Department for Business, Energy and Industrial Strategy"
+    },
+    {
+      value: "Department for Digital, Culture, Media and Sport",
+      text: "Department for Digital, Culture, Media and Sport"
+    },
+    {
+      value: "Department for Education",
+      text: "Department for Education"
+    },
+    {
+      value: "Department for Environment Food and Rural Affairs",
+      text: "Department for Environment Food and Rural Affairs"
+    },
+    {
+      value: "Department for International Trade",
+      text: "Department for International Trade"
+    },
+    {
+      value: "Department for Levelling Up, housing and Communities",
+      text: "Department for Levelling Up, housing and Communities"
+    },
+    {
+      value: "Department for Transport",
+      text: "Department for Transport"
+    },
+    {
+      value: "Department for Health and Social Care",
+      text: "Department for Health and Social Care"
+    },
+    {
+      value: "Foreign, Commonwealth and Development Office",
+      text: "Foreign, Commonwealth and Development Office"
+    },
+    {
+      value: "HM Treasury",
+      text: "HM Treasury"
+    },
+    {
+      value: "Home Office",
+      text: "Home Office"
+    },
+    {
+      value: "Ministry of Defence",
+      text: "Ministry of Defence"
+    },
+    {
+      value: "Ministry of Justice",
+      text: "Ministry of Justice"
+    },
+    {
+      value: "Northern Ireland Office",
+      text: "Northern Ireland Office"
+    },
+    {
+      value: "Office of the Advocate Gerneral for Scotland",
+      text: "Office of the Advocate Gerneral for Scotland"
+    },
+    {
+      value: "Office of the Leader of the House of Commons",
+      text: "Office of the Leader of the House of Commons"
+    },
+    {
+      value: "Office of the Leader of the House of Lords",
+      text: "Office of the Leader of the House of Lords"
+    },
+    {
+      value: "Office of the Secretary of State for Scotland",
+      text: "Office of the Secretary of State for Scotland"
+    },
+    {
+      value: "Office of the Secretary of State for Wales",
+      text: "Office of the Secretary of State for Wales"
+    },
+    {
+      value: "UK Export Finance",
+      text: "UK Export Finance"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "How many years ago did you leave the Civil Service?"
+  },
+  classes: "govuk-input--width-3",
+  id: "Years-Leave-Civil",
+  name: "Years-Leave-Civil"
+}) }}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "How many years did you serve in the Civil Service?"
+  },
+  classes: "govuk-input--width-3",
+  id: "Years-in-Civil",
+  name: "Years-in-Civil"
+}) }}
+
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 <div class="govuk-button-group">
