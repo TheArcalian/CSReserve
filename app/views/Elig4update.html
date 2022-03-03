@@ -41,7 +41,7 @@
 
         {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-{{ govukCheckboxes({
+  {{ govukCheckboxes({
   idPrefix: "current-last-role",
   name: "current-last-role",
   fieldset: {
@@ -70,6 +70,10 @@
     {
       value: "Counter Fraud",
       text: "Counter Fraud"
+    },
+    {
+      value: "Crisis Management",
+      text: "Crisis Management"
     },
     {
       value: "Digital, Data and Technology",
@@ -120,7 +124,7 @@
       text: "None of the above"
     }
   ]
-}) }}
+  }) }}
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
