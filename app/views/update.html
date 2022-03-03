@@ -573,20 +573,15 @@
 
       <h2 class="govuk-heading-m">Update your Reserve status</h2>
 
-      <p>If you wish to be temporarily removed from the Reserve, or to permanently leave the Reserve, you can request to update your Reserve status.</p>
+      <p>If you wish to permanently leave the Civil Service Reserve.</p>
 
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
-<form class="form" action="/changestat" method="post">
 
-  <div class="govuk-button-group">
-  {{ govukButton({
-  text: "Update Status"
-  }) }}
 
-  <a class="govuk-link" href="/start">Cancel</a>
+  <a class="govuk-link" href="/perml">Leave the Civil Service Reserve</a>
   </div>
 
-</form>
+
   </div>
 {% endblock %}
