@@ -55,7 +55,17 @@
           },
           hint: {
             text: ""
-          }
+          },
+          "items": [
+              {
+                  "name": "month",
+                  "classes": "govuk-input--width-2"
+              },
+              {
+                  "name": "year",
+                  "classes": "govuk-input--width-4"
+              }
+          ]
         }) }}
 
         {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
