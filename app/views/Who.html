@@ -35,74 +35,58 @@
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
-{{ govukInput({
-  label: {
-    text: "Full name"
-  },
-  id: "full-name",
-  name: "full-name",
-  autocomplete: "name",
-  spellcheck: false
-}) }}
+        {{ govukInput({
+          label: {
+            text: "Full name"
+          },
+          id: "full-name",
+          name: "full-name",
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
 
-{% from "govuk/components/input/macro.njk" import govukInput %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
 
-{{ govukInput({
-  label: {
-    text: "Email address"
-  },
-  hint: {
-    text: ""
-  },
-  id: "email",
-  name: "email",
-  type: "email",
-  autocomplete: "email",
-  spellcheck: false
-}) }}
+        {{ govukInput({
+          label: {
+            text: "Email address"
+          },
+          hint: {
+            text: ""
+          },
+          id: "email",
+          name: "email",
+          type: "email",
+          autocomplete: "email",
+          spellcheck: false
+        }) }}
 
-{% from "govuk/components/input/macro.njk" import govukInput %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
 
-{{ govukInput({
-  label: {
-    text: "UK telephone number"
-  },
-  id: "telephone-number",
-  name: "telephone-number",
-  type: "tel",
-  autocomplete: "tel",
-  classes: "govuk-input--width-20"
-}) }}
+        {{ govukInput({
+          label: {
+            text: "UK telephone number"
+          },
+          id: "telephone-number",
+          name: "telephone-number",
+          type: "tel",
+          autocomplete: "tel",
+          classes: "govuk-input--width-20"
+        }) }}
 
-{% from "govuk/components/input/macro.njk" import govukInput %}
+        {% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukInput({
-  label: {
-    text: "National Insurance number"
-  },
-  hint: {
-    text: "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
-  },
-  classes: "govuk-input--width-10",
-  id: "national-insurance-number",
-  name: "national-insurance-number",
-  spellcheck: false
-}) }}
+        <div class="govuk-button-group">
+        {{ govukButton({
+        text: "Continue"
+        }) }}
 
+        <a class="govuk-link" href="/start">Cancel</a>
+        </div>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+        </form>
 
-<div class="govuk-button-group">
-{{ govukButton({
-text: "Continue"
-}) }}
-
-<a class="govuk-link" href="/start">Cancel</a>
-</div>
-
-</form>
-
-    </div>
+      </div>
   </div>
 
 </form>
