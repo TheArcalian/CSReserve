@@ -253,6 +253,28 @@ name: "ref-role"
   classes: "govuk-input--width-20"
 }) }}
 
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "preferred-contact-method",
+  name: "preferred-contact-method",
+  fieldset: {
+    legend: {
+      text: "Preferred contact method"
+    }
+  },
+  items: [
+    {
+      value: "Email",
+      text: "Email"
+    },
+    {
+      value: "Telephone",
+      text: "Telephone"
+    }
+  ]
+}) }}
+
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 <div class="govuk-button-group">
