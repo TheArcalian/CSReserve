@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Hiring Manager Page
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Make a resource request with the Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/HO-007" method="post">
+        <h1 class="govuk-heading-xl">
+          Hiring manager details
+        </h1>
+        <p>
+          We may contact the hiring manager for more details on this resource request.
+        </p>
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+          label: {
+            text: "Hiring Manager Name"
+          },
+          id: "hiring-manager-name",
+          name: "hiring-manager-name",
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+          label: {
+            text: "Hiring Manager Contact (Work) Email"
+          },
+          hint: {
+            text: ""
+          },
+          id: "hiring-manager-work-email",
+          name: "hiring-manager-work-email",
+          type: "email",
+          autocomplete: "email",
+          spellcheck: false
+        }) }}
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+          label: {
+            text: "Hiring Manager Contact Number: .gov Phone number"
+          },
+          id: "hiring-manager-contact-telephone-number",
+          name: "hiring-manager-contact-telephone-number",
+          type: "tel",
+          autocomplete: "tel",
+          classes: "govuk-input--width-20"
+        }) }}
+
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        <div class="govuk-button-group">
+        {{ govukButton({
+        text: "Continue"
+        }) }}
+
+        <a class="govuk-link" href="/HO-003">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

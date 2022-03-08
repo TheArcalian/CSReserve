@@ -1,0 +1,175 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Location
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Make a resource request with the Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/HO-013" method="post">
+
+        <h1 class="govuk-heading-xl">
+          Further role details
+        </h1>
+
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+        {{ govukCheckboxes({
+          idPrefix: "location",
+          name: "location",
+          fieldset: {
+            legend: {
+              text: "Location",
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              value: "East Midlands",
+              text: "East Midlands"
+            },
+            {
+              value: "East of England",
+              text: "East of England"
+            },
+            {
+              value: "London",
+              text: "London"
+            },
+            {
+              value: "North East",
+              text: "North East"
+            },
+            {
+              value: "North West",
+              text: "North West"
+            },
+            {
+              value: "South East",
+              text: "South East"
+            },
+            {
+              value: "South West",
+              text: "South West"
+            },
+            {
+              value: "West Midlands",
+              text: "West Midlands"
+            },
+            {
+              value: "Yorkshire",
+              text: "Yorkshire"
+            },
+            {
+              value: "Remote working",
+              text: "Remote working"
+            }
+          ]
+        }) }}
+
+
+        
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        {{ govukSelect({
+          id: "numbers-per-role",
+          name: "numbers-per-role",
+          label: {
+            text: "Numbers Per Role"
+          },
+          items: [
+            {
+              value: " ",
+              text: " "
+            },
+            {
+              value: "1-5",
+              text: "1-5"
+            },
+            {
+              value: "6-10",
+              text: "6-10"
+            },
+            {
+              value: "11-15",
+              text: "11-15"
+            },
+            {
+              value: "Over 15",
+              text: "Over 15"
+            }
+          ]
+        }) }}
+
+
+        
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+        {{ govukDateInput({
+          id: "urgency",
+          namePrefix: "urgency",
+          fieldset: {
+            legend: {
+              text: "Urgency",
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Please pick the first date the reservist will be needed"
+          }
+        }) }}
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      <div class="govuk-button-group">
+      {{ govukButton({
+      text: "Submit"
+      }) }}
+
+      <a class="govuk-link" href="/HO-003">Cancel</a>
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

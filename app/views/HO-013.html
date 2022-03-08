@@ -1,0 +1,471 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Make a resource request with the Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+
+      <h2 class="govuk-heading-m">Hiring manager details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Hiring Manager Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['hiring-manager-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-005">
+              Change
+              <span class="govuk-visually-hidden">Hiring Manager Name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Hiring Manager Contact (Work) Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['hiring-manager-work-email'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/HO-005">
+              Change
+              <span class="govuk-visually-hidden">Hiring Manager Contact (Work) Email</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Hiring Manager Contact Number .gov Phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['hiring-manager-contact-telephone-number'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/HO-005">
+              Change
+              <span class="govuk-visually-hidden">Hiring Manager Contact Number .gov Phone number</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Role details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Role Title
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['role-title'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-007">
+              Change
+              <span class="govuk-visually-hidden">Role Title</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Role Description
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['role-description'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/HO-007">
+              Change
+              <span class="govuk-visually-hidden">Role Description</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Role Type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['role-type'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/HO-007">
+              Change
+              <span class="govuk-visually-hidden">Role Type</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Role requirements</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Minimum Grade
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['minimum-grade'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-008">
+              Change
+              <span class="govuk-visually-hidden">Minimum Grade</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Professions
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['professions'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/HO-008">
+              Change
+              <span class="govuk-visually-hidden">Professions</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Minimum security clearance
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['minimum-security-clearance'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/HO-008">
+              Change
+              <span class="govuk-visually-hidden">Minimum security clearance</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Preferred security clearance
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['preferred-security-clearance'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/HO-008">
+              Change
+              <span class="govuk-visually-hidden">Preferred security clearance</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <!-- start of skills skillsa skillsb -->
+
+      <h2 class="govuk-heading-m">Your communication skills</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Produce clear and accurate Briefings
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Rating - {{data['skill1conf'] }}
+            <br>Have experience? - {{data['skill1'] }}
+            <br>Experience - {{data['skill1-detail'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-009">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Produce clear and accurate written communications
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Rating - {{data['skill2conf'] }}
+            <br>Have experience? - {{data['skill2'] }}
+            <br>Experience - {{data['skill2-detail'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-009">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Articulate information quickly, succinctly and accurately
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Rating - {{data['skill3conf'] }}
+            <br>Have experience? - {{data['skill3'] }}
+            <br>Experience - {{data['skill3-detail'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-009">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Clearly and effectively communicate by verbal means
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Rating - {{data['skill4conf'] }}
+            <br>Have experience? - {{data['skill4'] }}
+            <br>Experience - {{data['skill4-detail'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-009">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Deliver difficult messages with clarity and sensitivity
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Rating - {{data['skill5conf'] }}
+            <br>Have experience? - {{data['skill5'] }}
+            <br>Experience - {{data['skill5-detail'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-009">
+              Change
+              <span class="govuk-visually-hidden"> Current or Former</span>
+            </a>
+          </dd>
+        </div>
+              </dl>
+
+              <h2 class="govuk-heading-m">Your analysis skills</h2>
+
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Analyse a range of information and translate this into clear policy
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Rating - {{data['skill6conf'] }}
+                    <br>Have experience? - {{data['skill6'] }}
+                    <br>Experience - {{data['skill6-detail'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="/hO-009">
+                      Change
+                      <span class="govuk-visually-hidden"> Current or Former</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Understand data, intelligence and analysis and engage with analysts
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Rating - {{data['skill7conf'] }}
+                    <br>Have experience? - {{data['skill7'] }}
+                    <br>Experience - {{data['skill7-detail'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="/hO-009">
+                      Change
+                      <span class="govuk-visually-hidden"> Current or Former</span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Understand data and communicate to a range of audiences
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Rating - {{data['skill8conf'] }}
+                    <br>Have experience? - {{data['skill8'] }}
+                    <br>Experience - {{data['skill8-detail'] }}
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a href="/hO-009">
+                      Change
+                      <span class="govuk-visually-hidden"> Current or Former</span>
+                    </a>
+                  </dd>
+                </div>
+
+                      </dl>
+
+                      <h2 class="govuk-heading-m">Your decision making skills</h2>
+
+                      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Make defensible decisions with partial and/or conflicting information
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            Rating - {{data['skill9conf'] }}
+                            <br>Have experience? - {{data['skill9'] }}
+                            <br>Experience - {{data['skill9-detail'] }}
+                          </dd>
+                          <dd class="govuk-summary-list__actions">
+                            <a href="/HO-009">
+                              Change
+                              <span class="govuk-visually-hidden"> Current or Former</span>
+                            </a>
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            Understand the consequences, impact and knock-on effects of decisions
+                          </dt>
+                          <dd class="govuk-summary-list__value">
+                            Rating - {{data['skill10conf'] }}
+                            <br>Have experience? - {{data['skill10'] }}
+                            <br>Experience - {{data['skill10-detail'] }}
+                          </dd>
+                          <dd class="govuk-summary-list__actions">
+                            <a href="/HO-009">
+                              Change
+                              <span class="govuk-visually-hidden"> Current or Former</span>
+                            </a>
+                          </dd>
+                        </div>
+
+                              </dl>
+
+
+
+
+
+      <!-- end of skills skillsa skillsb -->
+
+      <h2 class="govuk-heading-m">Working patterns</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Days Required
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['days-required'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-010">
+              Change
+              <span class="govuk-visually-hidden">Days Required</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Unsociable Hours
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['unsociable-hours'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-010">
+              Change
+              <span class="govuk-visually-hidden">Unsociable Hours</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Further role details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['location'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-011">
+              Change
+              <span class="govuk-visually-hidden">Location</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Numbers Per Role
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['numbers-per-role'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-011">
+              Change
+              <span class="govuk-visually-hidden">Numbers Per Role</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Urgency
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['urgency'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-011">
+              Change
+              <span class="govuk-visually-hidden">Urgency</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+     
+      <h2 class="govuk-heading-m">Now send your application</h2>
+
+      <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="/HO-014" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
