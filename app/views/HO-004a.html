@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Login Page
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "Make a resource request with the Civil Service Reserve",
+    serviceUrl: "#"
+  }) }}
+  
+
+  <div class="govuk-width-container">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        What would you like to do?
+      </h1>
+
+      <p>Review previous request</p>
+      <p>Make a new <a href="/HO-005">request</a></p>
+
+    </div>
+  </div>
+{% endblock %}
