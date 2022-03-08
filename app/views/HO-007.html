@@ -55,17 +55,17 @@
         }) }}
 
 
-        {% from "govuk/components/input/macro.njk" import govukInput %}
+        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
 
-        {{ govukInput({
-          label: {
-            text: "Role Description"
-          },
-          id: "role-description",
+        {{ govukTextarea({
           name: "role-description",
-          autocomplete: "name",
-          spellcheck: false
+          id: "role-description",
+          label: {
+            text: "Role Description",
+            classes: "govuk-hint"
+          }
         }) }}
+
 
         {% from "govuk/components/select/macro.njk" import govukSelect %}
 
@@ -100,7 +100,7 @@
 
       <div class="govuk-button-group">
       {{ govukButton({
-      text: "Submit"
+      text: "Continue"
       }) }}
 
       <a class="govuk-link" href="/HO-003">Cancel</a>

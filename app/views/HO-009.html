@@ -46,18 +46,16 @@
 
           <h1 class="govuk-heading-xl">
             Your communication skills
-          <p>  </p>
-          <p> We will now ask you to rate your confidence level against these communication skills.  </p>
-    <p>  </p>
+         </h1>
   
   <h2 class="govuk-heading-m">Produce clear and accurate Briefings</h2>
-          {% from "govuk/components/select/macro.njk" import govukSelect %}
+  {% from "govuk/components/select/macro.njk" import govukSelect %}
   
   {{ govukSelect({
     id: "skill1conf",
     name: "skill1conf",
     label: {
-      text: "Confidence Rating"
+      text: "Mininmum Confidence Level"
     },
     items: [
       {
@@ -83,7 +81,7 @@
     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <legend class="govuk-fieldset__legend">
-          Do you have any experience of this in a crisis?
+          Does the role require experience of this in a crisis?
         </legend>
       </legend>
       <div id="contact-hint" class="govuk-hint">
@@ -126,7 +124,7 @@
     id: "skill2conf",
     name: "skill2conf",
     label: {
-      text: "Confidence Rating"
+      text: "Mininmum Confidence Level"
     },
     items: [
       {
@@ -152,7 +150,7 @@
     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <legend class="govuk-fieldset__legend">
-          Do you have any experience of this in a crisis?
+          Does the role require experience of this in a crisis?
         </legend>
       </legend>
       <div id="contact-hint" class="govuk-hint">
@@ -193,7 +191,7 @@
     id: "skill3conf",
     name: "skill3conf",
     label: {
-      text: "Confidence Rating"
+      text: "Mininmum Confidence Level"
     },
     items: [
       {
@@ -219,7 +217,7 @@
             <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <legend class="govuk-fieldset__legend">
-                  Do you have any experience of this in a crisis?
+                  Does the role require experience of this in a crisis?
                 </legend>
               </legend>
               <div id="contact-hint" class="govuk-hint">
@@ -260,7 +258,7 @@
             id: "skill4conf",
             name: "skill4conf",
             label: {
-              text: "Confidence Rating"
+              text: "Mininmum Confidence Level"
             },
             items: [
               {
@@ -283,42 +281,42 @@
             }) }}
 
             <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <legend class="govuk-fieldset__legend">
-                          Do you have any experience of this in a crisis?
-                        </legend>
-                      </legend>
-                      <div id="contact-hint" class="govuk-hint">
+              <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <legend class="govuk-fieldset__legend">
+                    Does the role require experience of this in a crisis?
+                  </legend>
+                </legend>
+                <div id="contact-hint" class="govuk-hint">
 
-                      </div>
-                      <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="skill4" name="skill4" type="radio" value="Yes" data-aria-controls="skill4-contact">
-                          <label class="govuk-label govuk-radios__label" for="skill4">
-                            Yes
-                          </label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="skill4-contact">
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="skill4" name="skill4" type="radio" value="Yes" data-aria-controls="skill4-contact">
+                    <label class="govuk-label govuk-radios__label" for="skill4">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="skill4-contact">
 
-                          <div class="govuk-form-group">
-                            <label class="govuk-label" for="skill4-detail">
-                              Please describe this experience.
-                            </label>
-                            <textarea class="govuk-textarea" id="skill4-detail" name="skill4-detail" rows="5"></textarea>
-                          </div>
-
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="skill4" name="skill4" type="radio" value="No" data-aria-controls="skill4-contact-2">
-                          <label class="govuk-label govuk-radios__label" for="skill4">
-                            No
-                          </label>
-                        </div>
-                        </div>
-
-                      </fieldset>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="skill4-detail">
+                        Please describe this experience.
+                      </label>
+                      <textarea class="govuk-textarea" id="skill4-detail" name="skill4-detail" rows="5"></textarea>
                     </div>
+
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="skill4" name="skill4" type="radio" value="No" data-aria-controls="skill4-contact-2">
+                    <label class="govuk-label govuk-radios__label" for="skill4">
+                      No
+                    </label>
+                  </div>
+                  </div>
+
+                </fieldset>
+              </div>
 
   <h2 class="govuk-heading-m">Deliver difficult messages with clarity and sensitivity</h2>
         {% from "govuk/components/select/macro.njk" import govukSelect %}
@@ -327,7 +325,7 @@
   id: "skill5conf",
   name: "skill5conf",
   label: {
-    text: "Confidence Rating"
+    text: "Mininmum Confidence Level"
   },
   items: [
     {
@@ -353,7 +351,7 @@
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <legend class="govuk-fieldset__legend">
-                Do you have any experience of this in a crisis?
+                Does the role require experience of this in a crisis?
               </legend>
             </legend>
             <div id="contact-hint" class="govuk-hint">
@@ -394,9 +392,7 @@
 
           <h1 class="govuk-heading-xl">
             Your analysis skills
-          <p>  </p>
-          <p>We will now ask you to rate your confidence level against these analysis skills.  </p>
-    <p>  </p>
+          </h1>
   
   <h2 class="govuk-heading-m">Analyse a range of information and translate this into clear policy</h2>
           {% from "govuk/components/select/macro.njk" import govukSelect %}
@@ -405,7 +401,7 @@
     id: "skill6conf",
     name: "skill6conf",
     label: {
-      text: "Confidence Rating"
+      text: "Mininmum Confidence Level"
     },
     items: [
       {
@@ -431,7 +427,7 @@
             <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <legend class="govuk-fieldset__legend">
-                  Do you have any experience of this in a crisis?
+                  Does the role require experience of this in a crisis?
                 </legend>
               </legend>
               <div id="contact-hint" class="govuk-hint">
@@ -474,7 +470,7 @@
             id: "skill7conf",
             name: "skill7conf",
             label: {
-              text: "Confidence Rating"
+              text: "Mininmum Confidence Level"
             },
             items: [
               {
@@ -500,7 +496,7 @@
                     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                         <legend class="govuk-fieldset__legend">
-                          Do you have any experience of this in a crisis?
+                          Does the role require experience of this in a crisis?
                         </legend>
                       </legend>
                       <div id="contact-hint" class="govuk-hint">
@@ -541,7 +537,7 @@
     id: "skill8conf",
     name: "skill8conf",
     label: {
-      text: "Confidence Rating"
+      text: "Mininmum Confidence Level"
     },
     items: [
       {
@@ -567,7 +563,7 @@
       <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
           <legend class="govuk-fieldset__legend">
-            Do you have any experience of this in a crisis?
+            Does the role require experience of this in a crisis?
           </legend>
         </legend>
         <div id="contact-hint" class="govuk-hint">
@@ -608,9 +604,7 @@
 
 <h1 class="govuk-heading-xl">
   Your decision making skills
-<p>  </p>
-<p>We will now ask you to rate your confidence level against these decision making skills.</p>
-<p>  </p>
+</h1>
 
 <h2 class="govuk-heading-m">Make defensible decisions with partial and/or conflicting information</h2>
 {% from "govuk/components/select/macro.njk" import govukSelect %}
@@ -619,7 +613,7 @@
 id: "skill9conf",
 name: "skill9conf",
 label: {
-text: "Confidence Rating"
+text: "Mininmum Confidence Level"
 },
 items: [
 {
@@ -645,7 +639,7 @@ text: "Very confident"
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <legend class="govuk-fieldset__legend">
-        Do you have any experience of this in a crisis?
+        Does the role require experience of this in a crisis?
       </legend>
     </legend>
     <div id="contact-hint" class="govuk-hint">
@@ -688,7 +682,7 @@ text: "Very confident"
   id: "skill10conf",
   name: "skill10conf",
   label: {
-    text: "Confidence Rating"
+    text: "Mininmum Confidence Level"
   },
   items: [
     {
@@ -714,7 +708,7 @@ text: "Very confident"
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <legend class="govuk-fieldset__legend">
-                Do you have any experience of this in a crisis?
+                Does the role require experience of this in a crisis?
               </legend>
             </legend>
             <div id="contact-hint" class="govuk-hint">
@@ -755,7 +749,7 @@ text: "Very confident"
 
       <div class="govuk-button-group">
       {{ govukButton({
-      text: "Submit"
+      text: "Continue"
       }) }}
 
       <a class="govuk-link" href="/HO-003">Cancel</a>

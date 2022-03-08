@@ -47,7 +47,9 @@
           id: "minimum-grade",
           name: "minimum-grade",
           label: {
-            text: "Minimum grade"
+            text: "Minimum grade",
+            classes: "govuk-label--l",
+            isPageHeading: true
           },
           items: [
             {
@@ -160,9 +162,9 @@
         }) }}
 
         <div class="govuk-form-group">
-          <label class="govuk-label" for="address-county">
+          <h2 class="govuk-heading-l">
             Types of security
-          </label>
+          </h2>
           <p>
             Indicate what is the minimum and preferred 
             <a class="govuk-link" href="https://www.gov.uk/government/publications/united-kingdom-security-vetting-clearance-levels/national-security-vetting-clearance-levels">
@@ -178,7 +180,9 @@
           id: "minimum-security-clearance",
           name: "minimum-security-clearance",
           label: {
-            text: "Minimum security clearance"
+            text: "Minimum security clearance",
+            classes: "govuk-label--l",
+            isPageHeading: true
           },
           items: [
             {
@@ -211,7 +215,9 @@
           id: "preferred-security-clearance",
           name: "preferred-security-clearance",
           label: {
-            text: "Preferred security clearance"
+            text: "Preferred security clearance",
+            classes: "govuk-label--l",
+            isPageHeading: true
           },
           items: [
             {
@@ -243,7 +249,7 @@
 
       <div class="govuk-button-group">
       {{ govukButton({
-      text: "Submit"
+      text: "Continue"
       }) }}
 
       <a class="govuk-link" href="/HO-003">Cancel</a>

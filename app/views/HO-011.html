@@ -101,37 +101,19 @@
         }) }}
 
 
-        
         {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-        {{ govukSelect({
+        {{ govukInput({
+          label: {
+            text: "Number of reserves per role",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          classes: "govuk-input--width-5",
           id: "numbers-per-role",
           name: "numbers-per-role",
-          label: {
-            text: "Numbers Per Role"
-          },
-          items: [
-            {
-              value: " ",
-              text: " "
-            },
-            {
-              value: "1-5",
-              text: "1-5"
-            },
-            {
-              value: "6-10",
-              text: "6-10"
-            },
-            {
-              value: "11-15",
-              text: "11-15"
-            },
-            {
-              value: "Over 15",
-              text: "Over 15"
-            }
-          ]
+          autocomplete: "name",
+          spellcheck: false
         }) }}
 
 
@@ -156,7 +138,7 @@
 
       <div class="govuk-button-group">
       {{ govukButton({
-      text: "Submit"
+      text: "Continue"
       }) }}
 
       <a class="govuk-link" href="/HO-003">Cancel</a>
