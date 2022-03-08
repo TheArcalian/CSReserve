@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Reservist Availability
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Make a resource request with the Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/HO-011" method="post">
+
+        <h1 class="govuk-heading-xl">
+          Working patterns
+        </h1>
+
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+        {{ govukCheckboxes({
+          idPrefix: "days-required",
+          name: "days-required",
+          fieldset: {
+            legend: {
+              text: "Days Required",
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              value: "Monday",
+              text: "Monday"
+            },
+            {
+              value: "Tuesday",
+              text: "Tuesday"
+            },
+            {
+              value: "Wednesday",
+              text: "Wednesday"
+            },
+            {
+              value: "Thursday",
+              text: "Thursday"
+            },
+            {
+              value: "Friday",
+              text: "Friday"
+            },
+            {
+              value: "Saturday",
+              text: "Saturday"
+            },
+            {
+              value: "Sunday",
+              text: "Sunday"
+            }
+          ]
+        }) }}
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "unsociable-hours",
+          name: "unsociable-hours",
+          fieldset: {
+            legend: {
+              text: "Unsociable Hours",
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "Yes",
+              text: "Yes"
+            },
+            {
+              value: "No",
+              text: "No"
+            }
+          ]
+        }) }}
+
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      <div class="govuk-button-group">
+      {{ govukButton({
+      text: "Submit"
+      }) }}
+
+      <a class="govuk-link" href="/HO-003">Cancel</a>
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

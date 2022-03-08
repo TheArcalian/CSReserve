@@ -1,0 +1,262 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Type of reservist
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Make a resource request with the Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/HO-009" method="post">
+
+        <h1 class="govuk-heading-xl">
+          Role requirements
+        </h1>
+
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        {{ govukSelect({
+          id: "minimum-grade",
+          name: "minimum-grade",
+          label: {
+            text: "Minimum grade"
+          },
+          items: [
+            {
+              value: " ",
+              text: " "
+            },
+            {
+              value: "HEO",
+              text: "HEO"
+            },
+            {
+              value: "SEO",
+              text: "SEO"
+            },
+            {
+              value: "Grade 7",
+              text: "Grade 7"
+            },
+            {
+              value: "Grade 6",
+              text: "Grade 6"
+            },
+            {
+              value: "SCS1",
+              text: "SCS1"
+            }
+          ]
+        }) }}
+
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+        {{ govukCheckboxes({
+          idPrefix: "professions",
+          name: "professions",
+          fieldset: {
+            legend: {
+              text: "Professions",
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              value: "Analysis",
+              text: "Analysis"
+            },
+            {
+              value: "Commercial and Procurement",
+              text: "Commercial and Procurement"
+            },
+            {
+              value: "Communications",
+              text: "Communications"
+            },
+            {
+              value: "Counter Fraud",
+              text: "Counter Fraud"
+            },
+            {
+              value: "Crisis Management",
+              text: "Crisis Management"
+            },
+            {
+              value: "Digital, Data and Technology",
+              text: "Digital, Data and Technology"
+            },
+            {
+              value: "Finance",
+              text: "Finance"
+            },
+            {
+              value: "Human Resources",
+              text: "Human Resources"
+            },
+            {
+              value: "International Trade and Development",
+              text: "International Trade and Development"
+            },
+            {
+              value: "Knowledge and Information Management",
+              text: "Knowledge and Information Management"
+            },
+            {
+              value: "Legal",
+              text: "Legal"
+            },
+            {
+              value: "Operational Delivery",
+              text: "Operational Delivery"
+            },
+            {
+              value: "Policy",
+              text: "Policy"
+            },
+            {
+              value: "Project Management",
+              text: "Project Management"
+            },
+            {
+              value: "Property",
+              text: "Property"
+            },
+            {
+              value: "Security",
+              text: "Security"
+            }
+          ]
+        }) }}
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-county">
+            Types of security
+          </label>
+          <p>
+            Indicate what is the minimum and preferred 
+            <a class="govuk-link" href="https://www.gov.uk/government/publications/united-kingdom-security-vetting-clearance-levels/national-security-vetting-clearance-levels">
+              level of security clearance
+            </a>
+            for this role
+          </p>
+      </div>
+
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        {{ govukSelect({
+          id: "minimum-security-clearance",
+          name: "minimum-security-clearance",
+          label: {
+            text: "Minimum security clearance"
+          },
+          items: [
+            {
+              value: " ",
+              text: " "
+            },
+            {
+              value: "BPSS",
+              text: "BPSS"
+            },
+            {
+              value: "CTC",
+              text: "CTC"
+            },
+            {
+              value: "SC",
+              text: "SC"
+            },
+            {
+              value: "DV",
+              text: "DV"
+            }
+          ]
+        }) }}
+
+        
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        {{ govukSelect({
+          id: "preferred-security-clearance",
+          name: "preferred-security-clearance",
+          label: {
+            text: "Preferred security clearance"
+          },
+          items: [
+            {
+              value: " ",
+              text: " "
+            },
+            {
+              value: "BPSS",
+              text: "BPSS"
+            },
+            {
+              value: "CTC",
+              text: "CTC"
+            },
+            {
+              value: "SC",
+              text: "SC"
+            },
+            {
+              value: "DV",
+              text: "DV"
+            }
+          ]
+        }) }}
+  
+
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      <div class="govuk-button-group">
+      {{ govukButton({
+      text: "Submit"
+      }) }}
+
+      <a class="govuk-link" href="/HO-003">Cancel</a>
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}
