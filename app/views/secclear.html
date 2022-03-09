@@ -48,19 +48,32 @@
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
                 <div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
-    Select the type of security clearance you have
-  </label>
-  <select class="govuk-select" id="secclear1" name="secclear1">
-    <option value="blank"> </option>
-    <option value="BPSS" >BPSS</option>
-    <option value="CTC">CTC</option>
-    <option value="SC">SC</option>
-    <option value="SC">DV</option>
-    <option value="SC">EDV</option>
-  </select>
-</div>
+                  <label class="govuk-label" for="sort">
+                    Select the type of security clearance you have
+                  </label>
+                  <select class="govuk-select" id="secclear1" name="secclear1">
+                    <option value="blank"> </option>
+                    <option value="BPSS" >BPSS</option>
+                    <option value="CTC">CTC</option>
+                    <option value="SC">SC</option>
+                    <option value="SC">DV</option>
+                    <option value="SC">EDV</option>
+                  </select>
+                </div>
+                {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
 
+                {{ govukDateInput({
+                  id: "sec-expiry",
+                  namePrefix: "sec-expiry",
+                  fieldset: {
+                    legend: {
+                      text: "Expiry"
+                    }
+                  },
+                  hint: {
+                    text: "Optional"
+                  }
+                }) }}
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="secclear" name="secclear" type="radio" value="No" data-aria-controls="conditional-contact-2">
