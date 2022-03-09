@@ -22,16 +22,13 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
   <div class="govuk-grid-column-two-thirds">
     <form class="form" action="/HO-010" method="post">
       <h1 class="govuk-heading-xl">Skills and experience required</h1>
-
-
-
-
+      
       <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
         <div class="govuk-accordion__section">
           <div class="govuk-accordion__section-header">
             <span class="govuk-accordion__section-heading">
               <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                <h1 class="govuk-heading-xl">Your communication skills</h1>
+                <h1 class="govuk-heading-xl">Communication skills</h1>
               </span>
             </span>
           </div>
@@ -39,7 +36,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
             <h2 class="govuk-heading-m">Produce clear and accurate Briefings</h2>
             {% from "govuk/components/select/macro.njk" import govukSelect %} {{
             govukSelect({ id: "skill1conf", name: "skill1conf", label: { text:
-            "Mininmum Confidence Level" }, items: [ { value: " ", text: " " }, {
+            "Minimum Confidence Level" }, items: [ { value: " ", text: " " }, {
             value: "Not confident", text: "Not confident" }, { value: "Fairly
             confident", text: "Fairly confident" }, { value: "Very confident", text:
             "Very confident" } ] }) }}
@@ -66,22 +63,6 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
                       Yes
                     </label>
                   </div>
-                  <div
-                    class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                    id="skill1-contact"
-                  >
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="skill1-detail">
-                        Please describe this experience.
-                      </label>
-                      <textarea
-                        class="govuk-textarea"
-                        id="skill1-detail"
-                        name="skill1-detail"
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
                   <div class="govuk-radios__item">
                     <input
                       class="govuk-radios__input"
@@ -104,7 +85,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
             </h2>
             {% from "govuk/components/select/macro.njk" import govukSelect %} {{
             govukSelect({ id: "skill2conf", name: "skill2conf", label: { text:
-            "Mininmum Confidence Level" }, items: [ { value: " ", text: " " }, {
+            "Minimum Confidence Level" }, items: [ { value: " ", text: " " }, {
             value: "Not confident", text: "Not confident" }, { value: "Fairly
             confident", text: "Fairly confident" }, { value: "Very confident", text:
             "Very confident" } ] }) }}
@@ -131,22 +112,6 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
                       Yes
                     </label>
                   </div>
-                  <div
-                    class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                    id="skill2-contact"
-                  >
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="skill2-detail">
-                        Please describe this experience.
-                      </label>
-                      <textarea
-                        class="govuk-textarea"
-                        id="skill2-detail"
-                        name="skill2-detail"
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
                   <div class="govuk-radios__item">
                     <input
                       class="govuk-radios__input"
@@ -169,7 +134,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
             </h2>
             {% from "govuk/components/select/macro.njk" import govukSelect %} {{
             govukSelect({ id: "skill3conf", name: "skill3conf", label: { text:
-            "Mininmum Confidence Level" }, items: [ { value: " ", text: " " }, {
+            "Minimum Confidence Level" }, items: [ { value: " ", text: " " }, {
             value: "Not confident", text: "Not confident" }, { value: "Fairly
             confident", text: "Fairly confident" }, { value: "Very confident", text:
             "Very confident" } ] }) }}
@@ -196,22 +161,6 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
                       Yes
                     </label>
                   </div>
-                  <div
-                    class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                    id="skill3-contact"
-                  >
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="skill3-detail">
-                        Please describe this experience.
-                      </label>
-                      <textarea
-                        class="govuk-textarea"
-                        id="skill3-detail"
-                        name="skill3-detail"
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
                   <div class="govuk-radios__item">
                     <input
                       class="govuk-radios__input"
@@ -234,7 +183,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
             </h2>
             {% from "govuk/components/select/macro.njk" import govukSelect %} {{
             govukSelect({ id: "skill4conf", name: "skill4conf", label: { text:
-            "Mininmum Confidence Level" }, items: [ { value: " ", text: " " }, {
+            "Minimum Confidence Level" }, items: [ { value: " ", text: " " }, {
             value: "Not confident", text: "Not confident" }, { value: "Fairly
             confident", text: "Fairly confident" }, { value: "Very confident", text:
             "Very confident" } ] }) }}
@@ -261,22 +210,6 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
                       Yes
                     </label>
                   </div>
-                  <div
-                    class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                    id="skill4-contact"
-                  >
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="skill4-detail">
-                        Please describe this experience.
-                      </label>
-                      <textarea
-                        class="govuk-textarea"
-                        id="skill4-detail"
-                        name="skill4-detail"
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
                   <div class="govuk-radios__item">
                     <input
                       class="govuk-radios__input"
@@ -299,7 +232,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
             </h2>
             {% from "govuk/components/select/macro.njk" import govukSelect %} {{
             govukSelect({ id: "skill5conf", name: "skill5conf", label: { text:
-            "Mininmum Confidence Level" }, items: [ { value: " ", text: " " }, {
+            "Minimum Confidence Level" }, items: [ { value: " ", text: " " }, {
             value: "Not confident", text: "Not confident" }, { value: "Fairly
             confident", text: "Fairly confident" }, { value: "Very confident", text:
             "Very confident" } ] }) }}
@@ -326,22 +259,6 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
                       Yes
                     </label>
                   </div>
-                  <div
-                    class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                    id="skill5-contact"
-                  >
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="skill5-detail">
-                        Please describe this experience.
-                      </label>
-                      <textarea
-                        class="govuk-textarea"
-                        id="skill5-detail"
-                        name="skill5-detail"
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
                   <div class="govuk-radios__item">
                     <input
                       class="govuk-radios__input"
@@ -364,7 +281,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
           <div class="govuk-accordion__section-header">
             <span class="govuk-accordion__section-heading">
               <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                <h1 class="govuk-heading-xl">Your analysis skills</h1>
+                <h1 class="govuk-heading-xl">Analysis skills</h1>
               </span>
             </span>
           </div>
@@ -374,7 +291,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
             </h2>
             {% from "govuk/components/select/macro.njk" import govukSelect %} {{
             govukSelect({ id: "skill6conf", name: "skill6conf", label: { text:
-            "Mininmum Confidence Level" }, items: [ { value: " ", text: " " }, {
+            "Minimum Confidence Level" }, items: [ { value: " ", text: " " }, {
             value: "Not confident", text: "Not confident" }, { value: "Fairly
             confident", text: "Fairly confident" }, { value: "Very confident", text:
             "Very confident" } ] }) }}
@@ -401,22 +318,6 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
                       Yes
                     </label>
                   </div>
-                  <div
-                    class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                    id="skill6-contact"
-                  >
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="skill6-detail">
-                        Please describe this experience.
-                      </label>
-                      <textarea
-                        class="govuk-textarea"
-                        id="skill6-detail"
-                        name="skill6-detail"
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
                   <div class="govuk-radios__item">
                     <input
                       class="govuk-radios__input"
@@ -439,7 +340,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
             </h2>
             {% from "govuk/components/select/macro.njk" import govukSelect %} {{
             govukSelect({ id: "skill7conf", name: "skill7conf", label: { text:
-            "Mininmum Confidence Level" }, items: [ { value: " ", text: " " }, {
+            "Minimum Confidence Level" }, items: [ { value: " ", text: " " }, {
             value: "Not confident", text: "Not confident" }, { value: "Fairly
             confident", text: "Fairly confident" }, { value: "Very confident", text:
             "Very confident" } ] }) }}
@@ -466,22 +367,6 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
                       Yes
                     </label>
                   </div>
-                  <div
-                    class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                    id="skill7-contact"
-                  >
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="skill7-detail">
-                        Please describe this experience.
-                      </label>
-                      <textarea
-                        class="govuk-textarea"
-                        id="skill7-detail"
-                        name="skill7-detail"
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
                   <div class="govuk-radios__item">
                     <input
                       class="govuk-radios__input"
@@ -504,7 +389,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
             </h2>
             {% from "govuk/components/select/macro.njk" import govukSelect %} {{
             govukSelect({ id: "skill8conf", name: "skill8conf", label: { text:
-            "Mininmum Confidence Level" }, items: [ { value: " ", text: " " }, {
+            "Minimum Confidence Level" }, items: [ { value: " ", text: " " }, {
             value: "Not confident", text: "Not confident" }, { value: "Fairly
             confident", text: "Fairly confident" }, { value: "Very confident", text:
             "Very confident" } ] }) }}
@@ -531,22 +416,6 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
                       Yes
                     </label>
                   </div>
-                  <div
-                    class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                    id="skill8-contact"
-                  >
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="skill8-detail">
-                        Please describe this experience.
-                      </label>
-                      <textarea
-                        class="govuk-textarea"
-                        id="skill8-detail"
-                        name="skill8-detail"
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
                   <div class="govuk-radios__item">
                     <input
                       class="govuk-radios__input"
@@ -569,7 +438,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
           <div class="govuk-accordion__section-header">
             <span class="govuk-accordion__section-heading">
               <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                <h1 class="govuk-heading-xl">Your decision making skills</h1>
+                <h1 class="govuk-heading-xl">Decision making skills</h1>
               </span>
             </span>
           </div>
@@ -579,7 +448,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
             </h2>
             {% from "govuk/components/select/macro.njk" import govukSelect %} {{
             govukSelect({ id: "skill9conf", name: "skill9conf", label: { text:
-            "Mininmum Confidence Level" }, items: [ { value: " ", text: " " }, {
+            "Minimum Confidence Level" }, items: [ { value: " ", text: " " }, {
             value: "Not confident", text: "Not confident" }, { value: "Fairly
             confident", text: "Fairly confident" }, { value: "Very confident", text:
             "Very confident" } ] }) }}
@@ -606,22 +475,6 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
                       Yes
                     </label>
                   </div>
-                  <div
-                    class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                    id="skill9-contact"
-                  >
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="skill9-detail">
-                        Please describe this experience.
-                      </label>
-                      <textarea
-                        class="govuk-textarea"
-                        id="skill9-detail"
-                        name="skill9-detail"
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
                   <div class="govuk-radios__item">
                     <input
                       class="govuk-radios__input"
@@ -644,7 +497,7 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
             </h2>
             {% from "govuk/components/select/macro.njk" import govukSelect %} {{
             govukSelect({ id: "skill10conf", name: "skill10conf", label: { text:
-            "Mininmum Confidence Level" }, items: [ { value: " ", text: " " }, {
+            "Minimum Confidence Level" }, items: [ { value: " ", text: " " }, {
             value: "Not confident", text: "Not confident" }, { value: "Fairly
             confident", text: "Fairly confident" }, { value: "Very confident", text:
             "Very confident" } ] }) }}
@@ -670,22 +523,6 @@ resource request with the Civil Service Reserve", serviceUrl: "#" }) }}
                     <label class="govuk-label govuk-radios__label" for="skill10">
                       Yes
                     </label>
-                  </div>
-                  <div
-                    class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                    id="skill10-contact"
-                  >
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="skill10-detail">
-                        Please describe this experience.
-                      </label>
-                      <textarea
-                        class="govuk-textarea"
-                        id="skill10-detail"
-                        name="skill10-detail"
-                        rows="5"
-                      ></textarea>
-                    </div>
                   </div>
                   <div class="govuk-radios__item">
                     <input

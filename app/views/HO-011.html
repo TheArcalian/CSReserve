@@ -100,24 +100,6 @@
           ]
         }) }}
 
-
-        {% from "govuk/components/select/macro.njk" import govukSelect %}
-
-        {{ govukInput({
-          label: {
-            text: "Number of reserves per role",
-            classes: "govuk-label--l",
-            isPageHeading: true
-          },
-          classes: "govuk-input--width-5",
-          id: "numbers-per-role",
-          name: "numbers-per-role",
-          autocomplete: "name",
-          spellcheck: false
-        }) }}
-
-
-        
         {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
 
         {{ govukDateInput({
