@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  New Requests
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "Search the Civil Service Reserve",
+    serviceUrl: "#"
+  }) }}
+  
+
+  <div class="govuk-width-container">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+
+
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Search Results
+      </h1>
+      
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Candidate ID</th>
+            <td class="govuk-table__cell">1234567</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Availability</th>
+            <td class="govuk-table__cell">*****</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Location</th>
+            <td class="govuk-table__cell">*****</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Grade</th>
+            <td class="govuk-table__cell">*****</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Security Clearance</th>
+            <td class="govuk-table__cell">*****</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Profession</th>
+            <td class="govuk-table__cell">*****</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Skill</th>
+            <td class="govuk-table__cell">*****</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Experience</th>
+            <td class="govuk-table__cell">*****</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"></th>
+            <td class="govuk-table__cell">
+              <a href="/HR-010">View</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-button-group">
+        <input type="hidden" name="answers-checked" value="true">
+        <a class="govuk-button" href="{{ asset_path }}spreadsheets/export-of-reservists.xlsx">
+          Export
+        </a>
+        <a class="govuk-button" href="/HR-017">Complete</a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
