@@ -153,7 +153,17 @@
           },
           hint: {
             text: ""
-          }
+          },
+          "items": [
+              {
+                  "name": "month",
+                  "classes": "govuk-input--width-2"
+              },
+              {
+                  "name": "year",
+                  "classes": "govuk-input--width-4"
+              }
+          ]
         }) }}
 
         {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
@@ -208,7 +218,7 @@ name: "ref-role"
     text: "What is their email address?"
   },
   hint: {
-    text: ""
+    text: "This can be their personal or work email address, whichever is best for contacting them."
   },
   id: "ref-email",
   name: "ref-email",
@@ -223,11 +233,36 @@ name: "ref-role"
   label: {
     text: "What is their telephone number? "
   },
+  hint: {
+    text: "This can be their personal or work telephone number, whichever is best for contacting them."
+  },
   id: "ref-telephone-number",
   name: "ref-telephone-number",
   type: "tel",
   autocomplete: "tel",
   classes: "govuk-input--width-20"
+}) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "preferred-contact-method",
+  name: "preferred-contact-method",
+  fieldset: {
+    legend: {
+      text: "Preferred contact method"
+    }
+  },
+  items: [
+    {
+      value: "Email",
+      text: "Email"
+    },
+    {
+      value: "Telephone",
+      text: "Telephone"
+    }
+  ]
 }) }}
 
 {% from "govuk/components/button/macro.njk" import govukButton %}

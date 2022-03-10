@@ -62,7 +62,7 @@
     text: "Email address"
   },
   hint: {
-    text: ""
+    text: "This should be your personal email address."
   },
   id: "email",
   name: "email",
@@ -77,28 +77,15 @@
   label: {
     text: "UK telephone number"
   },
+  hint: {
+    text: "This should be your personal telephone number."
+  },
   id: "telephone-number",
   name: "telephone-number",
   type: "tel",
   autocomplete: "tel",
   classes: "govuk-input--width-20"
 }) }}
-
-{% from "govuk/components/input/macro.njk" import govukInput %}
-
-{{ govukInput({
-  label: {
-    text: "National Insurance number"
-  },
-  hint: {
-    text: "It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
-  },
-  classes: "govuk-input--width-10",
-  id: "national-insurance-number",
-  name: "national-insurance-number",
-  spellcheck: false
-}) }}
-
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
