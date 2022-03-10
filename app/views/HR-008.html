@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Search Criteria Input
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Search the Civil Service Reserve",
+  serviceUrl: "#"
+}) }}
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/feedback">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/HR-009" method="post">
+        <h1 class="govuk-heading-xl">
+          Search Criteria
+        </h1>
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+          label: {
+            text: "Availability"
+          },
+          id: "availability",
+          name: "availability",
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Location"
+          },
+          id: "location",
+          name: "location",
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Grade"
+          },
+          id: "grade",
+          name: "grade",
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Security Clearance"
+          },
+          id: "security-clearance",
+          name: "security-clearance",
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Profession"
+          },
+          id: "profession",
+          name: "profession",
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Skill"
+          },
+          id: "skill",
+          name: "skill",
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Experience"
+          },
+          id: "experience",
+          name: "experience",
+          autocomplete: "name",
+          spellcheck: false
+        }) }}
+
+        
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+          text: "Search"
+          }) }}
+          <a class="govuk-link" href="/HO-003">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
