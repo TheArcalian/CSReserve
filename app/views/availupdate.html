@@ -35,121 +35,113 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/update" method="post">
+      <form class="form" action="/update" method="post">
 
-      <h1 class="govuk-heading-xl">
-        Your availability
-<p>
+        <h1 class="govuk-heading-xl">
+          Your availability
+        </h1>
 
-  <p>
-
-
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-        <legend class="govuk-fieldset__legend">
-          What days would you be willing to perform Reserve duties?
-        </legend>
-        <div id="waste-hint" class="govuk-hint">
-
-        </div>
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="monday" name="availday" type="checkbox" value="monday">
-            <label class="govuk-label govuk-checkboxes__label" for="monday">
-              Monday
-            </label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="tuesday" name="availday" type="checkbox" value="tuesday">
-            <label class="govuk-label govuk-checkboxes__label" for="tuesday">
-              Tuesday
-            </label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="wednesday" name="availday" type="checkbox" value="wednesday">
-            <label class="govuk-label govuk-checkboxes__label" for="wednesday">
-              Wednesday
-            </label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="thursday" name="availday" type="checkbox" value="thursday">
-            <label class="govuk-label govuk-checkboxes__label" for="thursday">
-              Thursday
-            </label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="friday" name="availday" type="checkbox" value="friday">
-            <label class="govuk-label govuk-checkboxes__label" for="friday">
-              Friday
-            </label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="saturday" name="availday" type="checkbox" value="saturday">
-            <label class="govuk-label govuk-checkboxes__label" for="saturday">
-              Saturday
-            </label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="sunday" name="availday" type="checkbox" value="sunday">
-            <label class="govuk-label govuk-checkboxes__label" for="sunday">
-              Sunday
-            </label>
-          </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend">
+              What days would you be willing to perform Reserve duties?
+            </legend>
+            <div id="waste-hint" class="govuk-hint">
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="monday" name="availday" type="checkbox" value="monday">
+                <label class="govuk-label govuk-checkboxes__label" for="monday">
+                  Monday
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="tuesday" name="availday" type="checkbox" value="tuesday">
+                <label class="govuk-label govuk-checkboxes__label" for="tuesday">
+                  Tuesday
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="wednesday" name="availday" type="checkbox" value="wednesday">
+                <label class="govuk-label govuk-checkboxes__label" for="wednesday">
+                  Wednesday
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="thursday" name="availday" type="checkbox" value="thursday">
+                <label class="govuk-label govuk-checkboxes__label" for="thursday">
+                  Thursday
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="friday" name="availday" type="checkbox" value="friday">
+                <label class="govuk-label govuk-checkboxes__label" for="friday">
+                  Friday
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="saturday" name="availday" type="checkbox" value="saturday">
+                <label class="govuk-label govuk-checkboxes__label" for="saturday">
+                  Saturday
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="sunday" name="availday" type="checkbox" value="sunday">
+                <label class="govuk-label govuk-checkboxes__label" for="sunday">
+                  Sunday
+                </label>
+              </div>
+            </div>
+          </fieldset>
         </div>
 
-      </fieldset>
-
-</div>
-
-<p>
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <legend class="govuk-fieldset__legend">
-          Would you be willing to undertake a role with unsociable hours (e.g. shift working, nights)?
-        </legend>
-      </legend>
-      <div id="contact-hint" class="govuk-hint">
-
-      </div>
-      <div class="govuk-radios" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="unsol" name="unsol" type="radio" value="Yes" data-aria-controls="unsol-contact">
-          <label class="govuk-label govuk-radios__label" for="unsol">
-            Yes
-          </label>
-        </div>
-        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="unsol-contact">
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="more-detail">
-              Please comment on your level of flexibility (e.g. early mornings, late evenings, nights)?
-            </label>
-            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
-          </div>
-
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="unsol" name="unsol" type="radio" value="No" data-aria-controls="unsol-contact-2">
-          <label class="govuk-label govuk-radios__label" for="unsol">
-            No
-          </label>
-        </div>
-        </div>
-
-    </fieldset>
-  </div>
-
-  <p>
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <legend class="govuk-fieldset__legend">
-                Do you have any personal circumstances that we need to be aware of (e.g. condensed hours, fortnight days off, specific days off, etc.)?
+                Would you be willing to undertake a role with unsociable hours?
               </legend>
             </legend>
             <div id="contact-hint" class="govuk-hint">
+              Unsociable hours may refer to shift working and working nights.
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="unsol" name="unsol" type="radio" value="Yes" data-aria-controls="unsol-contact">
+                <label class="govuk-label govuk-radios__label" for="unsol">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="unsol-contact">
 
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="more-detail">
+                    Please comment on your level of flexibility (e.g. early mornings, late evenings, nights)?
+                  </label>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+                </div>
+
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="unsol" name="unsol" type="radio" value="No" data-aria-controls="unsol-contact-2">
+                <label class="govuk-label govuk-radios__label" for="unsol">
+                  No
+                </label>
+              </div>
+              </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <legend class="govuk-fieldset__legend">
+                Do you have any personal circumstances that we need to be aware of?
+              </legend>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+              This may mean only working condensed hours, e.g. evenings only, or having specific days or fortnight days off.
             </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
@@ -179,16 +171,15 @@
           </fieldset>
         </div>
 
+        <div class="govuk-button-group">
+        {{ govukButton({
+        text: "Submit"
+        }) }}
 
-<div class="govuk-button-group">
-{{ govukButton({
-text: "Submit"
-}) }}
+        <a class="govuk-link" href="/start">Cancel</a>
+        </div>
 
-<a class="govuk-link" href="/start">Cancel</a>
-</div>
-
-</form>
+      </form>
 
     </div>
   </div>
