@@ -2,6 +2,18 @@ const express = require('express')
 const router = express.Router()
 
 // Add your routes here - above the module.exports line
+router.post('/elig0-answer', function (req, res) {
+  var elig0answer = req.session.data['wales']
+  if (elig0answer == "yes"){
+      res.redirect('/Elig1')
+  }
+  if (elig0answer == "no"){
+      res.redirect('/Unelig1')
+  }
+})
+
+
+// Add your routes here - above the module.exports line
 router.post('/elig1-answer', function (req, res) {
   var elig1answer = req.session.data['current-former']
   if (elig1answer == "other"){
