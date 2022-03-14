@@ -29,92 +29,148 @@
 
       <form class="form" action="/elig4-answer" method="post">
 
-        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+        <div class="govuk-form-group">
 
-{{ govukCheckboxes({
-  idPrefix: "current-last-role",
-  name: "current-last-role",
-  fieldset: {
-    legend: {
-      text: "Have you ever worked in the following professions?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: "Select all that apply."
-  },
-  items: [
-    {
-      value: "Analysis",
-      text: "Analysis"
-    },
-    {
-      value: "Commercial and Procurement",
-      text: "Commercial and Procurement"
-    },
-    {
-      value: "Communications",
-      text: "Communications"
-    },
-    {
-      value: "Counter Fraud",
-      text: "Counter Fraud"
-    },
-    {
-      value: "Crisis Management",
-      text: "Crisis Management"
-    },
-    {
-      value: "Digital, Data and Technology",
-      text: "Digital, Data and Technology"
-    },
-    {
-      value: "Finance",
-      text: "Finance"
-    },
-    {
-      value: "Human Resources",
-      text: "Human Resources"
-    },
-    {
-      value: "International Trade and Development",
-      text: "International Trade and Development"
-    },
-    {
-      value: "Knowledge and Information Management",
-      text: "Knowledge and Information Management"
-    },
-    {
-      value: "Legal",
-      text: "Legal"
-    },
-    {
-      value: "Operational Delivery",
-      text: "Operational Delivery"
-    },
-    {
-      value: "Policy",
-      text: "Policy"
-    },
-    {
-      value: "Project Management",
-      text: "Project Management"
-    },
-    {
-      value: "Property",
-      text: "Property"
-    },
-    {
-      value: "Security",
-      text: "Security"
-    },
-    {
-      value: "None of the above",
-      text: "None of the above"
-    }
-  ]
-}) }}
+        <fieldset class="govuk-fieldset" aria-describedby="current-last-role-hint">
+
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        
+            <h1 class="govuk-fieldset__heading">
+              Have you ever worked in the following professions?
+            </h1>
+        
+          </legend>
+        
+          <div id="current-last-role-hint" class="govuk-hint">
+            Select the <a href="https://www.civil-service-careers.gov.uk/professions" target="_blank">profession(s)</a> that you have worked in
+          </div>
+        
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role" name="current-last-role" type="checkbox" value="Analysis">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role">
+                Analysis
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-2" name="current-last-role" type="checkbox" value="Commercial and Procurement">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-2">
+                Commercial and Procurement
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-3" name="current-last-role" type="checkbox" value="Communications">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-3">
+                Communications
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-4" name="current-last-role" type="checkbox" value="Counter Fraud">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-4">
+                Counter Fraud
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-5" name="current-last-role" type="checkbox" value="Crisis Management">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-5">
+                Crisis Management
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-6" name="current-last-role" type="checkbox" value="Digital, Data and Technology">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-6">
+                Digital, Data and Technology
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-7" name="current-last-role" type="checkbox" value="Finance">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-7">
+                Finance
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-8" name="current-last-role" type="checkbox" value="Human Resources">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-8">
+                Human Resources
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-9" name="current-last-role" type="checkbox" value="International Trade and Development">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-9">
+                International Trade and Development
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-10" name="current-last-role" type="checkbox" value="Knowledge and Information Management">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-10">
+                Knowledge and Information Management
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-11" name="current-last-role" type="checkbox" value="Legal">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-11">
+                Legal
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-12" name="current-last-role" type="checkbox" value="Operational Delivery">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-12">
+                Operational Delivery
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-13" name="current-last-role" type="checkbox" value="Policy">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-13">
+                Policy
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-14" name="current-last-role" type="checkbox" value="Project Management">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-14">
+                Project Management
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-15" name="current-last-role" type="checkbox" value="Property">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-15">
+                Property
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-16" name="current-last-role" type="checkbox" value="Security">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-16">
+                Security
+              </label>
+            </div>
+        
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="current-last-role-17" name="current-last-role" type="checkbox" value="None of the above">
+              <label class="govuk-label govuk-checkboxes__label" for="current-last-role-17">
+                None of the above
+              </label>
+            </div>
+        
+          </div>
+        
+        </fieldset>
+
+      </div>
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
