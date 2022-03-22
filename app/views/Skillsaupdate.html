@@ -25,54 +25,51 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-
-
       <form class="form" action="/update" method="post">
 
         <h1 class="govuk-heading-xl">
           Your analysis skills
-        <p>  </p>
-        <p>We will now ask you to rate your confidence level against these analysis skills.  </p>
-  <p>  </p>
+        </h1>
+        <p>We will now ask you to rate your confidence level against these analysis skills. </p>
 
-<h2 class="govuk-heading-m">Analyse a range of information and translate this into clear policy</h2>
+        <h2 class="govuk-heading-m">Analyse a range of information and translate this into clear policy</h2>
         {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-{{ govukSelect({
-  id: "skill6conf",
-  name: "skill6conf",
-  label: {
-    text: "Confidence Rating"
-  },
-  items: [
-    {
-      value: " ",
-      text: " "
-    },
-    {
-      value: "Not confident at all",
-      text: "Not confident at all"
-    },
-    {
-      value: "Slightly confident",
-      text: "Slightly confident"
-    },
-    {
-      value: "Somewhat confident",
-      text: "Somewhat confident"
-    },
-    {
-      value: "Fairly confident",
-      text: "Fairly confident"
-    },
-    {
-      value: "Completely confident",
-      text: "Completely confident"
-    }
-  ]
-}) }}
+        {{ govukSelect({
+          id: "skill6conf",
+          name: "skill6conf",
+          label: {
+            text: "Confidence Rating"
+          },
+          items: [
+            {
+              value: " ",
+              text: " "
+            },
+            {
+              value: "Not confident at all",
+              text: "Not confident at all"
+            },
+            {
+              value: "Slightly confident",
+              text: "Slightly confident"
+            },
+            {
+              value: "Somewhat confident",
+              text: "Somewhat confident"
+            },
+            {
+              value: "Fairly confident",
+              text: "Fairly confident"
+            },
+            {
+              value: "Completely confident",
+              text: "Completely confident"
+            }
+          ]
+        }) }}
 
-<div class="govuk-form-group">
+        <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <legend class="govuk-fieldset__legend">
@@ -107,15 +104,13 @@
               </div>
               </div>
 
-            </fieldset>
-          </div>
+          </fieldset>
+        </div>
 
-          <p>  </p>
+        <h2 class="govuk-heading-m">Understand data, intelligence and analysis and engage with analysts</h2>
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-          <h2 class="govuk-heading-m">Understand data, intelligence and analysis and engage with analysts</h2>
-                {% from "govuk/components/select/macro.njk" import govukSelect %}
-
-          {{ govukSelect({
+        {{ govukSelect({
           id: "skill7conf",
           name: "skill7conf",
           label: {
@@ -147,134 +142,121 @@
               text: "Completely confident"
             }
           ]
+        }) }}
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <legend class="govuk-fieldset__legend">
+                Do you have any experience of this in a crisis?
+              </legend>
+            </legend>
+            <div id="contact-hint" class="govuk-hint"></div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="skill7" name="skill7" type="radio" value="Yes" data-aria-controls="skill7-contact">
+                <label class="govuk-label govuk-radios__label" for="skill7">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="skill7-contact">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="skill7-detail">
+                    Briefly describe this experience in a couple of bullet points
+                  </label>
+                  <textarea class="govuk-textarea" id="skill7-detail" name="skill7-detail" rows="5"></textarea>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="skill7" name="skill7" type="radio" value="No" data-aria-controls="skill7-contact-2">
+                <label class="govuk-label govuk-radios__label" for="skill7">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <h2 class="govuk-heading-m">Understand data and communicate to a range of audiences</h2>
+        {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+        {{ govukSelect({
+          id: "skill8conf",
+          name: "skill8conf",
+          label: {
+            text: "Confidence Rating"
+          },
+          items: [
+            {
+              value: " ",
+              text: " "
+            },
+            {
+              value: "Not confident at all",
+              text: "Not confident at all"
+            },
+            {
+              value: "Slightly confident",
+              text: "Slightly confident"
+            },
+            {
+              value: "Somewhat confident",
+              text: "Somewhat confident"
+            },
+            {
+              value: "Fairly confident",
+              text: "Fairly confident"
+            },
+            {
+              value: "Completely confident",
+              text: "Completely confident"
+            }
+          ]
+        }) }}
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <legend class="govuk-fieldset__legend">
+                Do you have any experience of this in a crisis?
+              </legend>
+            </legend>
+            <div id="contact-hint" class="govuk-hint"></div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="skill8" name="skill8" type="radio" value="Yes" data-aria-controls="skill8-contact">
+                <label class="govuk-label govuk-radios__label" for="skill8">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="skill8-contact">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="skill8-detail">
+                    Briefly describe this experience in a couple of bullet points
+                  </label>
+                  <textarea class="govuk-textarea" id="skill8-detail" name="skill8-detail" rows="5"></textarea>
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="skill8" name="skill8" type="radio" value="No" data-aria-controls="skill8-contact-2">
+                <label class="govuk-label govuk-radios__label" for="skill8">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+          text: "Submit"
           }) }}
+          <a class="govuk-link" href="/start">Cancel</a>
+        </div>
 
-          <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                      <legend class="govuk-fieldset__legend">
-                        Do you have any experience of this in a crisis?
-                      </legend>
-                    </legend>
-                    <div id="contact-hint" class="govuk-hint">
-
-                    </div>
-                    <div class="govuk-radios" data-module="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="skill7" name="skill7" type="radio" value="Yes" data-aria-controls="skill7-contact">
-                        <label class="govuk-label govuk-radios__label" for="skill7">
-                          Yes
-                        </label>
-                      </div>
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="skill7-contact">
-
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="skill7-detail">
-                            Briefly describe this experience in a couple of bullet points
-                          </label>
-                          <textarea class="govuk-textarea" id="skill7-detail" name="skill7-detail" rows="5"></textarea>
-                        </div>
-
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="skill7" name="skill7" type="radio" value="No" data-aria-controls="skill7-contact-2">
-                        <label class="govuk-label govuk-radios__label" for="skill7">
-                          No
-                        </label>
-                      </div>
-                      </div>
-
-                    </fieldset>
-                  </div>
-
-                  <h2 class="govuk-heading-m">Understand data and communicate to a range of audiences</h2>
-                        {% from "govuk/components/select/macro.njk" import govukSelect %}
-
-                  {{ govukSelect({
-                  id: "skill8conf",
-                  name: "skill8conf",
-                  label: {
-                    text: "Confidence Rating"
-                  },
-                  items: [
-                    {
-                      value: " ",
-                      text: " "
-                    },
-                    {
-                      value: "Not confident at all",
-                      text: "Not confident at all"
-                    },
-                    {
-                      value: "Slightly confident",
-                      text: "Slightly confident"
-                    },
-                    {
-                      value: "Somewhat confident",
-                      text: "Somewhat confident"
-                    },
-                    {
-                      value: "Fairly confident",
-                      text: "Fairly confident"
-                    },
-                    {
-                      value: "Completely confident",
-                      text: "Completely confident"
-                    }
-                  ]
-                  }) }}
-
-                  <div class="govuk-form-group">
-                          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                              <legend class="govuk-fieldset__legend">
-                                Do you have any experience of this in a crisis?
-                              </legend>
-                            </legend>
-                            <div id="contact-hint" class="govuk-hint">
-
-                            </div>
-                            <div class="govuk-radios" data-module="govuk-radios">
-                              <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="skill8" name="skill8" type="radio" value="Yes" data-aria-controls="skill8-contact">
-                                <label class="govuk-label govuk-radios__label" for="skill8">
-                                  Yes
-                                </label>
-                              </div>
-                              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="skill8-contact">
-
-                                <div class="govuk-form-group">
-                                  <label class="govuk-label" for="skill8-detail">
-                                    Briefly describe this experience in a couple of bullet points
-                                  </label>
-                                  <textarea class="govuk-textarea" id="skill8-detail" name="skill8-detail" rows="5"></textarea>
-                                </div>
-
-                              </div>
-                              <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="skill8" name="skill8" type="radio" value="No" data-aria-controls="skill8-contact-2">
-                                <label class="govuk-label govuk-radios__label" for="skill8">
-                                  No
-                                </label>
-                              </div>
-                              </div>
-
-                            </fieldset>
-                          </div>
-
-
-
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-<div class="govuk-button-group">
-{{ govukButton({
-text: "Submit"
-}) }}
-
-<a class="govuk-link" href="/start">Cancel</a>
-</div>
-
-</form>
+      </form>
 
     </div>
   </div>
