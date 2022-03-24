@@ -1,0 +1,266 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %} 
+  Reservist Experience Required 
+{% endblock %} 
+
+{% block header %}
+
+  {% from "govuk/components/header/macro.njk" import govukHeader %} 
+
+  {{ govukHeader({ 
+    homepageUrl: "#", 
+    serviceName: "Make a resource request with the Civil Service Reserve", 
+    serviceUrl: "#" }) 
+  }}
+
+  <div class="govuk-width-container">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag"> alpha </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your
+        <a class="govuk-link" href="/feedback">feedback</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/HO-010" method="post">
+      <h1 class="govuk-heading-xl">
+        The following statements outline key behaviors and experiences you may require.
+      </h1>
+
+      <p>Please select the option that best describes the experience level required.</p>
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        classes: "govuk-radios--small",
+        idPrefix: "exp4req",
+        name: "exp4req",
+        fieldset: {
+          legend: {
+            text: "Working with ministers, anticipating and delivering their needs in a timely manner.",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "expert-required",
+            text: "Expert required"
+          },
+          {
+            value: "some-experience-required",
+            text: "Some experience required"
+          },          
+          {
+            value: "not-required",
+            text: "Not required"
+          }
+        ]
+      }) }}
+
+      {{ govukRadios({
+        classes: "govuk-radios--small",
+        idPrefix: "exp5req",
+        name: "exp5req",
+        fieldset: {
+          legend: {
+            text: "Enjoys working in high pressure enviroments.",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "required",
+            text: "Required"
+          },
+          {
+            value: "not-required",
+            text: "Not required"
+          }
+        ]
+      }) }}
+
+      {{ govukRadios({
+        classes: "govuk-radios--small",
+        idPrefix: "exp6req",
+        name: "exp6req",
+        fieldset: {
+          legend: {
+            text: "Making strategic decisions based on your understanding of the consequences.",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "expert-required",
+            text: "Expert required"
+          },
+          {
+            value: "some-experience-required",
+            text: "Some experience required"
+          },          
+          {
+            value: "not-required",
+            text: "Not required"
+          }
+        ]
+      }) }}
+
+      {{ govukRadios({
+        classes: "govuk-radios--small",
+        idPrefix: "exp7req",
+        name: "exp7req",
+        fieldset: {
+          legend: {
+            text: "Working with data to communicate to a range of audiences.",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "expert-required",
+            text: "Expert required"
+          },
+          {
+            value: "some-experience-required",
+            text: "Some experience required"
+          },          
+          {
+            value: "not-required",
+            text: "Not required"
+          }
+        ]
+      }) }}
+
+      {{ govukRadios({
+        classes: "govuk-radios--small",
+        idPrefix: "exp8req",
+        name: "exp8req",
+        fieldset: {
+          legend: {
+            text: "Producing clear and accurate briefings.",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "expert-required",
+            text: "Expert required"
+          },
+          {
+            value: "some-experience-required",
+            text: "Some experience required"
+          },          
+          {
+            value: "not-required",
+            text: "Not required"
+          }
+        ]
+      }) }}
+
+      {{ govukRadios({
+        classes: "govuk-radios--small",
+        idPrefix: "exp9req",
+        name: "exp9req",
+        fieldset: {
+          legend: {
+            text: "Delivering difficult messages to a range of audiences.",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "expert-required",
+            text: "Expert required"
+          },
+          {
+            value: "some-experience-required",
+            text: "Some experience required"
+          },          
+          {
+            value: "not-required",
+            text: "Not required"
+          }
+        ]
+      }) }}
+
+      {{ govukRadios({
+        classes: "govuk-radios--small",
+        idPrefix: "exp10req",
+        name: "exp10req",
+        fieldset: {
+          legend: {
+            text: "Running events or conferences.",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "expert-required",
+            text: "Expert required"
+          },
+          {
+            value: "some-experience-required",
+            text: "Some experience required"
+          },          
+          {
+            value: "not-required",
+            text: "Not required"
+          }
+        ]
+      }) }}
+
+      {{ govukRadios({
+        classes: "govuk-radios--small",
+        idPrefix: "exp11req",
+        name: "exp11req",
+        fieldset: {
+          legend: {
+            text: "Experience working with multiple organisations.",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "cross-government-departments",
+            text: "Cross - government departments"
+          },
+          {
+            value: "with-local-authorities",
+            text: "With local authorities"
+          },          
+          {
+            value: "with-voluntary-and-local-community-groups",
+            text: "With voluntary and local community groups"
+          },
+          {
+            value: "with-business-and-higher-education",
+            text: "With business and higher education"
+          }
+        ]
+      }) }}
+      
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      <div class="govuk-button-group">
+        {{ govukButton({ text: "Continue" }) }}
+
+        <a class="govuk-link" href="/HO-009a">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
