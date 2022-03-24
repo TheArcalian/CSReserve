@@ -36,7 +36,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form class="form" action="/HO-009b" method="post">
-      <h1 class="govuk-heading-xl">Do you require individuals with experience in the following?</h1>
+      <h1 class="govuk-heading-xl">Experience required</h1>
+
+      <p>Do you require individuals with experience in the following?</p>
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -46,10 +48,12 @@
         name: "exp1req",
         fieldset: {
           legend: {
-            text: "Experience supporting peaks in volume of BAU activities for expected events. 
-            For example, Universal Credit Processing, Olympic Games.",
+            text: "Experience supporting peaks in volume of BAU activities for expected events.",
             classes: "govuk-fieldset__legend--m"
           }
+        },
+        hint: {
+          text: "For example, Universal Credit Processing, Olympic Games."
         },
         items: [
           {
@@ -69,10 +73,12 @@
         name: "exp2req",
         fieldset: {
           legend: {
-            text: "Experience supporting peaks in volume of BAU activities for unexpected events. 
-            For example, Flooding, Grenfell Tower.",
+            text: "Experience supporting peaks in volume of BAU activities for unexpected events.",
             classes: "govuk-fieldset__legend--m"
           }
+        },
+        hint: {
+          text: "For example, Flooding, Grenfell Tower."
         },
         items: [
           {
@@ -92,10 +98,12 @@
         name: "exp3req",
         fieldset: {
           legend: {
-            text: "Experience supporting cross-government events. 
-            For example, Brexit, Covid-19.",
+            text: "Experience supporting cross-government events.",
             classes: "govuk-fieldset__legend--m"
           }
+        },
+        hint: {
+          text: "For example, Brexit, Covid-19."
         },
         items: [
           {
