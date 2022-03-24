@@ -41,14 +41,14 @@
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
       {{ govukRadios({
-        classes: "govuk-radios--inline",
+        classes: "govuk-radios--small",
         idPrefix: "exp1req",
         name: "exp1req",
         fieldset: {
           legend: {
             text: "Experience supporting peaks in volume of BAU activities for expected events. 
             For example, Universal Credit Processing, Olympic Games.",
-            classes: "govuk-fieldset__legend--l"
+            classes: "govuk-fieldset__legend--m"
           }
         },
         items: [
@@ -64,14 +64,14 @@
       }) }}
 
       {{ govukRadios({
-        classes: "govuk-radios--inline",
+        classes: "govuk-radios--small",
         idPrefix: "exp2req",
         name: "exp2req",
         fieldset: {
           legend: {
             text: "Experience supporting peaks in volume of BAU activities for unexpected events. 
             For example, Flooding, Grenfell Tower.",
-            classes: "govuk-fieldset__legend--l"
+            classes: "govuk-fieldset__legend--m"
           }
         },
         items: [
@@ -87,14 +87,14 @@
       }) }}
 
       {{ govukRadios({
-        classes: "govuk-radios--inline",
+        classes: "govuk-radios--small",
         idPrefix: "exp3req",
         name: "exp3req",
         fieldset: {
           legend: {
             text: "Experience supporting cross-government events. 
             For example, Brexit, Covid-19.",
-            classes: "govuk-fieldset__legend--l"
+            classes: "govuk-fieldset__legend--m"
           }
         },
         items: [
