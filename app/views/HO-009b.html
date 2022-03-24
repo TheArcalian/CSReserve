@@ -47,6 +47,7 @@
       </p>
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
       {{ govukRadios({
         classes: "govuk-radios--small",
@@ -226,8 +227,8 @@
         ]
       }) }}
 
-      {{ govukRadios({
-        classes: "govuk-radios--small",
+      {{ govukCheckboxes({
+        classes: "govuk-checkboxes--small",
         idPrefix: "exp11req",
         name: "exp11req",
         fieldset: {
@@ -235,6 +236,9 @@
             text: "Experience working with multiple organisations.",
             classes: "govuk-fieldset__legend--m"
           }
+        },
+        hint: {
+          text: "Select all that apply."
         },
         items: [
           {
