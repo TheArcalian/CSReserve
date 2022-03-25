@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %} 
+  Reservist registration
+{% endblock %} 
+
+{% block header %}
+
+  {% from "govuk/components/header/macro.njk" import govukHeader %} 
+
+  {{ govukHeader({ 
+    homepageUrl: "#", 
+    serviceName: "Civil Service Reserve - Reservist registration", 
+    serviceUrl: "#" }) 
+  }}
+
+  <div class="govuk-width-container">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag"> alpha </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your
+        <a class="govuk-link" href="/feedback">feedback</a> will help us to
+        improve it.
+      </span>
+    </p>
+  </div>
+
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/RR-017a" method="post">
+      <h1 class="govuk-heading-xl">Crisis and surge experience</h1>
+
+      <p>Tell us about your crisis or surge response experience.</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <legend class="govuk-fieldset__legend">
+              <h2 class="govuk-heading-m">
+                Have you supported peaks in volume of BAU activities for expected events?
+              </h2>
+            </legend>
+          </legend>
+          <div id="contact-hint" class="govuk-hint">
+            For example, Universal Credit Processing, Olympic Games.
+          </div>
+          <div class="govuk-radios--small" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="crisisexp1-yes" name="crisisexp1" type="radio" value="Yes" data-aria-controls="crisisexp1-contact">
+              <label class="govuk-label govuk-radios__label" for="crisisexp1">
+                Yes - please provide more information
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="crisisexp1-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="crisisexp1-detail">
+                  Briefly describe this experience in a couple of bullet points
+                </label>
+                <textarea class="govuk-textarea" id="crisisexp1-detail" name="crisisexp1-detail" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="crisisexp1-no" name="crisisexp1" type="radio" value="No" data-aria-controls="crisisexp1-contact-2">
+              <label class="govuk-label govuk-radios__label" for="crisisexp1">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <legend class="govuk-fieldset__legend">
+              <h2 class="govuk-heading-m">
+                Have you supported peaks in volume of BAU activities for unexpected events?
+              </h2>
+            </legend>
+          </legend>
+          <div id="contact-hint" class="govuk-hint">
+            For example, Flooding, Grenfell Tower.
+          </div>
+          <div class="govuk-radios--small" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="crisisexp2-yes" name="crisisexp2" type="radio" value="Yes" data-aria-controls="crisisexp2-contact">
+              <label class="govuk-label govuk-radios__label" for="crisisexp2">
+                Yes - please provide more information
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="crisisexp2-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="crisisexp2-detail">
+                  Briefly describe this experience in a couple of bullet points
+                </label>
+                <textarea class="govuk-textarea" id="crisisexp2-detail" name="crisisexp2-detail" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="crisisexp2-no" name="crisisexp2" type="radio" value="No" data-aria-controls="crisisexp2-contact-2">
+              <label class="govuk-label govuk-radios__label" for="crisisexp2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <legend class="govuk-fieldset__legend">
+              <h2 class="govuk-heading-m">
+                Have you supported cross-government responses?
+              </h2>
+            </legend>
+          </legend>
+          <div id="contact-hint" class="govuk-hint">
+            For example, Brexit, Covid-19.
+          </div>
+          <div class="govuk-radios--small" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="crisisexp3-yes" name="crisisexp3" type="radio" value="Yes" data-aria-controls="crisisexp3-contact">
+              <label class="govuk-label govuk-radios__label" for="crisisexp3">
+                Yes - please provide more information
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="crisisexp3-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="crisisexp3-detail">
+                  Briefly describe this experience in a couple of bullet points
+                </label>
+                <textarea class="govuk-textarea" id="crisisexp3-detail" name="crisisexp3-detail" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="crisisexp3-no" name="crisisexp3" type="radio" value="No" data-aria-controls="crisisexp3-contact-2">
+              <label class="govuk-label govuk-radios__label" for="crisisexp3">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      <div class="govuk-button-group">
+        {{ govukButton({ text: "Continue" }) }}
+
+        <a class="govuk-link" href="/Resreg">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
