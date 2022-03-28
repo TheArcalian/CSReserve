@@ -35,10 +35,11 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form class="form" action="/HO-009c" method="post">
+    <form class="form" action="/HO-010" method="post">
       <h1 class="govuk-heading-xl">
-        Select the experience required for the following working in government behaviours
+        Behaviours and experience
       </h1>
+
       <p>
         The following statements outline key behaviors and experiences you may require. 
         Please select the option that best describes the experience level required.
@@ -48,11 +49,38 @@
 
       {{ govukRadios({
         classes: "govuk-radios--small",
-        idPrefix: "exp4req",
-        name: "exp4req",
+        idPrefix: "exp7req",
+        name: "exp7req",
         fieldset: {
           legend: {
-            text: "Working with ministers, anticipating and delivering their needs in a timely manner.",
+            text: "Working with data to communicate to a range of audiences.",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "Expert required",
+            text: "Expert required"
+          },
+          {
+            value: "Some experience required",
+            text: "Some experience required"
+          },          
+          {
+            value: "Not required",
+            text: "Not required"
+          }
+        ]
+      }) }}
+
+
+      {{ govukRadios({
+        classes: "govuk-radios--small",
+        idPrefix: "exp10req",
+        name: "exp10req",
+        fieldset: {
+          legend: {
+            text: "Running events or conferences.",
             classes: "govuk-fieldset__legend--m"
           }
         },
@@ -74,30 +102,26 @@
 
       {{ govukRadios({
         classes: "govuk-radios--small",
-        idPrefix: "exp8req",
-        name: "exp8req",
+        idPrefix: "exp5req",
+        name: "exp5req",
         fieldset: {
           legend: {
-            text: "Producing clear and accurate briefings.",
+            text: "Enjoys working in high pressure environments.",
             classes: "govuk-fieldset__legend--m"
           }
         },
         items: [
           {
-            value: "Expert required",
-            text: "Expert required"
+            value: "Required",
+            text: "Required"
           },
-          {
-            value: "Some experience required",
-            text: "Some experience required"
-          },          
           {
             value: "Not required",
             text: "Not required"
           }
         ]
       }) }}
-      
+
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
       <div class="govuk-button-group">

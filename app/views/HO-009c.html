@@ -35,9 +35,9 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form class="form" action="/HO-009c" method="post">
+    <form class="form" action="/HO-009d" method="post">
       <h1 class="govuk-heading-xl">
-        Select the experience required for the following working in government behaviours
+        Select the experience required for the following senior level working behaviours
       </h1>
       <p>
         The following statements outline key behaviors and experiences you may require. 
@@ -45,14 +45,15 @@
       </p>
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
       {{ govukRadios({
         classes: "govuk-radios--small",
-        idPrefix: "exp4req",
-        name: "exp4req",
+        idPrefix: "exp6req",
+        name: "exp6req",
         fieldset: {
           legend: {
-            text: "Working with ministers, anticipating and delivering their needs in a timely manner.",
+            text: "Making strategic decisions based on your understanding of the consequences.",
             classes: "govuk-fieldset__legend--m"
           }
         },
@@ -74,11 +75,11 @@
 
       {{ govukRadios({
         classes: "govuk-radios--small",
-        idPrefix: "exp8req",
-        name: "exp8req",
+        idPrefix: "exp9req",
+        name: "exp9req",
         fieldset: {
           legend: {
-            text: "Producing clear and accurate briefings.",
+            text: "Delivering difficult messages to a range of audiences.",
             classes: "govuk-fieldset__legend--m"
           }
         },
@@ -94,6 +95,39 @@
           {
             value: "Not required",
             text: "Not required"
+          }
+        ]
+      }) }}
+
+      {{ govukCheckboxes({
+        classes: "govuk-checkboxes--small",
+        idPrefix: "exp11req",
+        name: "exp11req",
+        fieldset: {
+          legend: {
+            text: "Experience working with multiple organisations.",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        hint: {
+          text: "Select all that apply."
+        },
+        items: [
+          {
+            value: "Cross - government departments",
+            text: "Cross - government departments"
+          },
+          {
+            value: "With local authorities",
+            text: "With local authorities"
+          },          
+          {
+            value: "With voluntary and local community groups",
+            text: "With voluntary and local community groups"
+          },
+          {
+            value: "With business and higher education",
+            text: "With business and higher education"
           }
         ]
       }) }}

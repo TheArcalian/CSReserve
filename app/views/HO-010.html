@@ -58,32 +58,12 @@
           },
           items: [
             {
-              value: "Monday",
-              text: "Monday"
+              value: "Weekdays (Mon - Fri)",
+              text: "Weekdays (Mon - Fri)"
             },
             {
-              value: "Tuesday",
-              text: "Tuesday"
-            },
-            {
-              value: "Wednesday",
-              text: "Wednesday"
-            },
-            {
-              value: "Thursday",
-              text: "Thursday"
-            },
-            {
-              value: "Friday",
-              text: "Friday"
-            },
-            {
-              value: "Saturday",
-              text: "Saturday"
-            },
-            {
-              value: "Sunday",
-              text: "Sunday"
+              value: "Weekends",
+              text: "Weekends"
             }
           ]
         }) }}
@@ -119,11 +99,10 @@
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
       <div class="govuk-button-group">
-      {{ govukButton({
-      text: "Continue"
-      }) }}
-
-      <a class="govuk-link" href="/HO-003">Cancel</a>
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+        <a class="govuk-link" href="/HO-003">Cancel</a>
       </div>
 
       </form>
