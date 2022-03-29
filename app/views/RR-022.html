@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/RR-025" method="post">
+
+        <h1 class="govuk-heading-xl">
+          Reasonable adjustments and personal preferences
+        <p>  </p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <legend class="govuk-fieldset__legend">
+                Do you have any <a href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers">reasonable adjustments</a> we should be aware of? 
+              </legend>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="resadj" name="resadj" type="radio" value="Yes" data-aria-controls="resadj-contact">
+                <label class="govuk-label govuk-radios__label" for="resadj">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="resadj-contact">
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="resadj-detail">
+                    Please describe these reasonable adjustments.
+                  </label>
+                  <textarea class="govuk-textarea" id="resadj-detail" name="resadj-detail" rows="5"></textarea>
+                </div>
+
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="resadj" name="resadj" type="radio" value="No" data-aria-controls="resadj-contact-2">
+                <label class="govuk-label govuk-radios__label" for="resadj">
+                  No
+                </label>
+              </div>
+              </div>
+
+          </fieldset>
+        </div>
+
+        <p>  </p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <legend class="govuk-fieldset__legend">
+                Do you have any conflicts of interest or ethical concerns that could impact your preference for certain roles or Government departments?
+              </legend>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="deptp" name="deptp" type="radio" value="Yes" data-aria-controls="deptp-contact">
+                <label class="govuk-label govuk-radios__label" for="deptp">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="deptp-contact">
+
+                <div class="govuk-form-group">
+                  <textarea class="govuk-textarea" id="deptp-detail" name="deptp-detail" rows="5"></textarea>
+                </div>
+
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="deptp" name="deptp" type="radio" value="No" data-aria-controls="deptp-contact-2">
+                <label class="govuk-label govuk-radios__label" for="deptp">
+                  No
+                </label>
+              </div>
+              </div>
+
+          </fieldset>
+        </div>
+
+
+
+
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-button-group">
+{{ govukButton({
+text: "Continue"
+}) }}
+
+<a class="govuk-link" href="/start">Cancel</a>
+</div>
+
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

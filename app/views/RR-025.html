@@ -1,0 +1,571 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+
+    <h2 class="govuk-heading-m">Personal details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Full name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['full-name'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-013">
+            Change
+            <span class="govuk-visually-hidden"> Full Name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['telephone-number'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-013">
+            Change
+            <span class="govuk-visually-hidden"> contact details</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['email'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-013">
+            Change
+            <span class="govuk-visually-hidden"> contact details</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Right to work
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['nation'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-007a">
+            Change
+            <span class="govuk-visually-hidden"> Right to work</span>
+          </a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <h2 class="govuk-heading-m">Employment details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Current or former civil servant
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['current-former'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-006">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Current or last grade
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['current-last-grade'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-009">
+            Change
+            <span class="govuk-visually-hidden">Current or last grade</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Current Civil Service department or current organisation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['department-current-role'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/typeofrole">
+            Change
+            <span class="govuk-visually-hidden">Current Civil Service role or current oragnisation</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Your start date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['date-start'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/typeofrole">
+            Change
+            <span class="govuk-visually-hidden"> Your Start Date</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Your end date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['date-end'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/typeofrole">
+            Change
+            <span class="govuk-visually-hidden"> Your end date</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Current or most recent role
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['your-role'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/typeofrole">
+            Change
+            <span class="govuk-visually-hidden"> What was/is your role</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Referee name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['your-ref'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/typeofrole">
+            Change
+            <span class="govuk-visually-hidden"> The name of your reference</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Referee’s email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['ref-email'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/typeofrole">
+            Change
+            <span class="govuk-visually-hidden"> Your references email address</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Referee’s telephone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['ref-telephone-number'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/typeofrole">
+            Change
+            <span class="govuk-visually-hidden"> Your references telephone number</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Referee’s preferred contact method
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p>{{data['preferred-contact-method'] }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/typeofrole">
+            Change
+            <span class="govuk-visually-hidden"> Your references preferred contact method</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Employment details (former civil servant)</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Most recent Civil Service department
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['former-current-role'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-015">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Years since leaving the Civil Service
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['Years-Leave-Civil'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-015">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Years of service
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['Years-in-Civil'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-015">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <h2 class="govuk-heading-m">Crisis and surge experience</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have you supported peaks in volume of BAU activities for expected events?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <br>Have experience? - {{data['crisisexp1'] }}
+          <br>Experience - {{data['crisisexp1-detail'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-016">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have you supported peaks in volume of BAU activities for unexpected events?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <br>Have experience? - {{data['crisisexp2'] }}
+          <br>Experience - {{data['crisisexp2-detail'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-016">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have you supported cross-government responses?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <br>Have experience? - {{data['crisisexp3'] }}
+          <br>Experience - {{data['crisisexp3-detail'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-016">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Behaviours and experience</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have you worked with ministers, anticipating and delivering their needs in a timely manner?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Experience - {{data['crisisexp4'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-017a">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you enjoy working in high pressure environments?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Experience - {{data['crisisexp5'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-017b">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have you made strategic decisions based on your understanding of the consequences?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Experience - {{data['crisisexp6'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-017c">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have you worked with data to communicate to a range of audiences?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Experience - {{data['crisisexp7'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-017d">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have you produced clear and accurate briefings?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Experience - {{data['crisisexp8'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-017e">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have you delivered difficult messages to a range of audiences?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Experience - {{data['crisisexp9'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-017f">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have you experience running events or conferences?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Experience - {{data['crisisexp10'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-017f">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Have you worked with multiple organisations?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Experience - {{data['crisisexp11'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-017h">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Security clearance and availability</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Security clearance
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['secclear'] }}
+          <br>{{data['secclear1'] }}
+          <br>{{data['sec-expiry'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-018">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Available days
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['availday'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-021">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Unsociable hours
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['unsol'] }}
+          <br>{{data['more-detail'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-021">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Personal circumstances
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['otherinfo'] }}
+          <br>{{data['otherinfo-detail'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-021">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+
+
+    </dl>
+
+    <h2 class="govuk-heading-m">Reasonable adjustments and personal preferences</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reasonable adjustments needed
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['resadj'] }}
+          <br>{{data['resadj-detail'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-022">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Departmental preferences
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['deptp'] }}
+          <br>{{data['deptp-detail'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="/RR-022">
+            Change
+            <span class="govuk-visually-hidden">Current or Former</span>
+          </a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <h2 class="govuk-heading-m">Now send your application</h2>
+
+    <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are
+      providing are correct.</p>
+
+    <form action="/RR-026" method="post" novalidate>
+
+      <input type="hidden" name="answers-checked" value="true">
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Submit
+      </button>
+
+    </form>
+
+  </div>
+</div>
+{% endblock %}
