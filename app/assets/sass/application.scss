@@ -16,3 +16,56 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/related-items";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.homepage-inverse-header {
+    background-color: #1d70b8;
+    padding-bottom: 40px;
+    padding-top: 50px;
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+@media print {
+    .homepage-inverse-header {
+        font-family: sans-serif
+    }
+}
+
+@media (min-width: 48.0625em) {
+    .homepage-inverse-header {
+        padding-bottom:50px;
+        padding-top: 60px
+    }
+}
+
+.homepage-inverse-header__title {
+    font-weight: 700;
+    color: #fff;
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0;
+    padding-bottom: 30px
+}
+
+@media (min-width: 48.0625em) {
+    .homepage-inverse-header__title {
+        font-size:48px;
+        font-size: 3rem
+    }
+}
+
+.homepage-inverse-header__intro {
+    color: #fff;
+    font-size: 19px;
+    font-size: 1.1875rem;
+    margin: 0;
+    padding-bottom: 10px
+}
+
+@media (min-width: 48.0625em) {
+    .homepage-inverse-header__intro {
+        font-size:24px;
+        font-size: 1.5rem
+    }
+}
