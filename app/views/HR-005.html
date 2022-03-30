@@ -12,7 +12,6 @@
     serviceUrl: "#"
   }) }}
 
-
   <div class="govuk-width-container">
     <p class="govuk-phase-banner__content">
       <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -23,8 +22,6 @@
       </span>
     </p>
   </div>
-
-
 {% endblock %}
 
 {% block beforeContent %}
@@ -32,60 +29,226 @@
 {% endblock %}
 
 {% block content %}
+
+  {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
       <h1 class="govuk-heading-xl">
-        New Requests
+        View all requests
       </h1>
-
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Request Date</th>
-            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Host Organisation</th>
-            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Urgency</th>
-            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">View</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">14/01/2022</th>
-            <td class="govuk-table__cell">Resilience and Recovery Directorate</td>
-            <td class="govuk-table__cell">04/04/2022</td>
-            <td class="govuk-table__cell">View</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">23/01/2022</th>
-            <td class="govuk-table__cell">Civil Contingencies Secretariat</td>
-            <td class="govuk-table__cell">04/04/2022</td>
-            <td class="govuk-table__cell">View</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">27/01/2022</th>
-            <td class="govuk-table__cell">Civil Contingencies Secretariat</td>
-            <td class="govuk-table__cell">04/04/2022</td>
-            <td class="govuk-table__cell">View</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">04/02/2022</th>
-            <td class="govuk-table__cell">National Cyber Force</td>
-            <td class="govuk-table__cell">04/04/2022</td>
-            <td class="govuk-table__cell">View</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">07/02/2022</th>
-            <td class="govuk-table__cell">National Cyber Force</td>
-            <td class="govuk-table__cell">04/04/2022</td>
-            <td class="govuk-table__cell"><a href="/HR-006">View</a></td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-
-    <div class="govuk-grid-column-one-third">
-    </div>
+      <main class="govuk-main-wrapper">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <h3 class="govuk-heading-m">Apply Filters</h3>
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                      Requested by
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <div>
+                    {{ govukCheckboxes({
+                      idPrefix: "requestedBy",
+                      name: "requestedBy",
+                      classes: "govuk-checkboxes--small",
+                      items: [
+                        {
+                          value: "Civil Contingencies Secretariat",
+                          text: "Civil Contingencies Secretariat"
+                        },
+                        {
+                          value: "National Cyber Force",
+                          text: "National Cyber Force"
+                        },
+                        {
+                          value: "Cabinet Office",
+                          text: "Cabinet Office"
+                        },
+                        {
+                          value: "Resilience and Recover Directorate",
+                          text: "Resilience and Recover Directorate"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                      Event
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                  <div>
+                    {{ govukCheckboxes({
+                      idPrefix: "event",
+                      name: "event",
+                      classes: "govuk-checkboxes--small",
+                      items: [
+                        {
+                          value: "Event1",
+                          text: "Event1"
+                        },
+                        {
+                          value: "Event2",
+                          text: "Event2"
+                        },
+                        {
+                          value: "Event3",
+                          text: "Event3"
+                        },
+                        {
+                          value: "Event4",
+                          text: "Event4"
+                        },
+                        {
+                          value: "Event5",
+                          text: "Event5"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                      Status of request
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                  <div>
+                    {{ govukCheckboxes({
+                      idPrefix: "statusOfRequest",
+                      name: "statusOfRequest",
+                      classes: "govuk-checkboxes--small",
+                      items: [
+                        {
+                          value: "Unfilled",
+                          text: "Unfilled"
+                        },
+                        {
+                          value: "Filled",
+                          text: "Filled"
+                        },
+                        {
+                          value: "Deployed",
+                          text: "Deployed"
+                        },
+                        {
+                          value: "Completed",
+                          text: "Completed"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                      Role
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+                  <div>
+                    {{ govukCheckboxes({
+                      idPrefix: "statusOfRequest",
+                      name: "statusOfRequest",
+                      classes: "govuk-checkboxes--small",
+                      items: [
+                        {
+                          value: "Role 1",
+                          text: "Role 1"
+                        },
+                        {
+                          value: "Role 2",
+                          text: "Role 2"
+                        },
+                        {
+                          value: "Role 3",
+                          text: "Role 3"
+                        },
+                        {
+                          value: "Role 4",
+                          text: "Role 4"
+                        }
+                      ]
+                    }) }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="govuk-grid-column-three-quarters">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Event</th>
+                  <th scope="col" class="govuk-table__header">Host Organisation<br>(requested by)</th>
+                  <th scope="col" class="govuk-table__header">Role</th>
+                  <th scope="col" class="govuk-table__header">Request Date</th>
+                  <th scope="col" class="govuk-table__header">Urgency</th>
+                  <th scope="col" class="govuk-table__header">Status of Request</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell"><a href="/HR-006">Event1</a></td>
+                  <td class="govuk-table__cell">Civil Contingencies Secretariat</td>
+                  <td class="govuk-table__cell">Manager</td>
+                  <td class="govuk-table__cell">12/02/2022</td>
+                  <td class="govuk-table__cell">High</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag">Unfilled</strong></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Event2</td>
+                  <td class="govuk-table__cell">Cabinet Office</td>
+                  <td class="govuk-table__cell">Manager</td>
+                  <td class="govuk-table__cell">23/01/2022</td>
+                  <td class="govuk-table__cell">Medium</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Filled</strong></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Event3</td>
+                  <td class="govuk-table__cell">Cabinet Office</td>
+                  <td class="govuk-table__cell">Manager</td>
+                  <td class="govuk-table__cell">03/12/2021</td>
+                  <td class="govuk-table__cell">Low</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Deployed</strong></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Event4</td>
+                  <td class="govuk-table__cell">Resilience and Recover Directorate</td>
+                  <td class="govuk-table__cell">Manager</td>
+                  <td class="govuk-table__cell">27/10/2021</td>
+                  <td class="govuk-table__cell">Medium</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Completed</strong></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Event5</td>
+                  <td class="govuk-table__cell">Civil Contingencies Secretariat</td>
+                  <td class="govuk-table__cell">Manager</td>
+                  <td class="govuk-table__cell">02/02/2022</td>
+                  <td class="govuk-table__cell">High</td>
+                  <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Deployed</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
 
   </div>
 {% endblock %}
