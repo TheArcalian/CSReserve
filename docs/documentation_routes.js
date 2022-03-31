@@ -84,7 +84,7 @@ router.get('/make-first-prototype/add-questions', function (req, res) {
 })
 
 router.get('/templates/check-your-answers', function (req, res) {
-  res.redirect('/docs/templates/check-answers')
+  res.redirect('/docs/templates/RR-025')
 })
 
 module.exports = router
