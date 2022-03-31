@@ -16,6 +16,8 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/related-items";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// Styles for HR-003
 .homepage-inverse-header {
     background-color: #1d70b8;
     padding-bottom: 40px;
@@ -68,4 +70,81 @@ $govuk-assets-path: '/govuk/assets/';
         font-size:24px;
         font-size: 1.5rem
     }
+}
+
+.remove-button-container {
+    text-align: center;
+}
+
+.remove-button-container > button {
+    display: relative;
+    top: 185px;
+}
+
+// Styles for customised expandable sections in HR-005
+.expandable-section {
+    padding: 0 0 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #b1b4b6;
+}
+
+.expandable-content {
+    padding: 0 8px;
+    display: none;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.expandable-content > div > .govuk-form-group {
+    margin-bottom: 0px;
+}
+
+.expandable-section > label {
+    position: relative;
+    left: -8px;
+    font-size: 1.1875rem;
+    line-height: 1.25;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+}
+
+.expandable-section > label:active,  .expandable-section > label:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #ffdd00;
+    box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+    text-decoration: none;
+}
+
+.expandable-section > label:hover {
+    color: #1d70b8;
+    text-decoration: underline;
+}
+
+.expandable-ckbx {
+    height: 0px;
+    width: 0px;
+}
+
+.expandable-ckbx:checked + .content {
+    display: block;
+}
+
+.expandable-ckbx:checked + .expandable-chevron + .label + .expandable-content {
+    display: block;
+}
+
+.expandable-ckbx:checked + .expandable-chevron  {
+    transform: rotateX(180deg);
+}
+
+.expandable-chevron {
+    position: relative;
+    top: 12px;
+    left: -8px;
+    width: 30px;
+    height: 40px;
+    fill: #0b0c0c;
 }
