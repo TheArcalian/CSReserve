@@ -35,16 +35,29 @@
 
       <h1 class="govuk-heading-xl">Reservist Details</h1>
 
+      <h2 class="govuk-heading-m">Personal details</h2>
 
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Right to work
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['nation'] }}</p>
+          </dd>
+        </div>
+  
+      </dl>
+  
       <h2 class="govuk-heading-m">Employment details</h2>
-
+  
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Current or former civil servant
           </dt>
           <dd class="govuk-summary-list__value">
-            Current
+            {{data['current-former'] }}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -52,7 +65,7 @@
             Current or last grade
           </dt>
           <dd class="govuk-summary-list__value">
-            Grade 7
+            {{data['current-last-grade'] }}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -60,37 +73,45 @@
             Current Civil Service department or current organisation
           </dt>
           <dd class="govuk-summary-list__value">
-            Home Office
-          </dd>
-        </div>
-          <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Start Date
-          </dt>
-          <dd class="govuk-summary-list__value">
-            22/02/2000
+            {{data['department-current-role'] }}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Your end date
-        </dt>
-        <dd class="govuk-summary-list__value">
-          <p>{{data['date-end'] }}</p>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Current or most recent role
-      </dt>
-      <dd class="govuk-summary-list__value">
-        A really important one
-      </dd>
-    </div>
+          <dt class="govuk-summary-list__key">
+            Your start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['date-start'] }}</p>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your end date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['date-end'] }}</p>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Current or most recent role
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['your-role'] }}</p>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Referee’s preferred contact method
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>{{data['preferred-contact-method'] }}</p>
+          </dd>
+        </div>
       </dl>
-
+  
       <h2 class="govuk-heading-m">Employment details (former civil servant)</h2>
-
+  
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -116,133 +137,121 @@
             {{data['Years-in-Civil'] }}
           </dd>
         </div>
+  
       </dl>
-
-      <h2 class="govuk-heading-m">Your communication skills</h2>
-
+  
+      <h2 class="govuk-heading-m">Crisis and surge experience</h2>
+  
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Produce clear and accurate Briefings
+            Have you supported peaks in volume of BAU activities for expected events?
           </dt>
           <dd class="govuk-summary-list__value">
-            Rating - {{data['skill1conf'] }}
-            <br>Have experience? - {{data['skill1'] }}
-            <br>Experience - {{data['skill1-detail'] }}
+            <br>Have experience? - {{data['crisisexp1'] }}
+            <br>Experience - {{data['crisisexp1-detail'] }}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Produce clear and accurate written communications
+            Have you supported peaks in volume of BAU activities for unexpected events?
           </dt>
           <dd class="govuk-summary-list__value">
-            Rating - {{data['skill2conf'] }}
-            <br>Have experience? - {{data['skill2'] }}
-            <br>Experience - {{data['skill2-detail'] }}
+            <br>Have experience? - {{data['crisisexp2'] }}
+            <br>Experience - {{data['crisisexp2-detail'] }}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Articulate information quickly, succinctly and accurately
+            Have you supported cross-government responses?
           </dt>
           <dd class="govuk-summary-list__value">
-            Rating - {{data['skill3conf'] }}
-            <br>Have experience? - {{data['skill3'] }}
-            <br>Experience - {{data['skill3-detail'] }}
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Clearly and effectively communicate by verbal means
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Rating - {{data['skill4conf'] }}
-            <br>Have experience? - {{data['skill4'] }}
-            <br>Experience - {{data['skill4-detail'] }}
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Deliver difficult messages with clarity and sensitivity
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Rating - {{data['skill5conf'] }}
-            <br>Have experience? - {{data['skill5'] }}
-            <br>Experience - {{data['skill5-detail'] }}
+            <br>Have experience? - {{data['crisisexp3'] }}
+            <br>Experience - {{data['crisisexp3-detail'] }}
           </dd>
         </div>
       </dl>
-
-      <h2 class="govuk-heading-m">Your analysis skills</h2>
-
+  
+      <h2 class="govuk-heading-m">Behaviours and experience</h2>
+  
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Analyse a range of information and translate this into clear policy
+            Have you worked with ministers, anticipating and delivering their needs in a timely manner?
           </dt>
           <dd class="govuk-summary-list__value">
-            Rating - {{data['skill6conf'] }}
-            <br>Have experience? - {{data['skill6'] }}
-            <br>Experience - {{data['skill6-detail'] }}
+            Experience - {{data['crisisexp4'] }}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Understand data, intelligence and analysis and engage with analysts
+            Do you enjoy working in high pressure environments?
           </dt>
           <dd class="govuk-summary-list__value">
-            Rating - {{data['skill7conf'] }}
-            <br>Have experience? - {{data['skill7'] }}
-            <br>Experience - {{data['skill7-detail'] }}
+            Experience - {{data['crisisexp5'] }}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Understand data and communicate to a range of audiences
+            Have you made strategic decisions based on your understanding of the consequences?
           </dt>
           <dd class="govuk-summary-list__value">
-            Rating - {{data['skill8conf'] }}
-            <br>Have experience? - {{data['skill8'] }}
-            <br>Experience - {{data['skill8-detail'] }}
+            Experience - {{data['crisisexp6'] }}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Have you worked with data to communicate to a range of audiences?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Experience - {{data['crisisexp7'] }}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Have you produced clear and accurate briefings?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Experience - {{data['crisisexp8'] }}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Have you delivered difficult messages to a range of audiences?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Experience - {{data['crisisexp9'] }}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Have you experience running events or conferences?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Experience - {{data['crisisexp10'] }}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Have you worked with multiple organisations?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Experience - {{data['crisisexp11'] }}
           </dd>
         </div>
       </dl>
-
-      <h2 class="govuk-heading-m">Your decision making skills</h2>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Make defensible decisions with partial and/or conflicting information
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Rating - {{data['skill9conf'] }}
-            <br>Have experience? - {{data['skill9'] }}
-            <br>Experience - {{data['skill9-detail'] }}
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Understand the consequences, impact and knock-on effects of decisions
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Rating - {{data['skill10conf'] }}
-            <br>Have experience? - {{data['skill10'] }}
-            <br>Experience - {{data['skill10-detail'] }}
-          </dd>
-        </div>
-      </dl>
-
+  
       <h2 class="govuk-heading-m">Security clearance and availability</h2>
-
+  
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Security clearance
           </dt>
           <dd class="govuk-summary-list__value">
-            BPSS
+            {{data['secclear'] }}
             <br>{{data['secclear1'] }}
+            <br>{{data['sec-expiry'] }}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -250,7 +259,7 @@
             Available days
           </dt>
           <dd class="govuk-summary-list__value">
-            Monday, Tuesday, Wednesday, Thursday, Friday
+            {{data['availday'] }}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -258,8 +267,8 @@
             Unsociable hours
           </dt>
           <dd class="govuk-summary-list__value">
-            Yes
-            <br>Any Time
+            {{data['unsol'] }}
+            <br>{{data['more-detail'] }}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -267,21 +276,23 @@
             Personal circumstances
           </dt>
           <dd class="govuk-summary-list__value">
-            No
+            {{data['otherinfo'] }}
             <br>{{data['otherinfo-detail'] }}
           </dd>
         </div>
+  
+  
       </dl>
-
+  
       <h2 class="govuk-heading-m">Reasonable adjustments and personal preferences</h2>
-
+  
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Reasonable adjustments needed
           </dt>
           <dd class="govuk-summary-list__value">
-            No
+            {{data['resadj'] }}
             <br>{{data['resadj-detail'] }}
           </dd>
         </div>
@@ -290,7 +301,7 @@
             Departmental preferences
           </dt>
           <dd class="govuk-summary-list__value">
-            No
+            {{data['deptp'] }}
             <br>{{data['deptp-detail'] }}
           </dd>
         </div>
@@ -302,6 +313,9 @@
           <button type="submit" class="govuk-button" data-module="govuk-button">
             Shortlist
           </button>
+          <a href="/HR-006" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+            Candidate Selected
+          </a>
           <a class="govuk-link" href="/HR-009">Cancel</a>
         </div>
       </form>
