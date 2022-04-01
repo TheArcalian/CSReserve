@@ -176,11 +176,10 @@
           <div class="expandable-content">
             <div class="govuk-form-group">
               <select class="govuk-select" id="security-clearance-filter" name="security-clearance-filter">
-                <option value="HEO">HEO</option>
-                <option value="SEO">SEO</option>
-                <option value="Grade 7">Grade 7</option>
-                <option value="Grade 6">Grade 6</option>
-                <option value="SCS1">SCS1</option>
+                <option value="BPSS">BPSS</option>
+                <option value="CTC">CTC</option>
+                <option value="SC">SC</option>
+                <option value="DV">DV</option>
                 <option value="None of the above">None of the above</option>
               </select>
             </div>
@@ -310,14 +309,14 @@
             </tr>
             <tr>
               <td class="govuk-table__cell">
-                <a href="#">ABC123</a>
+                <a href="/HR-010">ABC123</a>
               </td>
               <td class="govuk-table__cell">7</td>
               <td class="govuk-table__cell">Yes</td>
               <td class="govuk-table__cell">Mon-Fri</td>
               <td class="govuk-table__cell">
-                <strong class="govuk-tag">
-                  Active
+                <strong class="govuk-tag govuk-tag--green">
+                  Available
                 </strong>
               </td>
               <td class="govuk-table__cell">
@@ -327,13 +326,13 @@
               </td>
             </tr>
             <tr>
-              <td class="govuk-table__cell"><a href="#">ABC124</a></td>
+              <td class="govuk-table__cell"><a href="/HR-010">ABC124</a></td>
               <td class="govuk-table__cell">7</td>
               <td class="govuk-table__cell">Yes</td>
               <td class="govuk-table__cell">Weekend</td>
               <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--grey">
-                  Inactive
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Under Consideration
                 </strong>
               </td>
               <td class="govuk-table__cell">
@@ -343,13 +342,13 @@
               </td>
             </tr>
             <tr>
-              <td class="govuk-table__cell"><a href="#">ABC125</a></td>
+              <td class="govuk-table__cell"><a href="/HR-010">ABC125</a></td>
               <td class="govuk-table__cell">7</td>
               <td class="govuk-table__cell">Yes</td>
               <td class="govuk-table__cell">Weekend</td>
               <td class="govuk-table__cell">
-                <strong class="govuk-tag">
-                  Active
+                <strong class="govuk-tag govuk-tag--red">
+                  Unavailable
                 </strong>
               </td>
               <td class="govuk-table__cell">
@@ -359,13 +358,13 @@
               </td>
             </tr>
             <tr>
-              <td class="govuk-table__cell"><a href="#">ABC126</a></td>
+              <td class="govuk-table__cell"><a href="/HR-010">ABC126</a></td>
               <td class="govuk-table__cell">7</td>
               <td class="govuk-table__cell">Yes</td>
               <td class="govuk-table__cell">Mon-Fri</td>
               <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--grey">
-                  Inactive
+                <strong class="govuk-tag govuk-tag--green">
+                  Available
                 </strong>
               </td>
               <td class="govuk-table__cell">
@@ -375,13 +374,13 @@
               </td>
             </tr>
             <tr>
-              <td class="govuk-table__cell"><a href="#">ABC127</a></td>
+              <td class="govuk-table__cell"><a href="/HR-010">ABC127</a></td>
               <td class="govuk-table__cell">7</td>
               <td class="govuk-table__cell">Yes</td>
               <td class="govuk-table__cell">Mon-Fri</td>
               <td class="govuk-table__cell">
-                <strong class="govuk-tag">
-                  Active
+                <strong class="govuk-tag govuk-tag--green">
+                  Available
                 </strong>
               </td>
               <td class="govuk-table__cell">
@@ -398,10 +397,7 @@
 
   <div class="govuk-button-group">
     <input type="hidden" name="answers-checked" value="true">
-    <a class="govuk-button" href="{{ asset_path }}spreadsheets/export-of-reservists-shortlist.xlsx">
-      Export
-    </a>
-    <a class="govuk-link" href="/HR-003">Cancel</a>
+    <a class="govuk-link" href="/HR-006">Cancel</a>
   </div>
 
 

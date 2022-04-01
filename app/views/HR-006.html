@@ -167,108 +167,113 @@
         </div>
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="skills">
           <h2 class="govuk-heading-l">Skills</h2>
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Supporting peaks in volume of BAU activities for expected events
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['exp1req'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Supporting peaks in volume of BAU activities for unexpected events
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['exp2req'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Supporting cross-government events.
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['exp3req'] }}
+              </dd>
+            </div>
+          </dl>
+    
+          <h2 class="govuk-heading-m">Working in government behaviours</h2>
+    
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Working with ministers, anticipating and delivering their needs in a timely manner
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['exp4req'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Producing clear and accurate briefings
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['exp8req'] }}
+              </dd>
+            </div>
+          </dl>
+    
+          <h2 class="govuk-heading-m">Senior level working behaviours</h2>
+    
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Making strategic decisions based on your understanding of the consequences
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['exp6req'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Delivering difficult messages to a range of audiences
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['exp9req'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Experience working with multiple organisations
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['exp11req'] }}
+              </dd>
+            </div>
+          </dl>
+    
+          <h2 class="govuk-heading-m">Communication and organisational behaviours</h2>
+    
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Working with data to communicate to a range of audiences
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['exp7req'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Running events or conferences.
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['exp10req'] }}
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Enjoys working in high pressure environments
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{data['exp5req'] }}
+              </dd>
+            </div>
+          </dl>
           
-          <h2 class="govuk-heading-m">Communication skills</h2>
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Produce clear and accurate Briefings
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Rating - {{data['skill1conf'] }}
-                <br>Have experience? - {{data['skill1'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Produce clear and accurate written communications
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Rating - {{data['skill2conf'] }}
-                <br>Have experience? - {{data['skill2'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Articulate information quickly, succinctly and accurately
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Rating - {{data['skill3conf'] }}
-                <br>Have experience? - {{data['skill3'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Clearly and effectively communicate by verbal means
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Rating - {{data['skill4conf'] }}
-                <br>Have experience? - {{data['skill4'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Deliver difficult messages with clarity and sensitivity
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Rating - {{data['skill5conf'] }}
-                <br>Have experience? - {{data['skill5'] }}
-              </dd>
-            </div>
-          </dl>
-
-          <h2 class="govuk-heading-m">Analysis skills</h2>
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Analyse a range of information and translate this into clear policy
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Rating - {{data['skill6conf'] }}
-                <br>Have experience? - {{data['skill6'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Understand data, intelligence and analysis and engage with analysts
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Rating - {{data['skill7conf'] }}
-                <br>Have experience? - {{data['skill7'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Understand data and communicate to a range of audiences
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Rating - {{data['skill8conf'] }}
-                <br>Have experience? - {{data['skill8'] }}
-              </dd>
-            </div>
-          </dl>
-
-          <h2 class="govuk-heading-m">Decision making skills</h2>
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Make defensible decisions with partial and/or conflicting information
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Rating - {{data['skill9conf'] }}
-                <br>Have experience? - {{data['skill9'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Understand the consequences, impact and knock-on effects of decisions
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Rating - {{data['skill10conf'] }}
-                <br>Have experience? - {{data['skill10'] }}
-              </dd>
-            </div>
-          </dl>
         </div>
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="working-patterns">
           <h2 class="govuk-heading-l">Working Patterns/location</h2>
@@ -494,7 +499,7 @@
               </button>
             </div>
           </div>
-          <a class="govuk-button" href="{{ asset_path }}spreadsheets/export-of-reservists-shortlist.xlsx">
+          <a class="govuk-button" href="{{ asset_path }}spreadsheets/export-of-reservists-details.xlsx">
             Export
           </a>
         </div>
