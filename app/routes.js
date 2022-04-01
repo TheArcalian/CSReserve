@@ -5,10 +5,10 @@ const router = express.Router()
 router.post('/elig0-answer', function (req, res) {
   var elig0answer = req.session.data['wales']
   if (elig0answer == "yes"){
-      res.redirect('/Elig1')
+      res.redirect('/RR-006')
   }
   if (elig0answer == "no"){
-      res.redirect('/Unelig1')
+      res.redirect('/RR-004a')
   }
 })
 
@@ -17,12 +17,12 @@ router.post('/elig0-answer', function (req, res) {
 router.post('/elig1-answer', function (req, res) {
   var elig1answer = req.session.data['current-former']
   if (elig1answer == "other"){
-      res.redirect('/Unelig1')
+      res.redirect('/RR-004a')
   }
   if (elig1answer == "Former"){
-      res.redirect('/Elig2a')
+      res.redirect('/RR-007a')
   } else {
-        res.redirect('/Elig2')
+        res.redirect('/RR-007')
   }
 })
 
@@ -33,9 +33,9 @@ router.post('/elig1-answer', function (req, res) {
 router.post('/elig2-answer', function (req, res) {
   var elig2answer = req.session.data['Manager-ask']
   if (elig2answer == "No"){
-      res.redirect('/Unelig2')
+      res.redirect('/RR-004b')
   } else {
-        res.redirect('/Elig3')
+        res.redirect('/RR-009')
   }
 })
 
@@ -43,54 +43,54 @@ router.post('/elig2-answer', function (req, res) {
 router.post('/elig3-answer', function (req, res) {
   var elig3answer = req.session.data['current-last-grade']
   if (elig3answer == "None of the above"){
-      res.redirect('/Unelig3')
+      res.redirect('/RR-004c')
   } else {
-        res.redirect('/Elig4')
+        res.redirect('/RR-010')
   }
 })
 
 router.post('/elig4-answer', function (req, res) {
   var elig4answer = req.session.data['current-last-role']
   if (elig4answer == "None of the above"){
-      res.redirect('/Unelig4')
+      res.redirect('/RR-004d')
   } else {
-        res.redirect('/proceed1')
+        res.redirect('/RR-011')
   }
 })
 
 router.post('/elig5-answer', function (req, res) {
   var elig5answer = req.session.data['nation']
   if (elig5answer == "No"){
-      res.redirect('/Unelig5')
+      res.redirect('/RR-004e')
   } else {
-        res.redirect('/Elig2b')
+        res.redirect('/RR-007b')
   }
 })
 
 router.post('/who-answer', function (req, res) {
   var typeofroleans = req.session.data['current-former']
   if (typeofroleans == "Current"){
-      res.redirect('/recentcivil')
+      res.redirect('/RR-014')
   } else {
-        res.redirect('/notrecentcivil')
+        res.redirect('/RR-015')
   }
 })
 
 router.post('/typeofroleupdate-answer', function (req, res) {
   var typeofroleans = req.session.data['current-former-role-update']
   if (typeofroleans == "Yes"){
-      res.redirect('/recentcivilupdate')
+      res.redirect('/RR-014update')
   } else {
-        res.redirect('/notrecentcivilupdate')
+        res.redirect('/RR-015update')
   }
 })
 
 router.post('/typeofrole-answer', function (req, res) {
   var typeofroleans = req.session.data['current-former-role']
   if (typeofroleans == "Yes"){
-      res.redirect('/recentcivil')
+      res.redirect('/RR-014')
   } else {
-        res.redirect('/notrecentcivil')
+        res.redirect('/RR-015')
   }
 })
 
