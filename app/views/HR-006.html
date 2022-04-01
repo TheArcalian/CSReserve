@@ -337,14 +337,6 @@
                     <th scope="row" class="govuk-table__header">Profession</th>
                     <td class="govuk-table__cell">*****</td>
                   </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Skill</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Experience</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -380,14 +372,6 @@
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Profession</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Skill</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Experience</th>
                     <td class="govuk-table__cell">*****</td>
                   </tr>
                 </tbody>
@@ -427,14 +411,6 @@
                     <th scope="row" class="govuk-table__header">Profession</th>
                     <td class="govuk-table__cell">*****</td>
                   </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Skill</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Experience</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -470,14 +446,6 @@
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Profession</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Skill</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Experience</th>
                     <td class="govuk-table__cell">*****</td>
                   </tr>
                 </tbody>
@@ -517,14 +485,6 @@
                     <th scope="row" class="govuk-table__header">Profession</th>
                     <td class="govuk-table__cell">*****</td>
                   </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Skill</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Experience</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -534,6 +494,9 @@
               </button>
             </div>
           </div>
+          <a class="govuk-button" href="{{ asset_path }}spreadsheets/export-of-reservists-shortlist.xlsx">
+            Export
+          </a>
         </div>
 
         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="request-status">
@@ -547,7 +510,11 @@
             </select>
           </div>
         </div>
+
+
       </div>
+
+
 
       <form action="/HR-009" method="post" novalidate>
         <input type="hidden" name="answers-checked" value="true">
