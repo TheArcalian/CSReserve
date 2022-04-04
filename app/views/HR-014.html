@@ -28,23 +28,32 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="" href="/HR-003">Home</a> 
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a> 
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-003">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-005">View all requests</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-006">Request details</a>
+      </li>
+    </ol>
+  </div>
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
       <h1 class="govuk-heading-xl">
-        Shortlisted Candidate Details
+        Shortlisted reservist details
       </h1>
-
       <table class="govuk-table">
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Candidate ID</th>
-            <td class="govuk-table__cell">ABC1234</td>
+            <td class="govuk-table__cell"><a href="/HR-010">ABC1234</a></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Candidate Name</th>
@@ -76,12 +85,11 @@
           </tr>
         </tbody>
       </table>
-
       <table class="govuk-table">
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Candidate ID</th>
-            <td class="govuk-table__cell">ABC1235</td>
+            <td class="govuk-table__cell"><a href="/HR-010">ABC1235</a></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Candidate Name</th>
