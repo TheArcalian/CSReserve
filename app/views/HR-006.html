@@ -26,515 +26,513 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="" href="/HR-003">Home</a> 
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a> 
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-003">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-005">View all requests</a>
+      </li>
+    </ol>
+  </div>
 {% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">
-    <div>
-
-      <h1 class="govuk-heading-xl">Request Details</h1>
-      <div class="govuk-tabs" data-module="govuk-tabs">
-        <ul class="govuk-tabs__list">
-          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-            <a class="govuk-tabs__tab" href="#manager-details">
-              Manager Details
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#role-details">
-              Role Details
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#skills">
-              Skills
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#working-patterns">
-              Working patterns
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#selected-candidates">
-              Selected Candidates
-            </a>
-          </li>
-          <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#request-status">
-              Request status
-            </a>
-          </li>
-        </ul>
-        <div class="govuk-tabs__panel" id="manager-details">
-          <h2 class="govuk-heading-l">Manager Details</h2>
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Hiring Manager Name
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['hiring-manager-name'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Hiring Manager Contact (Work) Email
-              </dt>
-              <dd class="govuk-summary-list__value">
-                <p>{{data['hiring-manager-work-email'] }}</p>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Hiring Manager Contact Number
-              </dt>
-              <dd class="govuk-summary-list__value">
-                <p>{{data['hiring-manager-contact-telephone-number'] }}</p>
-              </dd>
-            </div>
-          </dl>
+  <h1 class="govuk-heading-xl">Civil Contingencies Secretariat - Gloucestershire Flooding</h1>
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#manager-details">
+          Manager Details
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#role-details">
+          Role Details
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#skills">
+          Skills
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#working-patterns">
+          Working patterns
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#selected-candidates">
+          Selected Candidates
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#request-status">
+          Request status
+        </a>
+      </li>
+    </ul>
+    <div class="govuk-tabs__panel" id="manager-details">
+      <h2 class="govuk-heading-l">Manager Details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Hiring Manager Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            John Shearer
+          </dd>
         </div>
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="role-details">
-          <h2 class="govuk-heading-l">Role Details</h2>
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Role Title
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['role-title'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Role Description
-              </dt>
-              <dd class="govuk-summary-list__value">
-                <p>{{data['role-description'] }}</p>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Role Type
-              </dt>
-              <dd class="govuk-summary-list__value">
-                <p>{{data['role-type'] }}</p>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Numbers Per Role
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['numbers-per-role'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Minimum Grade
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['minimum-grade'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Professions
-              </dt>
-              <dd class="govuk-summary-list__value">
-                <p>{{data['professions'] }}</p>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Minimum security clearance
-              </dt>
-              <dd class="govuk-summary-list__value">
-                <p>{{data['minimum-security-clearance'] }}</p>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Preferred security clearance
-              </dt>
-              <dd class="govuk-summary-list__value">
-                <p>{{data['preferred-security-clearance'] }}</p>
-              </dd>
-            </div>
-          </dl>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Hiring Manager Contact (Work) Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            john.shearer@gov.uk
+          </dd>
         </div>
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="skills">
-          <h2 class="govuk-heading-l">Skills</h2>
-
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Supporting peaks in volume of BAU activities for expected events
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['exp1req'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Supporting peaks in volume of BAU activities for unexpected events
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['exp2req'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Supporting cross-government events.
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['exp3req'] }}
-              </dd>
-            </div>
-          </dl>
-    
-          <h2 class="govuk-heading-m">Working in government behaviours</h2>
-    
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Working with ministers, anticipating and delivering their needs in a timely manner
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['exp4req'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Producing clear and accurate briefings
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['exp8req'] }}
-              </dd>
-            </div>
-          </dl>
-    
-          <h2 class="govuk-heading-m">Senior level working behaviours</h2>
-    
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Making strategic decisions based on your understanding of the consequences
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['exp6req'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Delivering difficult messages to a range of audiences
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['exp9req'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Experience working with multiple organisations
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['exp11req'] }}
-              </dd>
-            </div>
-          </dl>
-    
-          <h2 class="govuk-heading-m">Communication and organisational behaviours</h2>
-    
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Working with data to communicate to a range of audiences
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['exp7req'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Running events or conferences.
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['exp10req'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Enjoys working in high pressure environments
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['exp5req'] }}
-              </dd>
-            </div>
-          </dl>
-          
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Hiring Manager Contact Number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>1234 56789</p>
+          </dd>
         </div>
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="working-patterns">
-          <h2 class="govuk-heading-l">Working Patterns/location</h2>
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Days Required
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['days-required'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Unsociable Hours
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['unsociable-hours'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Location
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['location'] }}
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Urgency
-              </dt>
-              <dd class="govuk-summary-list__value">
-                {{data['urgency'] }}
-              </dd>
-            </div>
-          </dl>
+      </dl>
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="role-details">
+      <h2 class="govuk-heading-l">Role Details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Role Title
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Briefing Officer
+          </dd>
         </div>
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="selected-candidates">
-          <h2 class="govuk-heading-l">Selected Candidates</h2>
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-              <table class="govuk-table">
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Candidate ID</th>
-                    <td class="govuk-table__cell"><a href="/HR-010">ABC123</a></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Availability</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Location</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Grade</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Security Clearance</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Profession</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="govuk-grid-column-one-third remove-button-container">
-              <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-                Remove
-              </button>
-            </div>
-          </div>
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-              <table class="govuk-table">
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Candidate ID</th>
-                    <td class="govuk-table__cell"><a href="/HR-010">ABC124</a></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Availability</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Location</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Grade</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Security Clearance</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Profession</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="govuk-grid-column-one-third remove-button-container">
-              <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-                Remove
-              </button>
-            </div>
-          </div>
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-              <table class="govuk-table">
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Candidate ID</th>
-                    <td class="govuk-table__cell"><a href="/HR-010">ABC125</a></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Availability</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Location</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Grade</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Security Clearance</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Profession</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="govuk-grid-column-one-third remove-button-container">
-              <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-                Remove
-              </button>
-            </div>
-          </div>
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-              <table class="govuk-table">
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Candidate ID</th>
-                    <td class="govuk-table__cell"><a href="/HR-010">ABC126</a></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Availability</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Location</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Grade</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Security Clearance</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Profession</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="govuk-grid-column-one-third remove-button-container">
-              <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-                Remove
-              </button>
-            </div>
-          </div>    
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-              <table class="govuk-table">
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Candidate ID</th>
-                    <td class="govuk-table__cell"><a href="/HR-010">ABC127</a></td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Availability</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Location</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Grade</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Security Clearance</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Profession</th>
-                    <td class="govuk-table__cell">*****</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="govuk-grid-column-one-third remove-button-container">
-              <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-                Remove
-              </button>
-            </div>
-          </div>
-          <a class="govuk-button" href="{{ asset_path }}spreadsheets/export-of-reservists-details.xlsx">
-            Export
-          </a>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Role Description
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>
+              You will work with a diverse range of internal and external stakeholders to provide prompt and high-quality briefings for Ministers often at very short notice. 
+              You will work well in a high-pressure environment with minimal supervision.
+           </p>
+          </dd>
         </div>
-
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="request-status">
-          <h2 class="govuk-heading-l">Request Status</h2>
-          <div class="govuk-form-group">
-            <select class="govuk-select" id="request-status-select" name="request-status-select">
-              <option value="Unfilled">Unfilled</option>
-              <option value="Filled" selected>Filled</option>
-              <option value="Deployed">Deployed</option>
-              <option value="Completed">Completed</option>
-            </select>
-          </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Role Type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Temporary</p>
+          </dd>
         </div>
-
-
-      </div>
-
-
-
-      <form action="/HR-009" method="post" novalidate>
-        <input type="hidden" name="answers-checked" value="true">
-        <div class="govuk-button-group">
-          <button type="submit" class="govuk-button" data-module="govuk-button">
-            Search
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Numbers Per Role
+          </dt>
+          <dd class="govuk-summary-list__value">
+            2
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Minimum Grade
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Grade 6
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Professions
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Digital, Data and Technology</p>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Minimum security clearance
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>CTC</p>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Preferred security clearance
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>ST</p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="skills">
+      <h2 class="govuk-heading-l">Skills</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Supporting peaks in volume of BAU activities for expected events
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Required
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Supporting peaks in volume of BAU activities for unexpected events
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Required
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Supporting cross-government events
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not Required
+          </dd>
+        </div>
+      </dl>
+      <h2 class="govuk-heading-m">Working in government behaviours</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Working with ministers, anticipating and delivering their needs in a timely manner
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Expert required
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Producing clear and accurate briefings
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Some experience required
+          </dd>
+        </div>
+      </dl>
+      <h2 class="govuk-heading-m">Senior level working behaviours</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Making strategic decisions based on your understanding of the consequences
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Expert required
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Delivering difficult messages to a range of audiences
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Some experience required
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Experience working with multiple organisations
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Cross - government departments, With local authorities
+          </dd>
+        </div>
+      </dl>
+      <h2 class="govuk-heading-m">Communication and organisational behaviours</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Working with data to communicate to a range of audiences
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Expert required
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Running events or conferences
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Some experience required
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Enjoys working in high pressure environments
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Not required
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="working-patterns">
+      <h2 class="govuk-heading-l">Working Patterns/location</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Days Required
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Weekdays and weekends
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Unsociable Hours
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            South West
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Urgency
+          </dt>
+          <dd class="govuk-summary-list__value">
+            High
+          </dd>
+        </div>
+      </dl>
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="selected-candidates">
+      <h2 class="govuk-heading-l">Shortlisted candidates</h2>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Candidate ID</th>
+                <td class="govuk-table__cell"><a href="/HR-010">ABC123</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Availability</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Location</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Grade</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Security Clearance</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Profession</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="govuk-grid-column-one-third remove-button-container">
+          <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+            Remove
           </button>
-          <a href="/HR-014" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-            Obtain Details
-          </a>
-          <a class="govuk-link" href="/HR-005">Cancel</a>
         </div>
-      </form>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Candidate ID</th>
+                <td class="govuk-table__cell"><a href="/HR-010">ABC124</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Availability</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Location</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Grade</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Security Clearance</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Profession</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="govuk-grid-column-one-third remove-button-container">
+          <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+            Remove
+          </button>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Candidate ID</th>
+                <td class="govuk-table__cell"><a href="/HR-010">ABC125</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Availability</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Location</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Grade</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Security Clearance</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Profession</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="govuk-grid-column-one-third remove-button-container">
+          <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+            Remove
+          </button>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Candidate ID</th>
+                <td class="govuk-table__cell"><a href="/HR-010">ABC126</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Availability</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Location</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Grade</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Security Clearance</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Profession</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="govuk-grid-column-one-third remove-button-container">
+          <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+            Remove
+          </button>
+        </div>
+      </div>    
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Candidate ID</th>
+                <td class="govuk-table__cell"><a href="/HR-010">ABC127</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Availability</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Location</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Grade</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Security Clearance</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Profession</th>
+                <td class="govuk-table__cell">*****</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="govuk-grid-column-one-third remove-button-container">
+          <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+            Remove
+          </button>
+        </div>
+      </div>
+      <a class="govuk-button" href="{{ asset_path }}spreadsheets/export-of-reservists-details.xlsx">
+        Export
+      </a>
+      <a href="/HR-014" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+        Show personal details
+      </a>
+    </div>
 
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="request-status">
+      <h2 class="govuk-heading-l">Request Status</h2>
+      <div class="govuk-form-group">
+        <select class="govuk-select" id="request-status-select" name="request-status-select">
+          <option value="Unfilled">Unfilled</option>
+          <option value="Filled" selected>Filled</option>
+          <option value="Deployed">Deployed</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Save
+      </button>
     </div>
   </div>
+
+  <form action="/HR-009" method="post" novalidate>
+    <input type="hidden" name="answers-checked" value="true">
+    <div class="govuk-button-group">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Search for Reservists
+      </button>
+      <a class="govuk-link" href="/HR-005">Cancel</a>
+    </div>
+  </form>
+</div>
 {% endblock %}

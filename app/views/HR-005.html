@@ -25,8 +25,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="" href="/HR-003">Home</a> 
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a> 
+  <a class="govuk-link govuk-back-link" href="/HR-003">Home</a> 
 {% endblock %}
 
 {% block content %}
@@ -95,24 +94,24 @@
                     classes: "govuk-checkboxes--small",
                     items: [
                       {
-                        value: "Event1",
-                        text: "Event1"
+                        value: "Cyber attack",
+                        text: "Cyber attack"
                       },
                       {
-                        value: "Event2",
-                        text: "Event2"
+                        value: "Fuel crisis",
+                        text: "Fuel crisis"
                       },
                       {
-                        value: "Event3",
-                        text: "Event3"
+                        value: "Gloucestershire Flooding",
+                        text: "Gloucestershire Flooding"
                       },
                       {
-                        value: "Event4",
-                        text: "Event4"
+                        value: "Russia-Ukraine",
+                        text: "Russia-Ukraine"
                       },
                       {
-                        value: "Event5",
-                        text: "Event5"
+                        value: "Ukraine response",
+                        text: "Ukraine response"
                       }
                     ]
                   }) }}
@@ -173,20 +172,24 @@
                     classes: "govuk-checkboxes--small",
                     items: [
                       {
-                        value: "Role 1",
-                        text: "Role 1"
+                        value: "Analyst",
+                        text: "Analyst"
                       },
                       {
-                        value: "Role 2",
-                        text: "Role 2"
+                        value: "Briefing Officer",
+                        text: "Briefing Officer"
                       },
                       {
-                        value: "Role 3",
-                        text: "Role 3"
+                        value: "Data scientist",
+                        text: "Data scientist"
                       },
                       {
-                        value: "Role 4",
-                        text: "Role 4"
+                        value: "Liaison Officer",
+                        text: "Liaison Officer"
+                      },
+                      {
+                        value: "Policy analyst",
+                        text: "Policy analyst"
                       }
                     ]
                   }) }}
@@ -199,7 +202,7 @@
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header">Event</th>
-                  <th scope="col" class="govuk-table__header">Host Organisation<br>(requested by)</th>
+                  <th scope="col" class="govuk-table__header">Host Organisation</th>
                   <th scope="col" class="govuk-table__header">Role</th>
                   <th scope="col" class="govuk-table__header">Request Date</th>
                   <th scope="col" class="govuk-table__header">Urgency</th>
@@ -208,41 +211,41 @@
               </thead>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="/HR-006">Event1</a></td>
+                  <td class="govuk-table__cell"><a href="/HR-006">Gloucestershire Flooding</a></td>
                   <td class="govuk-table__cell">Civil Contingencies Secretariat</td>
-                  <td class="govuk-table__cell">Manager</td>
+                  <td class="govuk-table__cell">Briefing Officer</td>
                   <td class="govuk-table__cell">12/02/2022</td>
                   <td class="govuk-table__cell">High</td>
                   <td class="govuk-table__cell"><strong class="govuk-tag">Unfilled</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="/HR-006a">Event2</a></td>
+                  <td class="govuk-table__cell"><a href="/HR-006a">Cyber attack</a></td>
                   <td class="govuk-table__cell">Cabinet Office</td>
-                  <td class="govuk-table__cell">Manager</td>
+                  <td class="govuk-table__cell">Data scientist</td>
                   <td class="govuk-table__cell">23/01/2022</td>
                   <td class="govuk-table__cell">Medium</td>
                   <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Filled</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Event3</td>
+                  <td class="govuk-table__cell"><a href="javascript:void(0)">Russia-Ukraine</a></td>
                   <td class="govuk-table__cell">Cabinet Office</td>
-                  <td class="govuk-table__cell">Manager</td>
+                  <td class="govuk-table__cell">Liaison Officer</td>
                   <td class="govuk-table__cell">03/12/2021</td>
                   <td class="govuk-table__cell">Low</td>
                   <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Deployed</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Event4</td>
+                  <td class="govuk-table__cell"><a href="javascript:void(0)">Fuel crisis</a></td>
                   <td class="govuk-table__cell">Resilience and Recover Directorate</td>
-                  <td class="govuk-table__cell">Manager</td>
+                  <td class="govuk-table__cell">Policy analyst</td>
                   <td class="govuk-table__cell">27/10/2021</td>
                   <td class="govuk-table__cell">Medium</td>
                   <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Completed</strong></td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell">Event5</td>
+                  <td class="govuk-table__cell"><a href="javascript:void(0)">Cyber attack</a></td>
                   <td class="govuk-table__cell">Civil Contingencies Secretariat</td>
-                  <td class="govuk-table__cell">Manager</td>
+                  <td class="govuk-table__cell">Analyst</td>
                   <td class="govuk-table__cell">02/02/2022</td>
                   <td class="govuk-table__cell">High</td>
                   <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Deployed</strong></td>

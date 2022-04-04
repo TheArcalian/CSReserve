@@ -23,19 +23,31 @@
       </span>
     </p>
   </div>
-
-
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="" href="/HR-003">Home</a> 
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a> 
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-003">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-005">View all requests</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-006">Request details</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-009">Reservist search results </a>
+      </li>
+    </ol>
+  </div>
 {% endblock %}
 
 {% block content %}
 
   <h1 class="govuk-heading-xl">
-    View all requests
+    Reservist search results
   </h1>
   
   <main class="govuk-main-wrapper">
@@ -54,8 +66,9 @@
           <div class="expandable-content">
             <div class="govuk-form-group">
               <select class="govuk-select" id="availability-filter" name="availability-filter">
-                <option value="Mon-Fri">Mon - Fri</option>
-                <option value="Weekend">Weekend</option>
+                <option value="Weekdays">Weekdays</option>
+                <option value="Weekends">Weekends</option>
+                <option value="Weekdays and weekends">Weekdays and weekends</option>
               </select>
             </div>
           </div>
@@ -313,8 +326,8 @@
                 <a href="/HR-010">ABC123</a>
               </td>
               <td class="govuk-table__cell">7</td>
-              <td class="govuk-table__cell">Yes</td>
-              <td class="govuk-table__cell">Mon-Fri</td>
+              <td class="govuk-table__cell">BPSS</td>
+              <td class="govuk-table__cell">Weekdays</td>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
                   Available
@@ -329,8 +342,8 @@
             <tr>
               <td class="govuk-table__cell"><a href="/HR-010">ABC124</a></td>
               <td class="govuk-table__cell">7</td>
-              <td class="govuk-table__cell">Yes</td>
-              <td class="govuk-table__cell">Weekend</td>
+              <td class="govuk-table__cell">CTC</td>
+              <td class="govuk-table__cell">Weekends</td>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--yellow">
                   Under Consideration
@@ -345,8 +358,8 @@
             <tr>
               <td class="govuk-table__cell"><a href="/HR-010">ABC125</a></td>
               <td class="govuk-table__cell">7</td>
-              <td class="govuk-table__cell">Yes</td>
-              <td class="govuk-table__cell">Weekend</td>
+              <td class="govuk-table__cell">SC</td>
+              <td class="govuk-table__cell">Weekends</td>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--red">
                   Unavailable
@@ -361,8 +374,8 @@
             <tr>
               <td class="govuk-table__cell"><a href="/HR-010">ABC126</a></td>
               <td class="govuk-table__cell">7</td>
-              <td class="govuk-table__cell">Yes</td>
-              <td class="govuk-table__cell">Mon-Fri</td>
+              <td class="govuk-table__cell">DV</td>
+              <td class="govuk-table__cell">Weekdays</td>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
                   Available
@@ -377,8 +390,8 @@
             <tr>
               <td class="govuk-table__cell"><a href="/HR-010">ABC127</a></td>
               <td class="govuk-table__cell">7</td>
-              <td class="govuk-table__cell">Yes</td>
-              <td class="govuk-table__cell">Mon-Fri</td>
+              <td class="govuk-table__cell">BPSS</td>
+              <td class="govuk-table__cell">Weekdays</td>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
                   Available

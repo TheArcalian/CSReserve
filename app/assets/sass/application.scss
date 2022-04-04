@@ -77,8 +77,7 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 .remove-button-container > button {
-    display: relative;
-    top: 140px;
+    position: relative;
 }
 
 // Styles for customised expandable sections in HR-005

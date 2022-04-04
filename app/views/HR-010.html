@@ -26,8 +26,22 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="" href="/HR-003">Home</a> 
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a> 
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-003">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-005">View all requests</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-006">Request details</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/HR-009">Reservist search results </a>
+      </li>
+    </ol>
+  </div>
 {% endblock %}
 
 {% block content %}
