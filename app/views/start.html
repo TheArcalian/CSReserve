@@ -5,9 +5,7 @@
 {% endblock %}
 
 {% block header %}
-  <!-- Blank header with no service name for the start page -->
   {{ govukHeader() }}
-
   <div class="govuk-width-container">
     <p class="govuk-phase-banner__content">
       <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -18,35 +16,31 @@
       </span>
     </p>
   </div>
-
-{% endblock %}
-
-{% block beforeContent %}
-
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
       <h1 class="govuk-heading-xl">
         {% if serviceName %} {{ serviceName }} {% endif %}
       </h1>
-
-      <p>The Civil Service Reserve helps to provide the expertise and capacity needed to respond quickly and effectively to crises that threaten our nation.     </p>
-
-      <p>The Civil Service Reserve supports the Civil Contingencies Secretariat,  National Cyber Force, and Resilience and Recovery Directorate to manage unexpected crises, as well as known peaks in demands. It is made up of current and former civil servants who join on a voluntary basis and can be surged into particular roles in times of need. </p>
-
-      <h1 class="govuk-heading-xl">
+      <p>
+        The Civil Service Reserve helps to provide the expertise and capacity needed to respond quickly and effectively
+        to crises that threaten our nation.
+      </p>
+      <p>
+        The Civil Service Reserve supports the Civil Contingencies Secretariat, National Cyber Force, and Resilience and
+        Recovery Directorate to manage unexpected crises, as well as known peaks in demands. It is made up of current and
+        former civil servants who join on a voluntary basis and can be surged into particular roles in times of need.
+      </p>
+      <h2 class="govuk-heading-xl">
         How to join the Civil Service Reserve
-<p></p>
-<p>If you are a current or former civil servant, you can <a href="/RR-003">register to join the Civil Service Reserve</a>.</p>
-
-
+      </h2>
+      <p>
+        If you are a current or former civil servant, you can <a href="/RR-003">register to join the Civil Service Reserve</a>.
+      </p>
     </div>
-
     <div class="govuk-grid-column-one-third">
-
       <aside class="app-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
           Guidance
@@ -61,7 +55,6 @@
           </ul>
         </nav>
       </aside>
-
     </div>
   </div>
 {% endblock %}
