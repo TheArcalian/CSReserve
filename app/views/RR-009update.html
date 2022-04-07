@@ -5,29 +5,26 @@
 {% endblock %}
 
 {% block header %}
-{% from "govuk/components/header/macro.njk" import govukHeader %}
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
 
-{{ govukHeader({
-  homepageUrl: "#",
-  serviceName: "My Civil Service Reserve Account",
-  serviceUrl: "#"
-}) }}
-
-<div class="govuk-width-container">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
-{% endblock %}
-
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "My Civil Service Reserve Account",
+    serviceUrl: "#"
+  }) }}
+  {% endblock %}
 
 {% block beforeContent %}
+  <div class="govuk-width-container">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
@@ -35,60 +32,57 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-
-
       <form class="form" action="/update" method="post">
 
-        <p>{% from "govuk/components/radios/macro.njk" import govukRadios %}
+        <div>
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{{ govukRadios({
-  idPrefix: "current-last-grade",
-  name: "current-last-grade",
-  fieldset: {
-    legend: {
-      text: "What is your current or most recent Civil Service grade?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "HEO",
-      text: "HEO"
-    },
-    {
-      value: "SEO",
-      text: "SEO"
-    },
-    {
-      value: "Grade 7",
-      text: "Grade 7"
-    },
-    {
-      value: "Grade 6",
-      text: "Grade 6"
-    },
-    {
-      value: "SCS1",
-      text: "SCS1"
-    }
-  ]
-}) }}</p>
+          {{ govukRadios({
+            idPrefix: "current-last-grade",
+            name: "current-last-grade",
+            fieldset: {
+              legend: {
+                text: "What is your current or most recent Civil Service grade?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "HEO",
+                text: "HEO"
+              },
+              {
+                value: "SEO",
+                text: "SEO"
+              },
+              {
+                value: "Grade 7",
+                text: "Grade 7"
+              },
+              {
+                value: "Grade 6",
+                text: "Grade 6"
+              },
+              {
+                value: "SCS1",
+                text: "SCS1"
+              }
+            ]
+          }) }}
+        </div>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+        
+        <div class="govuk-button-group">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
 
-<div class="govuk-button-group">
-{{ govukButton({
-text: "Submit"
-}) }}
+          {{ govukButton({
+            text: "Submit"
+          }) }}
+          <a class="govuk-link" href="/start">Cancel</a>
+        </div>
 
-<a class="govuk-link" href="/start">Cancel</a>
-</div>
-
-</form>
-
+      </form>
     </div>
   </div>
-
 {% endblock %}
