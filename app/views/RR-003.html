@@ -5,9 +5,7 @@
 {% endblock %}
 
 {% block header %}
-  <!-- Blank header with no service name for the start page -->
   {{ govukHeader() }}
-
   <div class="govuk-width-container">
     <p class="govuk-phase-banner__content">
       <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -18,8 +16,6 @@
       </span>
     </p>
   </div>
-
-
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,42 +25,27 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
       <h1 class="govuk-heading-xl">
         {% if serviceName %} {{ serviceName }} {% endif %}
       </h1>
-
-      <p>Use this service to register with the Civil Service Reserve. </p>
-      <p></p>
-<h2 class="govuk-heading-m">Before you start</h2>
-<p></p>
-<p></p>
-
-      <p>To be eligible to join you must: </p>
-
+      <p>
+        Use this service to register with the Civil Service Reserve.
+      </p>
+      <h2 class="govuk-heading-m">Before you start</h2>
+      <p>To be eligible to join you must:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>be a current or former civil servant </li>
         <li>have obtained permission from your employer to join the Civil Service Reserve, if still in employment </li>
         <li>be at grade HEO, SEO, Grade 7, Grade 6 or SCS1 if you are a current civil servant, if you are a former civil servant this should have been your most recent grade</li>
         <li>have the right to work within the UK  </li>
       </ul>
-
       <p>Registering takes around 15 minutes</p>
-
       <a href="/RR-005" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
         Start now
         <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
           <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
         </svg>
       </a>
-
-
-
-    </div>
-
-    <div class="govuk-grid-column-one-third">
-
-
     </div>
   </div>
 {% endblock %}
