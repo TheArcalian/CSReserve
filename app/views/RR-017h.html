@@ -5,7 +5,6 @@
 {% endblock %} 
 
 {% block header %}
-
   {% from "govuk/components/header/macro.njk" import govukHeader %} 
 
   {{ govukHeader({ 
@@ -13,7 +12,9 @@
     serviceName: "Civil Service Reserve - Reservist registration", 
     serviceUrl: "#" }) 
   }}
+{% endblock %}
 
+{% block beforeContent %}
   <div class="govuk-width-container">
     <p class="govuk-phase-banner__content">
       <strong class="govuk-tag govuk-phase-banner__content__tag"> alpha </strong>
@@ -24,71 +25,66 @@
       </span>
     </p>
   </div>
-
-{% endblock %}
-
-{% block beforeContent %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %} 
 
 {% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/RR-018" method="post">
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <form class="form" action="/RR-018" method="post">
-      <h1 class="govuk-heading-xl">Behaviours and experience</h1>
+        <h1 class="govuk-heading-xl">Behaviours and experience</h1>
+        <h2 class="govuk-heading-m">
+          The following statements outline key behaviours and experiences required in a crisis or surge response.
+        </h2>
+        <p>Please select the option that best describes your current experience level.</p>
 
-      <h2 class="govuk-heading-m">
-        The following statements outline key behaviours and experiences required in a crisis or surge response.
-      </h2>
+        <div>
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+          {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-      <p>Please select the option that best describes your current experience level.</p>
+          {{ govukCheckboxes({
+            classes: "govuk-radios",
+            idPrefix: "crisisexp11",
+            name: "crisisexp11",
+            fieldset: {
+              legend: {
+                text: "Have you worked with multiple organisations?",
+                classes: "govuk-fieldset__legend--s"
+              }
+            },
+            hint: {
+              text: "Select all that apply."
+            },
+            items: [
+              {
+                value: "cross-government-departments",
+                text: "Cross - government departments"
+              },
+              {
+                value: "with-local-authorities",
+                text: "With local authorities"
+              },          
+              {
+                value: "with-voluntary-and-local-community-groups",
+                text: "With voluntary and local community groups"
+              },
+              {
+                value: "with-business-and-higher-education",
+                text: "With business and higher education"
+              }
+            ]
+          }) }}
+        </div>
+        
+        <div class="govuk-button-group">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
 
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-      {{ govukCheckboxes({
-        classes: "govuk-radios",
-        idPrefix: "crisisexp11",
-        name: "crisisexp11",
-        fieldset: {
-          legend: {
-            text: "Have you worked with multiple organisations?",
-            classes: "govuk-fieldset__legend--s"
-          }
-        },
-        hint: {
-          text: "Select all that apply."
-        },
-        items: [
-          {
-            value: "cross-government-departments",
-            text: "Cross - government departments"
-          },
-          {
-            value: "with-local-authorities",
-            text: "With local authorities"
-          },          
-          {
-            value: "with-voluntary-and-local-community-groups",
-            text: "With voluntary and local community groups"
-          },
-          {
-            value: "with-business-and-higher-education",
-            text: "With business and higher education"
-          }
-        ]
-      }) }}
-      
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-
-      <div class="govuk-button-group">
-        {{ govukButton({ text: "Continue" }) }}
-
-        <a class="govuk-link" href="/RR-003">Cancel</a>
-      </div>
-    </form>
+          {{ govukButton({ text: "Continue" }) }}
+          <a class="govuk-link" href="/RR-003">Cancel</a>
+        </div>
+        
+      </form>
+    </div>
   </div>
-</div>
-
 {% endblock %}

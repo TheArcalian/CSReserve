@@ -5,7 +5,6 @@
 {% endblock %} 
 
 {% block header %}
-
   {% from "govuk/components/header/macro.njk" import govukHeader %} 
 
   {{ govukHeader({ 
@@ -13,7 +12,9 @@
     serviceName: "Civil Service Reserve - Reservist registration", 
     serviceUrl: "#" }) 
   }}
-
+{% endblock %}
+  
+{% block beforeContent %}
   <div class="govuk-width-container">
     <p class="govuk-phase-banner__content">
       <strong class="govuk-tag govuk-phase-banner__content__tag"> alpha </strong>
@@ -24,10 +25,6 @@
       </span>
     </p>
   </div>
-
-{% endblock %}
-
-{% block beforeContent %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %} 
 
@@ -36,8 +33,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form class="form" action="/RR-017a" method="post">
-      <h1 class="govuk-heading-xl">Crisis and surge experience</h1>
 
+      <h1 class="govuk-heading-xl">Crisis and surge experience</h1>
       <p>Tell us about your crisis or surge response experience.</p>
 
       <div class="govuk-form-group">
@@ -151,13 +148,12 @@
         </fieldset>
       </div>
       
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-
       <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %}
         {{ govukButton({ text: "Continue" }) }}
-
         <a class="govuk-link" href="/RR-003">Cancel</a>
       </div>
+
     </form>
   </div>
 </div>

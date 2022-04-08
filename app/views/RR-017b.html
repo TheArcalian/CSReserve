@@ -5,7 +5,6 @@
 {% endblock %} 
 
 {% block header %}
-
   {% from "govuk/components/header/macro.njk" import govukHeader %} 
 
   {{ govukHeader({ 
@@ -13,7 +12,9 @@
     serviceName: "Civil Service Reserve - Reservist registration", 
     serviceUrl: "#" }) 
   }}
+{% endblock %}
 
+{% block beforeContent %}
   <div class="govuk-width-container">
     <p class="govuk-phase-banner__content">
       <strong class="govuk-tag govuk-phase-banner__content__tag"> alpha </strong>
@@ -24,59 +25,54 @@
       </span>
     </p>
   </div>
-
-{% endblock %}
-
-{% block beforeContent %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %} 
 
 {% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/RR-017c" method="post">
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <form class="form" action="/RR-017c" method="post">
-      <h1 class="govuk-heading-xl">Behaviours and experience</h1>
-      
-      <h2 class="govuk-heading-m">
-        The following statements outline key behaviours and experiences required in a crisis or surge response.
-      </h2>
+        <h1 class="govuk-heading-xl">Behaviours and experience</h1>
+        <h2 class="govuk-heading-m">
+          The following statements outline key behaviours and experiences required in a crisis or surge response.
+        </h2>
+        <p>Please select the option that best describes your current experience level.</p>
 
-      <p>Please select the option that best describes your current experience level.</p>
+        <div>
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+          {{ govukRadios({
+            classes: "govuk-radios",
+            idPrefix: "crisisexp5",
+            name: "crisisexp5",
+            fieldset: {
+              legend: {
+                text: "Do you enjoy working in high pressure environments?",
+                classes: "govuk-fieldset__legend--s"
+              }
+            },
+            items: [
+              {
+                value: "yes",
+                text: "yes"
+              },        
+              {
+                value: "no",
+                text: "No"
+              }
+            ]
+          }) }}
+        </div>
+        
+        <div class="govuk-button-group">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
 
-      {{ govukRadios({
-        classes: "govuk-radios",
-        idPrefix: "crisisexp5",
-        name: "crisisexp5",
-        fieldset: {
-          legend: {
-            text: "Do you enjoy working in high pressure environments?",
-            classes: "govuk-fieldset__legend--s"
-          }
-        },
-        items: [
-          {
-            value: "yes",
-            text: "yes"
-          },        
-          {
-            value: "no",
-            text: "No"
-          }
-        ]
-      }) }}
-      
-      {% from "govuk/components/button/macro.njk" import govukButton %}
+          {{ govukButton({ text: "Continue" }) }}
+          <a class="govuk-link" href="/RR-003">Cancel</a>
+        </div>
 
-      <div class="govuk-button-group">
-        {{ govukButton({ text: "Continue" }) }}
-
-        <a class="govuk-link" href="/RR-003">Cancel</a>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
-</div>
-
 {% endblock %}
