@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your Experience Question page
+{% endblock %}
+
+{% block header %}
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
+
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "My Civil Service Reserve Account",
+    serviceUrl: "#"
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-width-container">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/RU-010-answer" method="post">
+
+        <div>
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+          {{ govukRadios({
+            idPrefix: "current-former-role-update",
+            name: "current-former-role-update",
+            fieldset: {
+              legend: {
+                text: "Is or was your most recent employment a Civil Service role?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "Yes",
+                text: "Yes"
+              },
+              {
+                value: "No",
+                text: "No"
+              }
+            ]
+          }) }}
+        </div>
+
+        <div class="govuk-button-group">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+          <a class="govuk-link" href="/RU-004">Cancel</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
