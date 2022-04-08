@@ -3,38 +3,34 @@
 {% block pageTitle %}
   Question page
 {% endblock %}
+
 {% block header %}
-{% from "govuk/components/header/macro.njk" import govukHeader %}
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
 
-{{ govukHeader({
-  homepageUrl: "#",
-  serviceName: "My Civil Service Reserve Account",
-  serviceUrl: "#"
-}) }}
-
-<div class="govuk-width-container">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "My Civil Service Reserve Account",
+    serviceUrl: "#"
+  }) }}
 {% endblock %}
+
 {% block beforeContent %}
+  <div class="govuk-width-container">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-
-
 {% endblock %}
 
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
       <form class="form" action="/update" method="post">
 
         <h1 class="govuk-heading-xl">
@@ -113,14 +109,12 @@
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="unsol-contact">
-
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="more-detail">
                     Please comment on your level of flexibility (e.g. early mornings, late evenings, nights)?
                   </label>
                   <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
                 </div>
-
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="unsol" name="unsol" type="radio" value="No" data-aria-controls="unsol-contact-2">
@@ -128,8 +122,7 @@
                   No
                 </label>
               </div>
-              </div>
-
+            </div>
           </fieldset>
         </div>
 
@@ -151,14 +144,12 @@
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="otherinfo-contact">
-
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="otherinfo-detail">
                     Please describe any personal circumstances we need to be aware of.
                   </label>
                   <textarea class="govuk-textarea" id="otherinfo-detail" name="otherinfo-detail" rows="5"></textarea>
                 </div>
-
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="otherinfo" name="otherinfo" type="radio" value="No" data-aria-controls="otherinfo-contact-2">
@@ -166,22 +157,18 @@
                   No
                 </label>
               </div>
-              </div>
-
+            </div>
           </fieldset>
         </div>
 
         <div class="govuk-button-group">
-        {{ govukButton({
-        text: "Submit"
-        }) }}
-
-        <a class="govuk-link" href="/start">Cancel</a>
+          {{ govukButton({
+            text: "Submit"
+          }) }}
+          <a class="govuk-link" href="/start">Cancel</a>
         </div>
 
       </form>
-
     </div>
   </div>
-
 {% endblock %}

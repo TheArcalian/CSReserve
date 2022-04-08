@@ -5,7 +5,6 @@
 {% endblock %} 
 
 {% block header %}
-
   {% from "govuk/components/header/macro.njk" import govukHeader %} 
 
   {{ govukHeader({ 
@@ -13,7 +12,9 @@
     serviceName: "Civil Service Reserve - Reservist registration", 
     serviceUrl: "#" }) 
   }}
-
+{% endblock %}
+  
+{% block beforeContent %}
   <div class="govuk-width-container">
     <p class="govuk-phase-banner__content">
       <strong class="govuk-tag govuk-phase-banner__content__tag"> alpha </strong>
@@ -24,63 +25,59 @@
       </span>
     </p>
   </div>
-
-{% endblock %}
-
-{% block beforeContent %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %} 
 
 {% block content %}
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form class="form" action="/RR-017b" method="post">
+
       <h1 class="govuk-heading-xl">Behaviours and experience</h1>
-      
       <h2 class="govuk-heading-m">
         The following statements outline key behaviours and experiences required in a crisis or surge response.
       </h2>
-
       <p>Please select the option that best describes your current experience level.</p>
 
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      <div>
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-      {{ govukRadios({
-        classes: "govuk-radios",
-        idPrefix: "crisisexp4",
-        name: "crisisexp4",
-        fieldset: {
-          legend: {
-            text: "Have you worked with ministers, anticipating and delivering their needs in a timely manner?",
-            classes: "govuk-fieldset__legend--s"
-          }
-        },
-        items: [
-          {
-            value: "expert",
-            text: "I am an expert"
+        {{ govukRadios({
+          classes: "govuk-radios",
+          idPrefix: "crisisexp4",
+          name: "crisisexp4",
+          fieldset: {
+            legend: {
+              text: "Have you worked with ministers, anticipating and delivering their needs in a timely manner?",
+              classes: "govuk-fieldset__legend--s"
+            }
           },
-          {
-            value: "some-experience",
-            text: "I have some experience"
-          },          
-          {
-            value: "no-experience",
-            text: "No experience"
-          }
-        ]
-      }) }}
+          items: [
+            {
+              value: "expert",
+              text: "I am an expert"
+            },
+            {
+              value: "some-experience",
+              text: "I have some experience"
+            },          
+            {
+              value: "no-experience",
+              text: "No experience"
+            }
+          ]
+        }) }}
+      </div>
       
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-
+      
       <div class="govuk-button-group">
-        {{ govukButton({ text: "Continue" }) }}
+        {% from "govuk/components/button/macro.njk" import govukButton %}
 
+        {{ govukButton({ text: "Continue" }) }}
         <a class="govuk-link" href="/RR-003">Cancel</a>
       </div>
+
     </form>
   </div>
 </div>
-
 {% endblock %}

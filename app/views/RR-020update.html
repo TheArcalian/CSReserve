@@ -3,113 +3,107 @@
 {% block pageTitle %}
   Question page
 {% endblock %}
+
 {% block header %}
-{% from "govuk/components/header/macro.njk" import govukHeader %}
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
 
-{{ govukHeader({
-  homepageUrl: "#",
-  serviceName: "My Civil Service Reserve Account",
-  serviceUrl: "#"
-}) }}
-
-<div class="govuk-width-container">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "My Civil Service Reserve Account",
+    serviceUrl: "#"
+  }) }}
 {% endblock %}
+
 {% block beforeContent %}
+  <div class="govuk-width-container">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-
-
       <form class="form" action="/update" method="post">
 
-        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+        <div>
+          {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-        {{ govukCheckboxes({
-          idPrefix: "preflocation",
-          name: "preflocation",
-          fieldset: {
-            legend: {
-              text: "What regions would you be able to perform reserve assignments in? ",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
-            }
-          },
-          hint: {
-            text: "Select all that apply."
-          },
-          items: [
-            {
-              value: "East Midlands",
-              text: "East Midlands"
+          {{ govukCheckboxes({
+            idPrefix: "preflocation",
+            name: "preflocation",
+            fieldset: {
+              legend: {
+                text: "What regions would you be able to perform reserve assignments in? ",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
             },
-            {
-              value: "East of England",
-              text: "East of England"
+            hint: {
+              text: "Select all that apply."
             },
-            {
-              value: "London",
-              text: "London"
-            },
-            {
-              value: "North East",
-              text: "North East"
-            },
-            {
-              value: "North West",
-              text: "North West"
-            },
-            {
-              value: "South East",
-              text: "South East"
-            },
-            {
-              value: "South West",
-              text: "South West"
-            },
-            {
-              value: "West Midlands",
-              text: "West Midlands"
-            },
-            {
-              value: "Yorkshire",
-              text: "Yorkshire"
-            },
-            {
-              value: "Remote working",
-              text: "Remote working"
-            }
-          ]
-        }) }}
+            items: [
+              {
+                value: "East Midlands",
+                text: "East Midlands"
+              },
+              {
+                value: "East of England",
+                text: "East of England"
+              },
+              {
+                value: "London",
+                text: "London"
+              },
+              {
+                value: "North East",
+                text: "North East"
+              },
+              {
+                value: "North West",
+                text: "North West"
+              },
+              {
+                value: "South East",
+                text: "South East"
+              },
+              {
+                value: "South West",
+                text: "South West"
+              },
+              {
+                value: "West Midlands",
+                text: "West Midlands"
+              },
+              {
+                value: "Yorkshire",
+                text: "Yorkshire"
+              },
+              {
+                value: "Remote working",
+                text: "Remote working"
+              }
+            ]
+          }) }}
+        </div>
+        
+        <div class="govuk-button-group">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
 
+          {{ govukButton({
+            text: "Submit"
+          }) }}
+          <a class="govuk-link" href="/start">Cancel</a>
+        </div>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-<div class="govuk-button-group">
-{{ govukButton({
-text: "Submit"
-}) }}
-
-<a class="govuk-link" href="/start">Cancel</a>
-</div>
-
-</form>
-
+      </form>
     </div>
   </div>
-
 {% endblock %}
