@@ -33,23 +33,23 @@
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="/RU-028" method="post">
       
-          {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+        {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-          {{ govukNotificationBanner({
-            text: 'Once you leave, you will need to complete the registration process again if you wish to rejoin the 
-            Civil Service Reserve in the future. You can withdraw your request by selecting Cancel, 
-            or proceed by selecting Leave the reserve.'
-          }) }}
+        {{ govukNotificationBanner({
+          text: 'Once you leave, you will need to complete the registration process again if you wish to rejoin the 
+          Civil Service Reserve in the future. You can withdraw your request by selecting Cancel, 
+          or proceed by selecting Leave the reserve.'
+        }) }}
 
-          <div class="govuk-button-group">
-            {% from "govuk/components/button/macro.njk" import govukButton %}
+        <div class="govuk-button-group">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
 
-            {{ govukButton({
-              text: "Leave the reserve",
+          {{ govukButton({
+            text: "Leave the reserve",
             classes: "govuk-button--warning"
-            }) }}
-            <a class="govuk-link" href="/RU-004">Cancel</a>
-          </div>
+          }) }}
+          <a class="govuk-link" href="/RU-004">Cancel</a>
+        </div>
 
       </form>
     </div>
