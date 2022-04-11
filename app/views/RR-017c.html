@@ -33,11 +33,7 @@
   <div class="govuk-grid-column-two-thirds">
     <form class="form" action="/RR-017d" method="post">
 
-      <h1 class="govuk-heading-xl">Behaviours and experience</h1>
-      <h2 class="govuk-heading-m">
-        The following statements outline key behaviours and experiences required in a crisis or surge response.
-      </h2>
-      <p>Please select the option that best describes your current experience level.</p>
+      <h1 class="govuk-heading-xl">Have you made strategic decisions based on your understanding of the consequences?</h1>
 
       <div>
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -58,11 +54,11 @@
               text: "I am an expert"
             },
             {
-              value: "some-experience",
+              value: "some experience",
               text: "I have some experience"
             },          
             {
-              value: "no-experience",
+              value: "no experience",
               text: "No experience"
             }
           ]

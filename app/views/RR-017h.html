@@ -33,11 +33,7 @@
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="/RR-018" method="post">
 
-        <h1 class="govuk-heading-xl">Behaviours and experience</h1>
-        <h2 class="govuk-heading-m">
-          The following statements outline key behaviours and experiences required in a crisis or surge response.
-        </h2>
-        <p>Please select the option that best describes your current experience level.</p>
+        <h1 class="govuk-heading-xl">Have you worked with multiple organisations?</h1>
 
         <div>
           {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -47,30 +43,24 @@
             classes: "govuk-radios",
             idPrefix: "crisisexp11",
             name: "crisisexp11",
-            fieldset: {
-              legend: {
-                text: "Have you worked with multiple organisations?",
-                classes: "govuk-fieldset__legend--s"
-              }
-            },
             hint: {
               text: "Select all that apply."
             },
             items: [
               {
-                value: "cross-government-departments",
-                text: "Cross - government departments"
+                value: "cross-government departments",
+                text: "Cross-government departments"
               },
               {
-                value: "with-local-authorities",
+                value: "with local authorities",
                 text: "With local authorities"
               },          
               {
-                value: "with-voluntary-and-local-community-groups",
+                value: "with voluntary and local community groups",
                 text: "With voluntary and local community groups"
               },
               {
-                value: "with-business-and-higher-education",
+                value: "with business and higher education",
                 text: "With business and higher education"
               }
             ]

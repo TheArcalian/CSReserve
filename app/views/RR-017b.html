@@ -33,11 +33,7 @@
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="/RR-017c" method="post">
 
-        <h1 class="govuk-heading-xl">Behaviours and experience</h1>
-        <h2 class="govuk-heading-m">
-          The following statements outline key behaviours and experiences required in a crisis or surge response.
-        </h2>
-        <p>Please select the option that best describes your current experience level.</p>
+        <h1 class="govuk-heading-xl">Do you enjoy working in high pressure environments?</h1>
 
         <div>
           {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -46,16 +42,10 @@
             classes: "govuk-radios",
             idPrefix: "crisisexp5",
             name: "crisisexp5",
-            fieldset: {
-              legend: {
-                text: "Do you enjoy working in high pressure environments?",
-                classes: "govuk-fieldset__legend--s"
-              }
-            },
             items: [
               {
                 value: "yes",
-                text: "yes"
+                text: "Yes"
               },        
               {
                 value: "no",
