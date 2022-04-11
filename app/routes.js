@@ -76,12 +76,12 @@ router.post('/who-answer', function (req, res) {
   }
 })
 
-router.post('/typeofroleupdate-answer', function (req, res) {
+router.post('/RU-010-answer', function (req, res) {
   var typeofroleans = req.session.data['current-former-role-update']
   if (typeofroleans == "Yes"){
-      res.redirect('/RR-014update')
+      res.redirect('/RU-011')
   } else {
-        res.redirect('/RR-015update')
+        res.redirect('/RU-012')
   }
 })
 
