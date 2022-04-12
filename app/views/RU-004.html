@@ -1,7 +1,18 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Check your answers
+  Update your details
+{% endblock %}
+
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "My Civil Service Reserve Account",
+  serviceUrl: "#"
+}) }}
+
 {% endblock %}
 
 {% block beforeContent %}
@@ -19,11 +30,11 @@
 {% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row">
+<div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
-      
+      <h1 class="govuk-heading-xl">Review and update your information</h1>
+
       <h2 class="govuk-heading-m">Personal details</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -34,7 +45,7 @@
             {{data['full-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-013">
+            <a href="/RU-006">
               Change
               <span class="govuk-visually-hidden"> Full Name</span>
             </a>
@@ -46,9 +57,9 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p>{{data['telephone-number'] }}</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/RR-013">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/RU-006">
               Change
               <span class="govuk-visually-hidden"> contact details</span>
             </a>
@@ -60,9 +71,9 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p>{{data['email'] }}</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/RR-013">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/RU-006">
               Change
               <span class="govuk-visually-hidden"> contact details</span>
             </a>
@@ -74,9 +85,9 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p>{{data['nation'] }}</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/RR-007a">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/RU-007">
               Change
               <span class="govuk-visually-hidden"> Right to work</span>
             </a>
@@ -94,9 +105,9 @@
             {{data['current-former'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-006">
+            <a href="/RU-008">
               Change
-              <span class="govuk-visually-hidden">Current or Former</span>
+              <span class="govuk-visually-hidden"> Current or Former</span>
             </a>
           </dd>
         </div>
@@ -108,9 +119,9 @@
             {{data['current-last-grade'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-009">
+            <a href="/RU-009">
               Change
-              <span class="govuk-visually-hidden">Current or last grade</span>
+              <span class="govuk-visually-hidden"> Current or last grade</span>
             </a>
           </dd>
         </div>
@@ -122,9 +133,9 @@
             {{data['department-current-role'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/typeofrole">
+            <a href="/RU-010">
               Change
-              <span class="govuk-visually-hidden">Current Civil Service role or current oragnisation</span>
+              <span class="govuk-visually-hidden"> Current Civil Service role or current oragnisation</span>
             </a>
           </dd>
         </div>
@@ -134,11 +145,11 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p>{{data['date-start'] }}</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/typeofrole">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/RU-010">
               Change
-              <span class="govuk-visually-hidden"> Your Start Date</span>
+              <span class="govuk-visually-hidden">Your Start Date</span>
             </a>
           </dd>
         </div>
@@ -150,9 +161,9 @@
             <p>{{data['date-end'] }}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/typeofrole">
+            <a href="/RU-010">
               Change
-              <span class="govuk-visually-hidden"> Your end date</span>
+              <span class="govuk-visually-hidden">Your end date</span>
             </a>
           </dd>
         </div>
@@ -163,8 +174,8 @@
           <dd class="govuk-summary-list__value">
             <p>{{data['your-role'] }}</p>
           </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/typeofrole">
+            <dd class="govuk-summary-list__actions">
+            <a href="/RU-010">
               Change
               <span class="govuk-visually-hidden"> What was/is your role</span>
             </a>
@@ -178,7 +189,7 @@
             <p>{{data['your-ref'] }}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/typeofrole">
+            <a href="/RU-010">
               Change
               <span class="govuk-visually-hidden"> The name of your reference</span>
             </a>
@@ -190,11 +201,11 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p>{{data['ref-email'] }}</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/typeofrole">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/RU-010">
               Change
-              <span class="govuk-visually-hidden"> Your references email address</span>
+              <span class="govuk-visually-hidden">Your references email address</span>
             </a>
           </dd>
         </div>
@@ -204,11 +215,11 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p>{{data['ref-telephone-number'] }}</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/typeofrole">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/RU-010">
               Change
-              <span class="govuk-visually-hidden"> Your references telephone number</span>
+              <span class="govuk-visually-hidden">Your references telephone number</span>
             </a>
           </dd>
         </div>
@@ -218,11 +229,11 @@
           </dt>
           <dd class="govuk-summary-list__value">
             <p>{{data['preferred-contact-method'] }}</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/typeofrole">
+            </dd>
+            <dd class="govuk-summary-list__actions">
+            <a href="/RU-010">
               Change
-              <span class="govuk-visually-hidden"> Your references preferred contact method</span>
+              <span class="govuk-visually-hidden">Your references preferred contact method</span>
             </a>
           </dd>
         </div>
@@ -238,9 +249,9 @@
             {{data['former-current-role'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-015">
+            <a href="/RU-012">
               Change
-              <span class="govuk-visually-hidden">Current or Former</span>
+              <span class="govuk-visually-hidden"> Current or Former</span>
             </a>
           </dd>
         </div>
@@ -252,9 +263,9 @@
             {{data['Years-Leave-Civil'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-015">
+            <a href="/RU-012">
               Change
-              <span class="govuk-visually-hidden">Current or Former</span>
+              <span class="govuk-visually-hidden"> Current or Former</span>
             </a>
           </dd>
         </div>
@@ -266,9 +277,9 @@
             {{data['Years-in-Civil'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-015">
+            <a href="/RU-012">
               Change
-              <span class="govuk-visually-hidden">Current or Former</span>
+              <span class="govuk-visually-hidden"> Current or Former</span>
             </a>
           </dd>
         </div>
@@ -285,7 +296,7 @@
             <br>Experience - {{data['crisisexp1-detail'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-016">
+            <a href="/RU-013">
               Change
               <span class="govuk-visually-hidden">Current or Former</span>
             </a>
@@ -300,7 +311,7 @@
             <br>Experience - {{data['crisisexp2-detail'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-016">
+            <a href="/RU-013">
               Change
               <span class="govuk-visually-hidden">Current or Former</span>
             </a>
@@ -315,7 +326,7 @@
             <br>Experience - {{data['crisisexp3-detail'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-016">
+            <a href="/RU-013">
               Change
               <span class="govuk-visually-hidden">Current or Former</span>
             </a>
@@ -333,7 +344,7 @@
             Experience - {{data['crisisexp4'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-017a">
+            <a href="/RU-014">
               Change
               <span class="govuk-visually-hidden">Current or Former</span>
             </a>
@@ -347,7 +358,7 @@
             Experience - {{data['crisisexp5'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-017b">
+            <a href="/RU-015">
               Change
               <span class="govuk-visually-hidden">Current or Former</span>
             </a>
@@ -361,7 +372,7 @@
             Experience - {{data['crisisexp6'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-017c">
+            <a href="/RU-016">
               Change
               <span class="govuk-visually-hidden">Current or Former</span>
             </a>
@@ -375,7 +386,7 @@
             Experience - {{data['crisisexp7'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-017d">
+            <a href="/RU-017">
               Change
               <span class="govuk-visually-hidden">Current or Former</span>
             </a>
@@ -389,7 +400,7 @@
             Experience - {{data['crisisexp8'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-017e">
+            <a href="/RU-018">
               Change
               <span class="govuk-visually-hidden">Current or Former</span>
             </a>
@@ -403,7 +414,7 @@
             Experience - {{data['crisisexp9'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-017f">
+            <a href="/RU-019">
               Change
               <span class="govuk-visually-hidden">Current or Former</span>
             </a>
@@ -417,7 +428,7 @@
             Experience - {{data['crisisexp10'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-017f">
+            <a href="/RU-020">
               Change
               <span class="govuk-visually-hidden">Current or Former</span>
             </a>
@@ -431,7 +442,7 @@
             Experience - {{data['crisisexp11'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-017h">
+            <a href="/RU-021">
               Change
               <span class="govuk-visually-hidden">Current or Former</span>
             </a>
@@ -451,9 +462,9 @@
             <br>{{data['sec-expiry'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-018">
+            <a href="/RU-022">
               Change
-              <span class="govuk-visually-hidden">Current or Former</span>
+              <span class="govuk-visually-hidden"> Current or Former</span>
             </a>
           </dd>
         </div>
@@ -463,11 +474,11 @@
           </dt>
           <dd class="govuk-summary-list__value">
             {{data['availday'] }}
-          </dd>
+            </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-021">
+            <a href="/RU-023">
               Change
-              <span class="govuk-visually-hidden">Current or Former</span>
+              <span class="govuk-visually-hidden"> Current or Former</span>
             </a>
           </dd>
         </div>
@@ -478,11 +489,11 @@
           <dd class="govuk-summary-list__value">
             {{data['unsol'] }}
             <br>{{data['more-detail'] }}
-          </dd>
+            </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-021">
+            <a href="/RU-023">
               Change
-              <span class="govuk-visually-hidden">Current or Former</span>
+              <span class="govuk-visually-hidden"> Current or Former</span>
             </a>
           </dd>
         </div>
@@ -493,11 +504,11 @@
           <dd class="govuk-summary-list__value">
             {{data['otherinfo'] }}
             <br>{{data['otherinfo-detail'] }}
-          </dd>
+            </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-021">
+            <a href="/RU-023">
               Change
-              <span class="govuk-visually-hidden">Current or Former</span>
+              <span class="govuk-visually-hidden"> Current or Former</span>
             </a>
           </dd>
         </div>
@@ -512,11 +523,11 @@
           <dd class="govuk-summary-list__value">
             {{data['resadj'] }}
             <br>{{data['resadj-detail'] }}
-          </dd>
+            </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-022">
+            <a href="/RU-024">
               Change
-              <span class="govuk-visually-hidden">Current or Former</span>
+              <span class="govuk-visually-hidden"> Current or Former</span>
             </a>
           </dd>
         </div>
@@ -527,28 +538,18 @@
           <dd class="govuk-summary-list__value">
             {{data['deptp'] }}
             <br>{{data['deptp-detail'] }}
-          </dd>
+            </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/RR-022">
+            <a href="/RU-024">
               Change
-              <span class="govuk-visually-hidden">Current or Former</span>
+              <span class="govuk-visually-hidden"> Current or Former</span>
             </a>
           </dd>
         </div>
       </dl>
 
-      <h2 class="govuk-heading-m">Now send your application</h2>
-      <p>
-        By submitting this application you are confirming that, to the best of your knowledge, the details you are
-        providing are correct.
-      </p>
-
-      <form action="/RR-026" method="post" novalidate>
-        <input type="hidden" name="answers-checked" value="true">
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Submit
-        </button>
-      </form>
+      <h2 class="govuk-heading-m">Update your Reserve status</h2>
+      <p>If you wish to permanently <a href="/RU-026">leave the Civil Service Reserve</a>.</p>
 
     </div>
   </div>

@@ -4,6 +4,16 @@
   Question page
 {% endblock %}
 
+{% block header %}
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
+
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "My Civil Service Reserve Account",
+    serviceUrl: "#"
+  }) }}
+  {% endblock %}
+
 {% block beforeContent %}
   <div class="govuk-width-container">
     <p class="govuk-phase-banner__content">
@@ -22,45 +32,57 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/update" method="post">
+      <form class="form" action="/RU-004" method="post">
 
         <div>
           {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
           {{ govukRadios({
-            idPrefix: "current-former",
-            name: "current-former",
+            idPrefix: "current-last-grade",
+            name: "current-last-grade",
             fieldset: {
               legend: {
-                text: "Are you a current or former civil servant?",
+                text: "What is your current or most recent Civil Service grade?",
                 isPageHeading: true,
                 classes: "govuk-fieldset__legend--l"
               }
             },
             items: [
               {
-                value: "Current",
-                text: "I am currently a civil servant"
+                value: "HEO",
+                text: "HEO"
               },
               {
-                value: "Former",
-                text: "I am a former civil servant"
+                value: "SEO",
+                text: "SEO"
+              },
+              {
+                value: "Grade 7",
+                text: "Grade 7"
+              },
+              {
+                value: "Grade 6",
+                text: "Grade 6"
+              },
+              {
+                value: "SCS1",
+                text: "SCS1"
               }
             ]
           }) }}
         </div>
+
         
         <div class="govuk-button-group">
           {% from "govuk/components/button/macro.njk" import govukButton %}
-          
+
           {{ govukButton({
             text: "Submit"
           }) }}
-          <a class="govuk-link" href="/start1">Cancel</a>
+          <a class="govuk-link" href="/start">Cancel</a>
         </div>
 
       </form>
     </div>
   </div>
-
 {% endblock %}

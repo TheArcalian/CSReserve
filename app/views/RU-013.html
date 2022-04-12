@@ -32,7 +32,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form class="form" action="/RR-017a" method="post">
+    <form class="form" action="/RU-004" method="post">
 
       <h1 class="govuk-heading-xl">Crisis and surge experience</h1>
       <p>Tell us about your crisis or surge response experience.</p>
@@ -53,7 +53,7 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="crisisexp1-yes" name="crisisexp1" type="radio" value="Yes" data-aria-controls="crisisexp1-contact">
               <label class="govuk-label govuk-radios__label" for="crisisexp1">
-                Yes
+                Yes - please provide more information
               </label>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="crisisexp1-contact">
@@ -90,7 +90,7 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="crisisexp2-yes" name="crisisexp2" type="radio" value="Yes" data-aria-controls="crisisexp2-contact">
               <label class="govuk-label govuk-radios__label" for="crisisexp2">
-                Yes
+                Yes - please provide more information
               </label>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="crisisexp2-contact">
@@ -127,7 +127,7 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="crisisexp3-yes" name="crisisexp3" type="radio" value="Yes" data-aria-controls="crisisexp3-contact">
               <label class="govuk-label govuk-radios__label" for="crisisexp3">
-                Yes
+                Yes - please provide more information
               </label>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="crisisexp3-contact">
@@ -150,8 +150,9 @@
       
       <div class="govuk-button-group">
         {% from "govuk/components/button/macro.njk" import govukButton %}
-        {{ govukButton({ text: "Continue" }) }}
-        <a class="govuk-link" href="/RR-003">Cancel</a>
+
+        {{ govukButton({ text: "Submit" }) }}
+        <a class="govuk-link" href="/RU-004">Cancel</a>
       </div>
 
     </form>
