@@ -12,7 +12,6 @@ router.post('/elig0-answer', function (req, res) {
   }
 })
 
-
 // Add your routes here - above the module.exports line
 router.post('/elig1-answer', function (req, res) {
   var elig1answer = req.session.data['current-former']
@@ -26,10 +25,6 @@ router.post('/elig1-answer', function (req, res) {
   }
 })
 
-
-
-
-
 router.post('/elig2-answer', function (req, res) {
   var elig2answer = req.session.data['Manager-ask']
   if (elig2answer == "No"){
@@ -38,7 +33,6 @@ router.post('/elig2-answer', function (req, res) {
         res.redirect('/RR-009')
   }
 })
-
 
 router.post('/elig3-answer', function (req, res) {
   var elig3answer = req.session.data['current-last-grade']
@@ -93,17 +87,5 @@ router.post('/typeofrole-answer', function (req, res) {
         res.redirect('/RR-015')
   }
 })
-
-router.post('/change-answer', function (req, res) {
-  var leaveans = req.session.data['what-do']
-  if (leaveans == "Reinstate my participation of the reserve"){
-      res.redirect('/rein')
-    }
-    if (leaveans == "Temporally suspend my service to the reserve"){
-        res.redirect('/templ')
-    } else {
-          res.redirect('/perml')
-    }
-  })
 
 module.exports = router
