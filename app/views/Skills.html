@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block beforeContent %}
-
   <div class="govuk-width-container">
     <p class="govuk-phase-banner__content">
       <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -16,16 +15,13 @@
       </span>
     </p>
   </div>
-
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="/Secclear" method="post">
-
 
         <h1 class="govuk-heading-xl">Skills and experience required</h1>
       
@@ -43,41 +39,43 @@
               <p> We will now ask you to rate your confidence level against these communication skills.</p>
 
               <h2 class="govuk-heading-m">Produce clear and accurate Briefings</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-              {{ govukSelect({
-                id: "skill1conf",
-                name: "skill1conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+                {{ govukSelect({
+                  id: "skill1conf",
+                  name: "skill1conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
 
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -113,41 +111,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Produce clear and accurate written communications</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-              {{ govukSelect({
-                id: "skill2conf",
-                name: "skill2conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+                {{ govukSelect({
+                  id: "skill2conf",
+                  name: "skill2conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
 
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -183,41 +183,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Articulate information quickly, succinctly and accurately</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-              {{ govukSelect({
-                id: "skill3conf",
-                name: "skill3conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+                {{ govukSelect({
+                  id: "skill3conf",
+                  name: "skill3conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
 
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -253,41 +255,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Clearly and effectively communicate by verbal means</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-              {{ govukSelect({
-                id: "skill4conf",
-                name: "skill4conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+                {{ govukSelect({
+                  id: "skill4conf",
+                  name: "skill4conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
 
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -323,41 +327,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Deliver difficult messages with clarity and sensitivity</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-              {{ govukSelect({
-                id: "skill5conf",
-                name: "skill5conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+                {{ govukSelect({
+                  id: "skill5conf",
+                  name: "skill5conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
 
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -395,7 +401,6 @@
             </div>
           </div>
 
-
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
               <span class="govuk-accordion__section-heading">
@@ -409,42 +414,43 @@
               <p>We will now ask you to rate your confidence level against these analysis skills. </p>
 
               <h2 class="govuk-heading-m">Analyse a range of information and translate this into clear policy</h2>
-      
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill6conf",
-                name: "skill6conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill6conf",
+                  name: "skill6conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -480,41 +486,43 @@
               </div>
       
               <h2 class="govuk-heading-m">Understand data, intelligence and analysis and engage with analysts</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill7conf",
-                name: "skill7conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill7conf",
+                  name: "skill7conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -550,41 +558,43 @@
               </div>
       
               <h2 class="govuk-heading-m">Understand data and communicate to a range of audiences</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill8conf",
-                name: "skill8conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill8conf",
+                  name: "skill8conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -622,7 +632,6 @@
             </div>
           </div>
 
-
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
               <span class="govuk-accordion__section-heading">
@@ -636,41 +645,43 @@
               <p>We will now ask you to rate your confidence level against these decision making skills.</p>
 
               <h2 class="govuk-heading-m">Make defensible decisions with partial and/or conflicting information</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill9conf",
-                name: "skill9conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill9conf",
+                  name: "skill9conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -706,41 +717,43 @@
               </div>
       
               <h2 class="govuk-heading-m">Understand the consequences, impact and knock-on effects of decisions</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill10conf",
-                name: "skill10conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill10conf",
+                  name: "skill10conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -778,7 +791,6 @@
             </div>
           </div>
 
-
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
               <span class="govuk-accordion__section-heading">
@@ -791,41 +803,43 @@
               <!-- start of accordian section content -->
 
               <h2 class="govuk-heading-m">Manage resources and their workloads effectively to meet deadlines</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill11conf",
-                name: "skill11conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill11conf",
+                  name: "skill11conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -853,41 +867,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Engage with teams to deliver improved outcomes</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill12conf",
-                name: "skill12conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill12conf",
+                  name: "skill12conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -915,41 +931,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Lead direct reports in high pressure situations</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill13conf",
-                name: "skill13conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill13conf",
+                  name: "skill13conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -979,7 +997,6 @@
             </div>
           </div>
           
-          
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
               <span class="govuk-accordion__section-heading">
@@ -992,41 +1009,43 @@
               <!-- start of accordian section content -->
 
               <h2 class="govuk-heading-m">Challenge existing ways of working and come up with workable solutions for improvement</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill14conf",
-                name: "skill14conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill14conf",
+                  name: "skill14conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1054,41 +1073,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Identify implications of own Department’s actions and policy levers when resolving issues</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill15conf",
-                name: "skill15conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill15conf",
+                  name: "skill15conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1114,12 +1135,9 @@
                   </div>
                 </fieldset>
               </div>
-
-
               <!-- end of accordian section content -->
             </div>
           </div>
-
 
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
@@ -1133,41 +1151,43 @@
               <!-- start of accordian section content -->
 
               <h2 class="govuk-heading-m">Prioritise multiple issues across multiple areas for operational delivery</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill16conf",
-                name: "skill16conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill16conf",
+                  name: "skill16conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1193,42 +1213,45 @@
                   </div>
                 </fieldset>
               </div>
+
               <h2 class="govuk-heading-m">Prioritise work effectively and respond to changing demands</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill17conf",
-                name: "skill17conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill17conf",
+                  name: "skill17conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1254,42 +1277,45 @@
                   </div>
                 </fieldset>
               </div>
+              
               <h2 class="govuk-heading-m">Identify key strategic trends and derive actions</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill18conf",
-                name: "skill18conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill18conf",
+                  name: "skill18conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1315,42 +1341,45 @@
                   </div>
                 </fieldset>
               </div>
+
               <h2 class="govuk-heading-m">See the big picture and develop strategic policy positions</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill19conf",
-                name: "skill19conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill19conf",
+                  name: "skill19conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1376,42 +1405,45 @@
                   </div>
                 </fieldset>
               </div>
+
               <h2 class="govuk-heading-m">Anticipate internal logistical and organisational issues and impacts from wider issues</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill20conf",
-                name: "skill20conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill20conf",
+                  name: "skill20conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1437,42 +1469,45 @@
                   </div>
                 </fieldset>
               </div>
+
               <h2 class="govuk-heading-m">Anticipate and deliver needs of ministers and stakeholders</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill21conf",
-                name: "skill21conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill21conf",
+                  name: "skill21conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1498,12 +1533,9 @@
                   </div>
                 </fieldset>
               </div>
-
-
               <!-- end of accordian section content -->
             </div>
           </div>
-          
          
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
@@ -1515,42 +1547,45 @@
             </div>
             <div id="accordion-default-content-7" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-7">
               <!-- start of accordian section content -->
+
               <h2 class="govuk-heading-m">Form strong relationships and networks across internal and external teams</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill22conf",
-                name: "skill22conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill22conf",
+                  name: "skill22conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1576,42 +1611,45 @@
                   </div>
                 </fieldset>
               </div>
+
               <h2 class="govuk-heading-m">Articulate priority to senior stakeholders in order to work together for a common purpose</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill23conf",
-                name: "skill23conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill23conf",
+                  name: "skill23conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1652,42 +1690,45 @@
             </div>
             <div id="accordion-default-content-8" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-8">
               <!-- start of accordian section content -->
+
               <h2 class="govuk-heading-m">Flexible, agile and calm under pressure</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill24conf",
-                name: "skill24conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill24conf",
+                  name: "skill24conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1715,41 +1756,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Work at pace in high pressure situations</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill25conf",
-                name: "skill25conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill25conf",
+                  name: "skill25conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1777,41 +1820,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Self-starter</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill26conf",
-                name: "skill26conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill26conf",
+                  name: "skill26conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1837,11 +1882,9 @@
                   </div>
                 </fieldset>
               </div>
-
               <!-- end of accordian section content -->
             </div>
           </div>
-
 
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
@@ -1853,42 +1896,45 @@
             </div>
             <div id="accordion-default-content-9" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-9">
               <!-- start of accordian section content -->
+
               <h2 class="govuk-heading-m">Quickly develop a good understanding of the breadth of the division’s work</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill27conf",
-                name: "skill27conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill27conf",
+                  name: "skill27conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1916,41 +1962,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Provide effective support to Senior Management and the wider Team</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill28conf",
-                name: "skill28conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill28conf",
+                  name: "skill28conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -1976,11 +2024,9 @@
                   </div>
                 </fieldset>
               </div>
-
               <!-- end of accordian section content -->
             </div>
           </div>
-
 
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
@@ -1992,44 +2038,47 @@
             </div>
             <div id="accordion-default-content-10" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-10">
               <!-- start of accordian section content -->
+              
               <h2 class="govuk-heading-m">
                 Working across Government, with local authorities, business representative organisations, voluntary sector, universities, or community groups.
               </h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill29conf",
-                name: "skill29conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill29conf",
+                  name: "skill29conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -2057,41 +2106,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Programme management</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill30conf",
-                name: "skill30conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill30conf",
+                  name: "skill30conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -2119,41 +2170,43 @@
               </div>
 
               <h2 class="govuk-heading-m">Running events/conferences</h2>
-              {% from "govuk/components/select/macro.njk" import govukSelect %}
-      
-              {{ govukSelect({
-                id: "skill31conf",
-                name: "skill31conf",
-                label: {
-                  text: "Confidence Rating"
-                },
-                items: [
-                  {
-                    value: " ",
-                    text: " "
+              <div>
+                {% from "govuk/components/select/macro.njk" import govukSelect %}
+        
+                {{ govukSelect({
+                  id: "skill31conf",
+                  name: "skill31conf",
+                  label: {
+                    text: "Confidence Rating"
                   },
-                  {
-                    value: "Not confident at all",
-                    text: "Not confident at all"
-                  },
-                  {
-                    value: "Slightly confident",
-                    text: "Slightly confident"
-                  },
-                  {
-                    value: "Somewhat confident",
-                    text: "Somewhat confident"
-                  },
-                  {
-                    value: "Fairly confident",
-                    text: "Fairly confident"
-                  },
-                  {
-                    value: "Completely confident",
-                    text: "Completely confident"
-                  }
-                ]
-              }) }}
+                  items: [
+                    {
+                      value: " ",
+                      text: " "
+                    },
+                    {
+                      value: "Not confident at all",
+                      text: "Not confident at all"
+                    },
+                    {
+                      value: "Slightly confident",
+                      text: "Slightly confident"
+                    },
+                    {
+                      value: "Somewhat confident",
+                      text: "Somewhat confident"
+                    },
+                    {
+                      value: "Fairly confident",
+                      text: "Fairly confident"
+                    },
+                    {
+                      value: "Completely confident",
+                      text: "Completely confident"
+                    }
+                  ]
+                }) }}
+              </div>
       
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -2179,29 +2232,21 @@
                   </div>
                 </fieldset>
               </div>
-
               <!-- end of accordian section content -->
             </div>
           </div>
-
-
         </div>
 
-
-
-
-        {% from "govuk/components/button/macro.njk" import govukButton %}
-
         <div class="govuk-button-group">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
           {{ govukButton({
-          text: "Continue"
+            text: "Continue"
           }) }}
           <a class="govuk-link" href="/start">Cancel</a>
         </div>
 
       </form>
-
     </div>
   </div>
-
 {% endblock %}

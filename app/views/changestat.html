@@ -5,87 +5,76 @@
 {% endblock %}
 
 {% block header %}
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
 
-{% from "govuk/components/header/macro.njk" import govukHeader %}
-
-{{ govukHeader({
-  homepageUrl: "#",
-  serviceName: "My Civil Service Reserve Account",
-  serviceUrl: "#"
-}) }}
-
-<div class="govuk-width-container">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "My Civil Service Reserve Account",
+    serviceUrl: "#"
+  }) }}
 {% endblock %}
 
-
-
-
 {% block beforeContent %}
+  <div class="govuk-width-container">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-
-
       <form class="form" action="/change-answer" method="post">
 
         <h1 class="govuk-heading-xl">
           Update your Reserve status
-        <p></p>
+        </h1>
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        <div>
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-        {{ govukRadios({
-          idPrefix: "what-do",
-          name: "what-do",
-          fieldset: {
-            legend: {
-              text: "What would you like to do?"
-            }
-          },
-          items: [
-            {
-              value: "Reinstate my participation of the reserve",
-              text: "Reinstate my Reserve membership"
+          {{ govukRadios({
+            idPrefix: "what-do",
+            name: "what-do",
+            fieldset: {
+              legend: {
+                text: "What would you like to do?"
+              }
             },
-            {
-              value: "Temporally suspend my service to the reserve",
-              text: "Temporarily suspend my Reserve membership"
-            },
-            {
-              value: "Permanently leave the reserve",
-              text: "Permanently leave the Reserve"
-            }
-          ]
-        }) }}
+            items: [
+              {
+                value: "Reinstate my participation of the reserve",
+                text: "Reinstate my Reserve membership"
+              },
+              {
+                value: "Temporally suspend my service to the reserve",
+                text: "Temporarily suspend my Reserve membership"
+              },
+              {
+                value: "Permanently leave the reserve",
+                text: "Permanently leave the Reserve"
+              }
+            ]
+          }) }}
+        </div>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+        <div class="govuk-button-group">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+          {{ govukButton({
+          text: "Continue"
+          }) }}
 
-<div class="govuk-button-group">
-{{ govukButton({
-text: "Continue"
-}) }}
+          <a class="govuk-link" href="/RU-004">Cancel</a>
+        </div>
 
-<a class="govuk-link" href="/RU-004">Cancel</a>
-</div>
-
-</form>
-
+      </form>
     </div>
   </div>
-
 {% endblock %}

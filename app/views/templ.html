@@ -5,112 +5,103 @@
 {% endblock %}
 
 {% block header %}
-{% from "govuk/components/header/macro.njk" import govukHeader %}
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
 
-{{ govukHeader({
-  homepageUrl: "#",
-  serviceName: "My Civil Service Reserve Account",
-  serviceUrl: "#"
-}) }}
-
-<div class="govuk-width-container">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "My Civil Service Reserve Account",
+    serviceUrl: "#"
+  }) }}
 {% endblock %}
 
 {% block beforeContent %}
+  <div class="govuk-width-container">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-
-
-
+      <form class="form" action="/templconf" method="post">
 
         <h1 class="govuk-heading-xl">
           Temporarily suspend my Reserve membership 
-        <p></p>
+        </h1>
 
-        {% from "govuk/components/select/macro.njk" import govukSelect %}
+        <div>
+          {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-        {{ govukSelect({
-          id: "temp-leave",
-          name: "temp-leave",
-          label: {
-            text: "Select a reason for suspending your membership"
-          },
-          items: [
-            {
-              value: " ",
-              text: " "
+          {{ govukSelect({
+            id: "temp-leave",
+            name: "temp-leave",
+            label: {
+              text: "Select a reason for suspending your membership"
             },
-            {
-              value: "not-avail",
-              text: "Not available for more than 3 months"
+            items: [
+              {
+                value: " ",
+                text: " "
+              },
+              {
+                value: "not-avail",
+                text: "Not available for more than 3 months"
+              },
+              {
+                value: "ill",
+                text: "Extended period of illness"
+              },
+              {
+                value: "parental",
+                text: "Extended period of parental leave"
+              },
+              {
+                value: "Personal",
+                text: "Personal reasons"
+              },
+              {
+                value: "Other",
+                text: "Other"
+              }
+            ]
+          }) }}
+
+          {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+          {{ govukTextarea({
+            name: "more-detail",
+            id: "more-detail",
+            label: {
+              text: "Can you provide more detail?",
+              classes: "govuk-label--l",
+              isPageHeading: true
             },
-            {
-              value: "ill",
-              text: "Extended period of illness"
-            },
-            {
-              value: "parental",
-              text: "Extended period of parental leave"
-            },
-            {
-              value: "Personal",
-              text: "Personal reasons"
-            },
-            {
-              value: "Other",
-              text: "Other"
+            hint: {
+              text: "This is optional"
             }
-          ]
-        }) }}
+          }) }}
+        </div>
+        
+        <div class="govuk-button-group">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+          
+          {{ govukButton({
+            text: "Suspend membership",
+          classes: "govuk-button--warning"
+          }) }}
 
-        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+          <a class="govuk-link" href="/RU-004">Cancel</a>
+        </div>
 
-        {{ govukTextarea({
-          name: "more-detail",
-          id: "more-detail",
-          label: {
-            text: "Can you provide more detail?",
-            classes: "govuk-label--l",
-            isPageHeading: true
-          },
-          hint: {
-            text: "This is optional"
-          }
-        }) }}
-
-
-{% from "govuk/components/button/macro.njk" import govukButton %}
-
-<form class="form" action="/templconf" method="post">
-
-<div class="govuk-button-group">
-  {{ govukButton({
-    text: "Suspend membership",
-  classes: "govuk-button--warning"
-  }) }}
-
-  <a class="govuk-link" href="/RU-004">Cancel</a>
-</div>
-
-</form>
-
+      </form>
     </div>
   </div>
-
 {% endblock %}

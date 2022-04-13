@@ -9,51 +9,46 @@
 {% endblock %}
 
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-
-
       <form class="form" action="/typeofrole-answer" method="post">
 
-        <p>{% from "govuk/components/radios/macro.njk" import govukRadios %}
+        <div>
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-{{ govukRadios({
-  idPrefix: "current-former-role",
-  name: "current-former-role",
-  fieldset: {
-    legend: {
-      text: "Is or was your most recent employment a Civil Service role?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "Yes",
-      text: "Yes"
-    },
-    {
-      value: "No",
-      text: "No"
-    }
-  ]
-}) }}</p>
+          {{ govukRadios({
+            idPrefix: "current-former-role",
+            name: "current-former-role",
+            fieldset: {
+              legend: {
+                text: "Is or was your most recent employment a Civil Service role?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "Yes",
+                text: "Yes"
+              },
+              {
+                value: "No",
+                text: "No"
+              }
+            ]
+          }) }}
+        </div>
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+        <div class="govuk-button-group">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
 
-<div class="govuk-button-group">
-{{ govukButton({
-text: "Continue"
-}) }}
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+          <a class="govuk-link" href="/start">Cancel</a>
+        </div>
 
-<a class="govuk-link" href="/start">Cancel</a>
-</div>
-
-</form>
-
+      </form>
     </div>
   </div>
-
 {% endblock %}
