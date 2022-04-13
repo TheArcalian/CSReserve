@@ -63,6 +63,9 @@
           label: {
             text: "Role Description",
             classes: "govuk-hint"
+          },
+          hint: {
+            text: "Include details of where the role is based, e.g. in an office, with travel between offices, etc"
           }
         }) }}
 
@@ -73,7 +76,7 @@
           id: "role-type",
           name: "role-type",
           label: {
-            text: "Role Type"
+            text: "Has the use of the Civil Service Reserve received appropriate authorisation?"
           },
           items: [
             {
@@ -81,16 +84,12 @@
               text: " "
             },
             {
-              value: "Single office",
-              text: "Single office"
+              value: "yes",
+              text: "Yes"
             },
             {
-              value: "Multiple offices with travel",
-              text: "Multiple offices with travel"
-            },
-            {
-              value: "In the field",
-              text: "In the field"
+              value: "no",
+              text: "No"
             }
           ]
         }) }}
