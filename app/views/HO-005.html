@@ -36,17 +36,17 @@
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="/HO-007" method="post">
         <h1 class="govuk-heading-xl">
-          Hiring manager details
+          Named contact details
         </h1>
         <p>
-          We may contact the hiring manager for more details on this resource request.
+          We may contact the named contact for more details on this resource request.
         </p>
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
           label: {
-            text: "Hiring Manager Name"
+            text: "Named contact"
           },
           id: "hiring-manager-name",
           name: "hiring-manager-name",
@@ -58,7 +58,7 @@
 
         {{ govukInput({
           label: {
-            text: "Hiring Manager Contact (Work) Email"
+            text: "Named contact (work) email"
           },
           hint: {
             text: ""
@@ -74,7 +74,7 @@
 
         {{ govukInput({
           label: {
-            text: "Hiring Manager Contact Number"
+            text: "Named contact number"
           },
           id: "hiring-manager-contact-telephone-number",
           name: "hiring-manager-contact-telephone-number",

@@ -114,7 +114,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Role Type
+            Host organisation authorisation?
           </dt>
           <dd class="govuk-summary-list__value">
             <p>{{data['role-type'] }}</p>
@@ -122,7 +122,7 @@
             <dd class="govuk-summary-list__actions">
             <a href="/HO-007">
               Change
-              <span class="govuk-visually-hidden">Role Type</span>
+              <span class="govuk-visually-hidden">Host organisation authorisation?</span>
             </a>
           </dd>
         </div>
@@ -441,9 +441,22 @@
             </a>
           </dd>
         </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Length of assignment
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['assignment-term'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/HO-011">
+              Change
+              <span class="govuk-visually-hidden">Length of assignment</span>
+            </a>
+          </dd>
+        </div>
       </dl>
 
-     
       <h2 class="govuk-heading-m">Now send in your request</h2>
 
       <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
