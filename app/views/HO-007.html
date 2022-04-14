@@ -5,128 +5,119 @@
 {% endblock %}
 
 {% block header %}
-{% from "govuk/components/header/macro.njk" import govukHeader %}
+  {% from "govuk/components/header/macro.njk" import govukHeader %}
 
-{{ govukHeader({
-  homepageUrl: "#",
-  serviceName: "Make a resource request with the Civil Service Reserve",
-  serviceUrl: "#"
-}) }}
-
-
-<div class="govuk-width-container">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      alpha
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "Make a resource request with the Civil Service Reserve",
+    serviceUrl: "#"
+  }) }}
 {% endblock %}
 
 {% block beforeContent %}
+  <div class="govuk-width-container">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
+      </span>
+    </p>
+  </div>
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
       <form class="form" action="/HO-008" method="post">
 
         <h1 class="govuk-heading-xl">
           Role details
         </h1>
 
-        {% from "govuk/components/select/macro.njk" import govukSelect %}
+        <div>
+          {% from "govuk/components/select/macro.njk" import govukSelect %}
 
-        {{ govukInput({
-          label: {
-            text: "Role Title"
-          },
-          id: "role-title",
-          name: "role-title",
-          autocomplete: "name",
-          spellcheck: false
-        }) }}
-
-
-        {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-
-        {{ govukTextarea({
-          name: "role-description",
-          id: "role-description",
-          label: {
-            text: "Role Description",
-            classes: "govuk-hint"
-          },
-          hint: {
-            text: "Include details of where the role is based, e.g. in an office, with travel between offices, etc"
-          }
-        }) }}
-
-
-        {% from "govuk/components/select/macro.njk" import govukSelect %}
-
-        {{ govukSelect({
-          id: "role-type",
-          name: "role-type",
-          label: {
-            text: "Has the use of the Civil Service Reserve received appropriate authorisation?"
-          },
-          items: [
-            {
-              value: " ",
-              text: " "
+          {{ govukInput({
+            label: {
+              text: "Role Title"
             },
-            {
-              value: "yes",
-              text: "Yes"
+            id: "role-title",
+            name: "role-title",
+            autocomplete: "name",
+            spellcheck: false
+          }) }}
+        </div>
+
+        <div>
+          {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+          {{ govukTextarea({
+            name: "role-description",
+            id: "role-description",
+            label: {
+              text: "Role Description",
+              classes: "govuk-hint"
             },
-            {
-              value: "no",
-              text: "No"
+            hint: {
+              text: "Describe in a couple of bullet points what tasks and responsibilities will be required for this role.
+              You should include details about the role is based, for example in an office or with travel between multiple offices."
             }
-          ]
-        }) }}
+          }) }}
+        </div>
 
-        {% from "govuk/components/select/macro.njk" import govukSelect %}
+        <div>
+          {% from "govuk/components/radios/macro.njk" import govukRadios  %}
 
-        {{ govukInput({
-          label: {
-            text: "Number of people required for this role"
-          },
-          classes: "govuk-input--width-5",
-          id: "numbers-per-role",
-          name: "numbers-per-role",
-          autocomplete: "name",
-          spellcheck: false
-        }) }}
+          {{ govukRadios({
+            id: "role-type",
+            name: "role-type",
+            fieldset: {
+              legend: {
+                text: "Have you received appropriate authorisation for this resource request?",
+                classes: "govuk-label govuk-hint"
+              }
+            },
+            items: [
+              {
+                value: "yes",
+                text: "Yes"
+              },
+              {
+                value: "no",
+                text: "No"
+              }
+            ]
+          }) }}
+        </div>
 
+        <div>
+          {% from "govuk/components/select/macro.njk" import govukSelect %}
 
+          {{ govukInput({
+            label: {
+              text: "Number of people required for this role"
+            },
+            classes: "govuk-input--width-5",
+            id: "numbers-per-role",
+            name: "numbers-per-role",
+            autocomplete: "name",
+            spellcheck: false
+          }) }}
+        </div>
+        
+        <div class="govuk-button-group">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
 
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-
-      <div class="govuk-button-group">
-      {{ govukButton({
-      text: "Continue"
-      }) }}
-
-      <a class="govuk-link" href="/HO-003">Cancel</a>
-      </div>
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+          <a class="govuk-link" href="/HO-003">Cancel</a>
+        </div>
 
       </form>
-
     </div>
   </div>
-
-</form>
-
-    </div>
-  </div>
-
 {% endblock %}
