@@ -62,9 +62,23 @@
               classes: "govuk-hint"
             },
             hint: {
-              text: "Describe in a couple of bullet points what tasks and responsibilities will be required for this role.
-              You should include details about the role is based, for example in an office or with travel between multiple offices."
+              text: "Briefly describe what tasks will be required for this role. You should also include details about where the role is based, for example in an office or with travel between multiple offices."
             }
+          }) }}
+        </div>
+
+        <div>
+          {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+          {{ govukInput({
+            label: {
+              text: "Number of people required for this role"
+            },
+            classes: "govuk-input--width-5",
+            id: "numbers-per-role",
+            name: "numbers-per-role",
+            autocomplete: "name",
+            spellcheck: false
           }) }}
         </div>
 
@@ -93,21 +107,6 @@
           }) }}
         </div>
 
-        <div>
-          {% from "govuk/components/select/macro.njk" import govukSelect %}
-
-          {{ govukInput({
-            label: {
-              text: "Number of people required for this role"
-            },
-            classes: "govuk-input--width-5",
-            id: "numbers-per-role",
-            name: "numbers-per-role",
-            autocomplete: "name",
-            spellcheck: false
-          }) }}
-        </div>
-        
         <div class="govuk-button-group">
           {% from "govuk/components/button/macro.njk" import govukButton %}
 
