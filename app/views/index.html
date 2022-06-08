@@ -1,23 +1,65 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  Civil Service Reserves — Prototypes
 {% endblock %}
 
 {% block content %}
-  <h2 class="govuk-heading-m">Link to start of prototype service</h2>
-  <ul class="govuk-list govuk-list--bullet">
-    <li>
-      <a href="/start">Reservist registration</a>
-    </li>
-    <li>
-      <a href="/RU-003">Reservist update</a>
-    </li>
-    <li>
-      <a href="/HO-003">Start page of Host service</a>
-    </li>
-    <li>
-      <a href="/HR-003">Start page of Reserve service</a>
-    </li>
-  </ul>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Civil Service Reserves
+      </h1>
+    </div>
+    
+    
+    <div class="govuk-grid-column-two-thirds">
+      
+      <h2 class="govuk-heading-m">
+        Version 2 — Sprint 2
+      </h2>
+
+      <h2 class="govuk-heading-s">Links to prototypes</h2>
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link--no-visited-state" href="start"><strong>Reservist registration</strong></a>
+        </li>
+        <li>
+          <a class="govuk-link--no-visited-state" href="RU-003"><strong>Reservist update</strong></a>
+        </li>
+        <li>
+          <a class="govuk-link--no-visited-state" href="HO-003"><strong>Host service</strong></a>
+        </li>
+        <li>
+          <a class="govuk-link--no-visited-state" href="HR-003"><strong>Reserve service</strong></a>
+        </li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Changes</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Change continue buttons to save and continue buttons.</li>
+        <li>Added login page.</li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Design notes, user flows and journeys</h3>
+      <p><a class="govuk-link--no-visited-state" href="https://app.mural.co/t/ddat6094/m/ddat6094/1654010854014/8c9dd9cb320bda06622925c7b8cfe440db1b459e?sender=a2056812-e7d7-4317-a06c-7cdec80cfb50">RO - Search & Shortlist</a><br>
+      <a class="govuk-link--no-visited-state" href="https://app.mural.co/t/ddat6094/m/ddat6094/1654011894790/c4b0c73cdd7d812093d57c33141f2adc08c143c4?sender=1868dd2e-4f5d-4af8-a6df-1af645d680da">HO - Resource Request</a><br>
+      <a class="govuk-link--no-visited-state" href="https://app.mural.co/t/ddat6094/m/ddat6094/1654012079227/6a0cd9f9b11863432878550c85b002840e6a0d9a?sender=uc68c2b86fdeb6474f1f94924">R - Reservist Registration</a><br>
+      
+      <h3 class="govuk-heading-s">Research notes</h3>
+      <p>Insert research notes here</p>
+      <!--<p><a href="#0">View user research report</a>.<p>-->
+
+      <!--{{ govukButton({
+        text: 'View prototype',
+        href: '/index'
+      }) }}-->
+
+
+    </div>
+  </div>
+
+
+
 {% endblock %}
