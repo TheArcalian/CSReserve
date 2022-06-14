@@ -5,7 +5,14 @@
 {% endblock %}
 
 {% block header %}
-  {{ govukHeader() }}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+  {{ govukHeader({
+    homepageUrl: "#",
+    serviceName: "Apply to join the Civil Service Reserve",
+    serviceUrl: "#"
+  }) }}
+
   <div class="govuk-width-container">
     <div class="govuk-phase-banner">
     <p class="govuk-phase-banner__content">
@@ -18,7 +25,6 @@
     </p>
     </div>
   </div>
-
 {% endblock %}
 
 {% block content %}
@@ -31,11 +37,14 @@
           Sign in to your account
         </h1>
 
-        <div class="govuk-body">
+        <!--<div class="govuk-body">
         If this is the first time you are using this service, you will need to
           <a class="button-link" id="register" href="#">create an account</a>
-        </div>
+        </div>-->
 
+        <div class="govuk-inset-text">
+        If this is the first time you are using this service, we need to <a class="button-link" id="eligibility" href="/RR-005">check your eligibility</a>. You will be able to create an account if you are eligible.
+        </div>
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" data-required="data-required" data-error="Enter your email address">
