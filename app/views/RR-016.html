@@ -16,14 +16,16 @@
   
 {% block beforeContent %}
   <div class="govuk-width-container">
+    <div class="govuk-phase-banner">
     <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag"> alpha </strong>
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
       <span class="govuk-phase-banner__text">
-        This is a new service – your
-        <a class="govuk-link" href="/RR-027">feedback</a> will help us to
-        improve it.
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
       </span>
     </p>
+    </div>
   </div>
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %} 
@@ -37,6 +39,8 @@
       <h1 class="govuk-heading-xl">Crisis and surge experience</h1>
       <p>Tell us about your crisis or surge response experience.</p>
 
+      <br>
+
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -44,15 +48,14 @@
               <h2 class="govuk-heading-m">
                 Have you supported peaks in volume of BAU activities for expected events?
               </h2>
-            </legend>
-          </legend>
-          <div id="contact-hint" class="govuk-hint">
+              <div id="contact-hint" class="govuk-hint">
             For example, Universal Credit Processing, Olympic Games.
           </div>
-          <div class="govuk-radios--small" data-module="govuk-radios">
+
+          <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="crisisexp1-yes" name="crisisexp1" type="radio" value="Yes" data-aria-controls="crisisexp1-contact">
-              <label class="govuk-label govuk-radios__label" for="crisisexp1">
+              <label class="govuk-label govuk-radios__label" for="crisisexp1-yes">
                 Yes
               </label>
             </div>
@@ -66,12 +69,14 @@
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="crisisexp1-no" name="crisisexp1" type="radio" value="No" data-aria-controls="crisisexp1-contact-2">
-              <label class="govuk-label govuk-radios__label" for="crisisexp1">
+              <label class="govuk-label govuk-radios__label" for="crisisexp1-no">
                 No
               </label>
             </div>
           </div>
         </fieldset>
+        </legend>
+        </legend>
       </div>
 
       <div class="govuk-form-group">
@@ -81,15 +86,13 @@
               <h2 class="govuk-heading-m">
                 Have you supported peaks in volume of BAU activities for unexpected events?
               </h2>
-            </legend>
-          </legend>
-          <div id="contact-hint" class="govuk-hint">
+              <div id="contact-hint" class="govuk-hint">
             For example, Flooding, Grenfell Tower.
           </div>
-          <div class="govuk-radios--small" data-module="govuk-radios">
+          <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="crisisexp2-yes" name="crisisexp2" type="radio" value="Yes" data-aria-controls="crisisexp2-contact">
-              <label class="govuk-label govuk-radios__label" for="crisisexp2">
+              <label class="govuk-label govuk-radios__label" for="crisisexp2-yes">
                 Yes
               </label>
             </div>
@@ -103,12 +106,14 @@
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="crisisexp2-no" name="crisisexp2" type="radio" value="No" data-aria-controls="crisisexp2-contact-2">
-              <label class="govuk-label govuk-radios__label" for="crisisexp2">
+              <label class="govuk-label govuk-radios__label" for="crisisexp2-no">
                 No
               </label>
             </div>
           </div>
         </fieldset>
+            </legend>
+          </legend>
       </div>
 
       <div class="govuk-form-group">
@@ -118,15 +123,13 @@
               <h2 class="govuk-heading-m">
                 Have you supported cross-government responses?
               </h2>
-            </legend>
-          </legend>
-          <div id="contact-hint" class="govuk-hint">
+              <div id="contact-hint" class="govuk-hint">
             For example, EU Exit, Covid-19.
           </div>
-          <div class="govuk-radios--small" data-module="govuk-radios">
+          <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="crisisexp3-yes" name="crisisexp3" type="radio" value="Yes" data-aria-controls="crisisexp3-contact">
-              <label class="govuk-label govuk-radios__label" for="crisisexp3">
+              <label class="govuk-label govuk-radios__label" for="crisisexp3-yes">
                 Yes
               </label>
             </div>
@@ -140,12 +143,14 @@
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="crisisexp3-no" name="crisisexp3" type="radio" value="No" data-aria-controls="crisisexp3-contact-2">
-              <label class="govuk-label govuk-radios__label" for="crisisexp3">
+              <label class="govuk-label govuk-radios__label" for="crisisexp3-no">
                 No
               </label>
             </div>
           </div>
         </fieldset>
+            </legend>
+          </legend>
       </div>
       
       <div class="govuk-button-group">
