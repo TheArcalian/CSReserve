@@ -33,13 +33,16 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+        Have you worked with ministers, anticipating and delivering their needs in a timely manner?
+      </h1>
+    </legend>
     <form class="form" action="/RR-017b" method="post">
-
-      <h1 class="govuk-heading-xl">Have you worked with ministers, anticipating and delivering their needs in a timely manner?</h1>
-
-      <div>
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
+    
+    <br>
+    
         {{ govukRadios({
           classes: "govuk-radios",
           idPrefix: "crisisexp4",
@@ -59,8 +62,6 @@
             }
           ]
         }) }}
-      </div>
-      
       
       <div class="govuk-button-group">
         {% from "govuk/components/button/macro.njk" import govukButton %}

@@ -33,9 +33,15 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">
+        Have you delivered difficult messages to a range of audiences?
+          </h1>
+        </legend>
       <form class="form" action="/RR-017g" method="post">
 
-        <h1 class="govuk-heading-xl">Have you delivered difficult messages to a range of audiences?</h1>
+      <br>
 
         <div>
           {% from "govuk/components/radios/macro.njk" import govukRadios %}
