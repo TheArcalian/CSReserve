@@ -44,17 +44,22 @@
         <li>you must have been provided with sign in details for your Civil Service Reserve account</li>
       </ul>
 
+      <br>
+
       {% from "govuk/components/input/macro.njk" import govukInput %}
+
+      <h2 class="govuk-heading-l">Sign in to your Civil Service Reserve account</h2>
 
       {{ govukInput({
         label: {
-          text: "Sign in to your Civil Service Reserve Account",
+          text: "Sign in to your Civil Service Reserve account",
           classes: "govuk-label--l",
           isPageHeading: true
         },
         classes: "govuk-input--width-20",
-        hint: {
-          text: "User ID"
+        label: {
+          text: "User ID",
+          classes: 'govuk-label--1'
         },
         id: "User-ID",
         name: "User-ID",
@@ -86,8 +91,11 @@
       </a>
 
       <h2 class="govuk-heading-m">Problems signing in</h2>
-      <p><a href="#">I have forgotten my user ID</a></p>
-      <p><a href="#">I have forgotten my password</a></p>
+      <p>
+      <a href="#">I have forgotten my user ID</a>
+      <br>
+      <a href="#">I have forgotten my password</a>
+      </p>
 
     </div>
   </div>

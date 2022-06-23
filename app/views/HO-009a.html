@@ -15,14 +15,16 @@
   }}
 
   <div class="govuk-width-container">
+    <div class="govuk-phase-banner">
     <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag"> alpha </strong>
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
       <span class="govuk-phase-banner__text">
-        This is a new service – your
-        <a class="govuk-link" href="/RR-027">feedback</a> will help us to
-        improve it.
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
       </span>
     </p>
+    </div>
   </div>
 
 {% endblock %}
@@ -43,17 +45,17 @@
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
       {{ govukRadios({
-        classes: "govuk-radios--small",
+        classes: "govuk-radios",
         idPrefix: "exp1req",
         name: "exp1req",
         fieldset: {
           legend: {
             text: "Supporting peaks in volume of BAU activities for expected events",
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-body"
           }
         },
         hint: {
-          text: "For example, Universal Credit Processing, Olympic Games"
+          text: "For example, Universal Credit Processing, Olympic Games."
         },
         items: [
           {
@@ -68,17 +70,17 @@
       }) }}
 
       {{ govukRadios({
-        classes: "govuk-radios--small",
+        classes: "govuk-radios",
         idPrefix: "exp2req",
         name: "exp2req",
         fieldset: {
           legend: {
             text: "Supporting peaks in volume for unexpected events",
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-body"
           }
         },
         hint: {
-          text: "For example, Flooding, Grenfell Tower"
+          text: "For example, Flooding, Grenfell Tower."
         },
         items: [
           {
@@ -93,17 +95,17 @@
       }) }}
 
       {{ govukRadios({
-        classes: "govuk-radios--small",
+        classes: "govuk-radios",
         idPrefix: "exp3req",
         name: "exp3req",
         fieldset: {
           legend: {
             text: "Supporting cross-government events",
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-body"
           }
         },
         hint: {
-          text: "For example, EU Exit, Covid-19"
+          text: "For example, EU Exit, Covid-19."
         },
         items: [
           {

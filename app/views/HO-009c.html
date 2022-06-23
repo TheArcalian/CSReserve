@@ -15,14 +15,16 @@
   }}
 
   <div class="govuk-width-container">
+    <div class="govuk-phase-banner">
     <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag"> alpha </strong>
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
       <span class="govuk-phase-banner__text">
-        This is a new service – your
-        <a class="govuk-link" href="/RR-027">feedback</a> will help us to
-        improve it.
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
       </span>
     </p>
+    </div>
   </div>
 
 {% endblock %}
@@ -47,13 +49,13 @@
       {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
       {{ govukRadios({
-        classes: "govuk-radios--small",
+        classes: "govuk-radios",
         idPrefix: "exp6req",
         name: "exp6req",
         fieldset: {
           legend: {
             text: "Making strategic decisions based on your understanding of the consequences",
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-body"
           }
         },
         items: [
@@ -73,13 +75,13 @@
       }) }}
 
       {{ govukRadios({
-        classes: "govuk-radios--small",
+        classes: "govuk-radios",
         idPrefix: "exp9req",
         name: "exp9req",
         fieldset: {
           legend: {
             text: "Delivering difficult messages to a range of audiences",
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-body"
           }
         },
         items: [
@@ -99,13 +101,13 @@
       }) }}
 
       {{ govukCheckboxes({
-        classes: "govuk-checkboxes--small",
+        classes: "govuk-checkboxes",
         idPrefix: "exp11req",
         name: "exp11req",
         fieldset: {
           legend: {
             text: "Experience working with multiple organisations",
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-body"
           }
         },
         hint: {

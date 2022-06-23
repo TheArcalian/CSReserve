@@ -15,14 +15,16 @@
   }}
 
   <div class="govuk-width-container">
+    <div class="govuk-phase-banner">
     <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag"> alpha </strong>
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
       <span class="govuk-phase-banner__text">
-        This is a new service – your
-        <a class="govuk-link" href="/RR-027">feedback</a> will help us to
-        improve it.
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
       </span>
     </p>
+    </div>
   </div>
 
 {% endblock %}
@@ -46,13 +48,13 @@
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
       {{ govukRadios({
-        classes: "govuk-radios--small",
+        classes: "govuk-radios",
         idPrefix: "exp7req",
         name: "exp7req",
         fieldset: {
           legend: {
             text: "Working with data to communicate to a range of audiences",
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-body"
           }
         },
         items: [
@@ -73,13 +75,13 @@
 
 
       {{ govukRadios({
-        classes: "govuk-radios--small",
+        classes: "govuk-radios",
         idPrefix: "exp10req",
         name: "exp10req",
         fieldset: {
           legend: {
             text: "Running events or conferences",
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-body"
           }
         },
         items: [
@@ -99,13 +101,13 @@
       }) }}
 
       {{ govukRadios({
-        classes: "govuk-radios--small",
+        classes: "govuk-radios",
         idPrefix: "exp5req",
         name: "exp5req",
         fieldset: {
           legend: {
             text: "Enjoys working in high pressure environments",
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-body"
           }
         },
         items: [

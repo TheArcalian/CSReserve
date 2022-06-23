@@ -15,14 +15,16 @@
   }}
 
   <div class="govuk-width-container">
+    <div class="govuk-phase-banner">
     <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag"> alpha </strong>
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        alpha
+      </strong>
       <span class="govuk-phase-banner__text">
-        This is a new service – your
-        <a class="govuk-link" href="/RR-027">feedback</a> will help us to
-        improve it.
+        This is a new service – your <a class="govuk-link" href="/RR-027">feedback</a> will help us to improve it.
       </span>
     </p>
+    </div>
   </div>
 
 {% endblock %}
@@ -46,13 +48,13 @@
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
       {{ govukRadios({
-        classes: "govuk-radios--small",
+        classes: "govuk-radios",
         idPrefix: "exp4req",
         name: "exp4req",
         fieldset: {
           legend: {
             text: "Working with ministers, anticipating and delivering their needs in a timely manner",
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-body"
           }
         },
         items: [
@@ -72,13 +74,13 @@
       }) }}
 
       {{ govukRadios({
-        classes: "govuk-radios--small",
+        classes: "govuk-radios",
         idPrefix: "exp8req",
         name: "exp8req",
         fieldset: {
           legend: {
             text: "Producing clear and accurate briefings",
-            classes: "govuk-fieldset__legend--m"
+            classes: "govuk-body"
           }
         },
         items: [
