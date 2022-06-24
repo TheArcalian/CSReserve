@@ -54,8 +54,15 @@
   
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-thirds">
       <div class="govuk-grid-column-one-third">
-        <h3 class="govuk-heading-m">Apply Filters</h3>
+
+        <div class="box2">
+        <h3 class="govuk-heading-m">Filter</h3>
+
+            <button class="govuk-button" data-module="govuk-button">
+            Apply filters
+            </button>
 
         <div class="expandable-section">
           <input id="expandable-ckbx-1" type="checkbox" class="expandable-ckbx" />
@@ -82,7 +89,7 @@
             <path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path>
           </svg>
           <label class="label" for="expandable-ckbx-2">
-            Location Preference
+            Location preference
           </label>
           <div class="expandable-content">
             <div>
@@ -187,10 +194,13 @@
             <path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path>
           </svg>
           <label class="label" for="expandable-ckbx-4">
-            Minimum Security Clearance
+            Security clearance
           </label>
           <div class="expandable-content">
             <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                Minimum security clearance
+              </label>
               <select class="govuk-select" id="security-clearance-filter" name="security-clearance-filter">
                 <option value="BPSS">BPSS</option>
                 <option value="CTC">CTC</option>
@@ -310,7 +320,12 @@
               </div>
             </div>
           </div>
-        </div>  
+        </div> 
+        <br>
+            <button class="govuk-button" data-module="govuk-button">
+            Apply filters
+            </button>  
+      </div>
       </div>
       <div class="govuk-grid-column-two-thirds">
         <table class="govuk-table">
@@ -318,9 +333,9 @@
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Candidate ID</th>
               <th scope="row" class="govuk-table__header">Grade</th>
-              <th scope="row" class="govuk-table__header">Security Clearance</th>
+              <th scope="row" class="govuk-table__header">Security clearance</th>
               <th scope="row" class="govuk-table__header">Availability</th>
-              <th scope="row" class="govuk-table__header">Reservist Status</th>
+              <th scope="row" class="govuk-table__header">Reservist status</th>
               <th scope="row" class="govuk-table__header">Shortlist</th>
             </tr>
             <tr>

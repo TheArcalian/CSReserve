@@ -35,50 +35,57 @@
   {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
   <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">
         View all requests
       </h1>
       <main class="govuk-main-wrapper">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-one-quarter">
-            <h3 class="govuk-heading-m">Apply Filters</h3>
+            <div class="box">
+              <h3 class="govuk-heading-m">Filter</h3>
 
-            <div class="expandable-section">
-              <input id="expandable-ckbx-1" type="checkbox" class="expandable-ckbx" />
-              <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="expandable-chevron" aria-hidden="true" focusable="false">
-                <path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path>
-              </svg>
-              <label class="label" for="expandable-ckbx-1">
-                Requested by
-              </label>
-              <div class="expandable-content">
-                <div>
-                  {{ govukCheckboxes({
-                    idPrefix: "requestedBy",
-                    name: "requestedBy",
-                    classes: "govuk-checkboxes--small",
-                    items: [
-                      {
-                        value: "Civil Contingencies Secretariat",
-                        text: "Civil Contingencies Secretariat"
-                      },
-                      {
-                        value: "National Cyber Force",
-                        text: "National Cyber Force"
-                      },
-                      {
-                        value: "Cabinet Office",
-                        text: "Cabinet Office"
-                      },
-                      {
-                        value: "Resilience and Recover Directorate",
-                        text: "Resilience and Recover Directorate"
-                      }
-                    ]
-                  }) }}
+              <button class="govuk-button" data-module="govuk-button">
+            Apply filters
+            </button>
+
+              <div class="expandable-section">
+                <input id="expandable-ckbx-1" type="checkbox" class="expandable-ckbx" />
+                <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="expandable-chevron" aria-hidden="true" focusable="false">
+                  <path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path>
+                </svg>
+                <label class="label" for="expandable-ckbx-1">
+                  Requested by
+                </label>
+                <div class="expandable-content">
+                  <div>
+                    {{ govukCheckboxes({
+                      idPrefix: "requestedBy",
+                      name: "requestedBy",
+                      classes: "govuk-checkboxes--small",
+                      items: [
+                        {
+                          value: "Civil Contingencies Secretariat",
+                          text: "Civil Contingencies Secretariat"
+                        },
+                        {
+                          value: "National Cyber Force",
+                          text: "National Cyber Force"
+                        },
+                        {
+                          value: "Cabinet Office",
+                          text: "Cabinet Office"
+                        },
+                        {
+                          value: "Resilience and Recover Directorate",
+                          text: "Resilience and Recover Directorate"
+                        }
+                      ]
+                    }) }}
+                  </div>
                 </div>
               </div>
-            </div>
+            
 
             <div class="expandable-section">
               <input id="expandable-ckbx-2" type="checkbox" class="expandable-ckbx" />
@@ -197,8 +204,14 @@
                   }) }}
                 </div>
               </div>
-            </div>  
+            </div>
+            <br>
+            <button class="govuk-button" data-module="govuk-button">
+            Apply filters
+            </button>  
           </div>
+          </div>
+
           <div class="govuk-grid-column-three-quarters">
             <table class="govuk-table">
               <thead class="govuk-table__head">
@@ -256,7 +269,8 @@
             </table>
           </div>
         </div>
+        
       </main>
-
+    </div>
   </div>
 {% endblock %}
